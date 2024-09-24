@@ -423,7 +423,38 @@ export default function Footer() {
             }}
           />
         </Box>
-
+        <Stack direction={"row"} margin={"0 0 20px 0"} gap={"10px"}>
+          <Stack
+            sx={{
+              width: "30px",
+              height: "30px",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <FaLinkedinIn />
+          </Stack>
+          <Stack
+            sx={{
+              width: "30px",
+              height: "30px",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <FaFacebookF />
+          </Stack>
+          <Stack
+            sx={{
+              width: "30px",
+              height: "30px",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <FaXTwitter />
+          </Stack>
+        </Stack>
         <Stack
           sx={{
             width: "100%",

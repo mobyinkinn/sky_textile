@@ -6,7 +6,7 @@ import logo from "./parts/assets/logo.png";
 import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { MdOutlineClose } from "react-icons/io";
 
 import menu from "./parts/assets/menu.png";
@@ -237,9 +237,11 @@ export default function Navbar() {
   const [showSubRoutes, setShowSubRoutes] = useState(false);
   const [subRoutes, setSubRoutes] = useState([]);
   const router = useRouter();
+  const pathname = usePathname();
   const [expanded, setExpanded] = useState("");
   const containerRef = React.useRef(null);
   // console.log(showNav);
+  console.log(pathname);
 
   const getTrasformStyles = (isHovered) => ({
     transform: `translateY(${isHovered ? "-100%" : "0"})`,
@@ -289,9 +291,13 @@ export default function Navbar() {
                   className="nav-link"
                   href={el.route}
                   onMouseEnter={() => handleShowSubRoutes(el)}
-                  style={{ fontSize: "0.8rem" }}
                 >
-                  {el.name}
+                  <Typography
+                    fontSize={"0.9rem"}
+                    color={pathname === el.route ? "#FB5457" : "black"}
+                  >
+                    {el.name}
+                  </Typography>
                 </Link>
 
                 {/* <Fade in={showSubRoutes} easing="enter"> */}
@@ -389,16 +395,21 @@ export default function Navbar() {
         top={"0"}
         sx={{ borderBottom: "1px solid black" }}
       >
-        <Box width={"20vw"} height={"100%"} position={"relative"}>
+        <Box
+          zIndex={"20"}
+          onClick={() => {
+            router.push("/");
+          }}
+          width={"20vw"}
+          height={"100%"}
+          position={"relative"}
+        >
           <Image
             src={logo}
             alt=""
             fill
             objectFit="contain"
             style={{ cursor: "pointer" }}
-            onClick={() => {
-              router.push("/");
-            }}
           />
         </Box>
         <Box zIndex={showNav ? "0" : "50"}>
@@ -484,7 +495,11 @@ export default function Navbar() {
                         <Typography
                           fontSize={"0.8rem"}
                           fontWeight={"bold"}
+                          color={pathname === el.route ? "#FB5457" : "black"}
                           marginBottom={"20px"}
+                          onClick={() => {
+                            router.push(el.route);
+                          }}
                         >
                           {el.name}
                         </Typography>

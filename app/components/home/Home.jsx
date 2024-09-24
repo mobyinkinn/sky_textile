@@ -19,7 +19,7 @@ export default function Home() {
       <Dta />
       <BusinessVerticles />
       <Map />
-      {/* <Hover /> */}
+      <Hover />
       <Team />
       <Reviews />
       <Box height={{ md: "30vh" }}></Box>

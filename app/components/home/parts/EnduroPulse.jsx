@@ -1,10 +1,10 @@
 "use client";
 
 import { Box, Stack, Typography } from "@mui/material";
-import enduro1 from "./assets/enduro1.png";
-import enduro2 from "./assets/enduro2.png";
-import enduro3 from "./assets/enduro3.png";
-import enduro4 from "./assets/enduro4.png";
+import enduro1 from "./assets/events/b1.jpg";
+import enduro2 from "./assets/events/b2.jpg";
+import enduro3 from "./assets/events/s1.jpg";
+import enduro4 from "./assets/events/s2.jpg";
 import Image from "next/image";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -103,9 +103,7 @@ export default function Enduro() {
             backgroundPosition: "center center",
           }}
           className="image3"
-        >
-          {/* <Image src={enduro2} alt="" fill objectFit="cover" /> */}
-        </Box>
+        ></Box>
         <Box
           width={"60%"}
           height={"100%"}
@@ -117,9 +115,7 @@ export default function Enduro() {
             backgroundPosition: "center 0px",
           }}
           className="image"
-        >
-          {/* <Image src={enduro1} alt="" fill objectFit="cover" /> */}
-        </Box>
+        ></Box>
       </Stack>
       <Stack
         display={{ md: "flex", xs: "none" }}
@@ -140,9 +136,7 @@ export default function Enduro() {
             backgroundPosition: "center 0px",
           }}
           className="image2"
-        >
-          {/* <Image src={enduro1} alt="" fill objectFit="cover" /> */}
-        </Box>
+        ></Box>
         <Box
           width={"40%"}
           height={"70%"}
@@ -154,9 +148,7 @@ export default function Enduro() {
             backgroundPosition: "center center",
           }}
           className="image4"
-        >
-          {/* <Image src={enduro2} alt="" fill objectFit="cover" /> */}
-        </Box>
+        ></Box>
       </Stack>
       <Stack width={"100%"} gap={"10px"} display={{ md: "none" }}>
         <Box
