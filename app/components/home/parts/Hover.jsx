@@ -16,17 +16,17 @@ import img9 from "@/app/components/home/parts/assets/coverImages/image9.jpg";
 import img10 from "@/app/components/home/parts/assets/coverImages/image10.jpg";
 import img11 from "@/app/components/home/parts/assets/coverImages/image11.jpg";
 
-import image1 from "@/app/components/home/parts/assets/hoverImages/Image1.jpg";
-import image2 from "@/app/components/home/parts/assets/hoverImages/Image2.jpg";
-import image3 from "@/app/components/home/parts/assets/hoverImages/Image3.jpg";
-import image5 from "@/app/components/home/parts/assets/hoverImages/Image5.jpg";
-import image6 from "@/app/components/home/parts/assets/hoverImages/Image6.jpg";
-import image7 from "@/app/components/home/parts/assets/hoverImages/Image7.jpg";
-import image8 from "@/app/components/home/parts/assets/hoverImages/Image8.jpg";
-import image9 from "@/app/components/home/parts/assets/hoverImages/Image9.jpg";
-import image11 from "@/app/components/home/parts/assets/hoverImages/Image11.jpg";
-import image10 from "@/app/components/home/parts/assets/hoverImages/Image10.jpg";
-import image4 from "@/app/components/home/parts/assets/hoverImages/Image4.jpg";
+import image1 from "@/app/components/home/parts/assets/hoverImages/image1.jpg";
+import image2 from "@/app/components/home/parts/assets/hoverImages/image2.jpg";
+import image3 from "@/app/components/home/parts/assets/hoverImages/image3.jpg";
+import image5 from "@/app/components/home/parts/assets/hoverImages/image5.jpg";
+import image6 from "@/app/components/home/parts/assets/hoverImages/image6.jpg";
+import image7 from "@/app/components/home/parts/assets/hoverImages/image7.jpg";
+import image8 from "@/app/components/home/parts/assets/hoverImages/image8.jpg";
+import image9 from "@/app/components/home/parts/assets/hoverImages/image9.jpg";
+import image11 from "@/app/components/home/parts/assets/hoverImages/image11.jpg";
+import image10 from "@/app/components/home/parts/assets/hoverImages/image10.jpg";
+import image4 from "@/app/components/home/parts/assets/hoverImages/image4.jpg";
 
 const coverAnimation = {
   position: "relative",
