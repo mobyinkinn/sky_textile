@@ -1,3 +1,6 @@
+{
+  /**  
+
 "use client";
 
 import React, { useState } from "react";
@@ -175,7 +178,6 @@ const Hover = () => {
                 },
               }}
             >
-              {/* Original Image */}
               <Image
                 src={logo.img}
                 alt={`${index + 1}`}
@@ -184,7 +186,6 @@ const Hover = () => {
                 className="original-image"
               />
 
-              {/* Hover Image */}
               <Image
                 src={hoverImages[index]}
                 alt={`${index + 1}`}
@@ -220,3 +221,6 @@ const Hover = () => {
 };
 
 export default Hover;
+
+**/
+}
