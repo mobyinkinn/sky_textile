@@ -25,7 +25,7 @@ export default function Home() {
       <Hover />
       <Team />
       <Reviews />
-      <Box height={{ md: "30vh" }}></Box>
+      <Box height={{ md: "10vh" }}></Box>
       <Enduro />
       <Form />
       <Footer />

@@ -286,37 +286,37 @@ export default function Footer() {
         <Stack
           margin={"50px"}
           direction={"row"}
-          justifyContent={"center"}
+          justifyContent={"space-evenly"}
           gap={"100px"}
         >
           <Stack gap={"10px"}>
             <Typography fontWeight={"bold"}>Product</Typography>
-            <Box color={"#393737"}>
+            <Stack color={"#393737"} gap={"6px"}>
               <Typography>Employee database</Typography>
               <Typography>Paypal</Typography>
               <Typography>Absences</Typography>
               <Typography>Time tracking</Typography>
               <Typography>Shift Planner</Typography>
               <Typography>Recruiting</Typography>
-            </Box>
+            </Stack>
           </Stack>
           <Stack gap={"10px"}>
             <Typography fontWeight={"bold"}>Information</Typography>
-            <Box color={"#393737"}>
+            <Stack color={"#393737"} gap={"6px"}>
               <Typography>FAQ</Typography>
               <Typography>Blog</Typography>
               <Typography>Support</Typography>
-            </Box>
+            </Stack>
           </Stack>
           <Stack gap={"10px"}>
             <Typography fontWeight={"bold"}>Company</Typography>
-            <Box color={"#393737"}>
+            <Stack color={"#393737"} gap={"6px"}>
               <Typography>FAQ</Typography>
               <Typography>About us</Typography>
               <Typography>Careers</Typography>
               <Typography>Contact us</Typography>
               <Typography>Lift Media</Typography>
-            </Box>
+            </Stack>
           </Stack>
           <Stack
             backgroundColor={"#F9F9F9"}
