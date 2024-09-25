@@ -1,5 +1,5 @@
 import { Box, Stack, Typography } from "@mui/material";
-import map from "./assets/map.gif";
+import map from "./assets/realMap.gif";
 import Image from "next/image";
 
 export default function () {

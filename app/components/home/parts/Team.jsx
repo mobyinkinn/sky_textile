@@ -11,6 +11,65 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import anand from "./assets/team/AnandMishra.png";
+import anurag from "./assets/team/Anurag.png";
+import travadai from "./assets/team/MohammadTravadi.png";
+import rajiv from "./assets/team/Rajiv.png";
+import rakes from "./assets/team/Rakes.png";
+import satendar from "./assets/team/Satendar.png";
+import uday from "./assets/team/UdayKambe.png";
+import Vishno from "./assets/team/Vishno.png";
+
+const teamData = [
+  {
+    id: 0,
+    name: "Rajiv Sharma",
+    designation: "AVP Production Fabrics",
+    img: anand,
+  },
+  {
+    id: 0,
+    name: "Vishnoo Pachori",
+    designation: "GM Production Garments",
+    img: anand,
+  },
+  {
+    id: 0,
+    name: "Rakesh Jayaraman",
+    designation: "GM Production Garments",
+    img: anand,
+  },
+  {
+    id: 0,
+    name: "Anand Mishra",
+    designation: "GM Production Garments",
+    img: anand,
+  },
+  {
+    id: 0,
+    name: "Satendra Singh",
+    designation: "GM Production Garments",
+    img: anand,
+  },
+  {
+    id: 0,
+    name: "Anurag Duglach",
+    designation: "GM Production Garments",
+    img: anand,
+  },
+  {
+    id: 0,
+    name: "Uday Kambe",
+    designation: "GM Production Garments",
+    img: anand,
+  },
+  {
+    id: 0,
+    name: "Mohammad Travedi",
+    designation: "GM Production Garments",
+    img: anand,
+  },
+];
 export default function () {
   var settings = {
     // arrows: true,
@@ -21,6 +80,16 @@ export default function () {
     slidesToScroll: 1,
     centerMode: true,
     centerPadding: "8%",
+  };
+  var settingLarge = {
+    arrows: true,
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    // centerMode: true,
+    // centerPadding: "8%",
   };
 
   return (

@@ -9,6 +9,7 @@ import Image from "next/image";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { MdOutlineArrowOutward } from "react-icons/md";
 
 gsap.registerPlugin(useGSAP);
 
@@ -75,7 +76,7 @@ export default function Enduro() {
       );
   });
   return (
-    <Stack margin={"0 50px"} gap={"10px"}>
+    <Stack margin={{ md: "0 50px", xs: "20px" }} gap={"10px"}>
       <Typography
         fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
         textAlign={"center"}
@@ -92,7 +93,7 @@ export default function Enduro() {
         direction={"row"}
         gap={"10px"}
       >
-        <Box
+        <Stack
           width={"40%"}
           height={"70%"}
           position={"relative"}
@@ -103,7 +104,31 @@ export default function Enduro() {
             backgroundPosition: "center center",
           }}
           className="image3"
-        ></Box>
+        >
+          <Stack
+            position={"absolute"}
+            direction={"row"}
+            sx={{
+              top: "80%",
+              backgroundColor: "rgba(0, 0, 0, 0.6)",
+              width: "100%",
+              padding: "20px",
+            }}
+            justifyContent={"space-between"}
+          >
+            <Typography color="white">Enterpreneur's Launchpad</Typography>
+            <Stack
+              backgroundColor={"#E39B97"}
+              width={"25px"}
+              height={"25px"}
+              justifyContent={"center"}
+              alignItems={"center"}
+              borderRadius={"2px"}
+            >
+              <MdOutlineArrowOutward color="white" />
+            </Stack>
+          </Stack>
+        </Stack>
         <Box
           width={"60%"}
           height={"100%"}
@@ -115,7 +140,31 @@ export default function Enduro() {
             backgroundPosition: "center 0px",
           }}
           className="image"
-        ></Box>
+        >
+          <Stack
+            position={"absolute"}
+            direction={"row"}
+            sx={{
+              top: "85%",
+              backgroundColor: "rgba(0, 0, 0, 0.6)",
+              width: "100%",
+              padding: "20px",
+            }}
+            justifyContent={"space-between"}
+          >
+            <Typography color="white">Vibrant Gujarat</Typography>
+            <Stack
+              backgroundColor={"#E39B97"}
+              width={"25px"}
+              height={"25px"}
+              justifyContent={"center"}
+              alignItems={"center"}
+              borderRadius={"2px"}
+            >
+              <MdOutlineArrowOutward color="white" />
+            </Stack>
+          </Stack>
+        </Box>
       </Stack>
       <Stack
         display={{ md: "flex", xs: "none" }}
@@ -136,7 +185,31 @@ export default function Enduro() {
             backgroundPosition: "center 0px",
           }}
           className="image2"
-        ></Box>
+        >
+          <Stack
+            position={"absolute"}
+            direction={"row"}
+            sx={{
+              top: "75%",
+              backgroundColor: "rgba(0, 0, 0, 0.6)",
+              width: "100%",
+              padding: "20px",
+            }}
+            justifyContent={"space-between"}
+          >
+            <Typography color="white">Emerging Legends of Gujarat</Typography>
+            <Stack
+              backgroundColor={"#E39B97"}
+              width={"25px"}
+              height={"25px"}
+              justifyContent={"center"}
+              alignItems={"center"}
+              borderRadius={"2px"}
+            >
+              <MdOutlineArrowOutward color="white" />
+            </Stack>
+          </Stack>
+        </Box>
         <Box
           width={"40%"}
           height={"70%"}
@@ -148,20 +221,70 @@ export default function Enduro() {
             backgroundPosition: "center center",
           }}
           className="image4"
-        ></Box>
+        >
+          <Stack
+            position={"absolute"}
+            direction={"row"}
+            sx={{
+              top: "80%",
+              backgroundColor: "rgba(0, 0, 0, 0.6)",
+              width: "100%",
+              padding: "20px",
+            }}
+            justifyContent={"space-between"}
+          >
+            <Typography color="white">Vibrant Gujarat</Typography>
+            <Stack
+              backgroundColor={"#E39B97"}
+              width={"25px"}
+              height={"25px"}
+              justifyContent={"center"}
+              alignItems={"center"}
+              borderRadius={"2px"}
+            >
+              <MdOutlineArrowOutward color="white" />
+            </Stack>
+          </Stack>
+        </Box>
       </Stack>
       <Stack width={"100%"} gap={"10px"} display={{ md: "none" }}>
         <Box
           width={"100%"}
           height={"40vh"}
+          position="relative"
           sx={{
             backgroundImage: `url(${enduro1.src})`,
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center center",
           }}
-        ></Box>
+        >
+          <Stack
+            position={"absolute"}
+            direction={"row"}
+            sx={{
+              bottom: "5%",
+              backgroundColor: "rgba(0, 0, 0, 0.6)",
+              width: "100%",
+              padding: "20px",
+            }}
+            justifyContent={"space-between"}
+          >
+            <Typography color="white">Emerging Legends of Gujarat</Typography>
+            <Stack
+              backgroundColor={"#E39B97"}
+              width={"25px"}
+              height={"25px"}
+              justifyContent={"center"}
+              alignItems={"center"}
+              borderRadius={"2px"}
+            >
+              <MdOutlineArrowOutward color="white" />
+            </Stack>
+          </Stack>
+        </Box>
         <Box
+          position="relative"
           width={"100%"}
           height={"40vh"}
           sx={{
@@ -170,9 +293,34 @@ export default function Enduro() {
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center center",
           }}
-        ></Box>
+        >
+          <Stack
+            position={"absolute"}
+            direction={"row"}
+            sx={{
+              bottom: "5%",
+              backgroundColor: "rgba(0, 0, 0, 0.6)",
+              width: "100%",
+              padding: "20px",
+            }}
+            justifyContent={"space-between"}
+          >
+            <Typography color="white">Vibrant Gujarat</Typography>
+            <Stack
+              backgroundColor={"#E39B97"}
+              width={"25px"}
+              height={"25px"}
+              justifyContent={"center"}
+              alignItems={"center"}
+              borderRadius={"2px"}
+            >
+              <MdOutlineArrowOutward color="white" />
+            </Stack>
+          </Stack>
+        </Box>
         <Box
           width={"100%"}
+          position="relative"
           height={"40vh"}
           sx={{
             backgroundImage: `url(${enduro3.src})`,
@@ -180,8 +328,33 @@ export default function Enduro() {
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center center",
           }}
-        ></Box>
+        >
+          <Stack
+            position={"absolute"}
+            direction={"row"}
+            sx={{
+              bottom: "5%",
+              backgroundColor: "rgba(0, 0, 0, 0.6)",
+              width: "100%",
+              padding: "20px",
+            }}
+            justifyContent={"space-between"}
+          >
+            <Typography color="white">Enterpreneur's Launchpad</Typography>
+            <Stack
+              backgroundColor={"#E39B97"}
+              width={"25px"}
+              height={"25px"}
+              justifyContent={"center"}
+              alignItems={"center"}
+              borderRadius={"2px"}
+            >
+              <MdOutlineArrowOutward color="white" />
+            </Stack>
+          </Stack>
+        </Box>
         <Box
+          position="relative"
           width={"100%"}
           height={"40vh"}
           sx={{
@@ -190,7 +363,31 @@ export default function Enduro() {
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center center",
           }}
-        ></Box>
+        >
+          <Stack
+            position={"absolute"}
+            direction={"row"}
+            sx={{
+              bottom: "5%",
+              backgroundColor: "rgba(0, 0, 0, 0.6)",
+              width: "100%",
+              padding: "20px",
+            }}
+            justifyContent={"space-between"}
+          >
+            <Typography color="white">Vibrant Gujarat</Typography>
+            <Stack
+              backgroundColor={"#E39B97"}
+              width={"25px"}
+              height={"25px"}
+              justifyContent={"center"}
+              alignItems={"center"}
+              borderRadius={"2px"}
+            >
+              <MdOutlineArrowOutward color="white" />
+            </Stack>
+          </Stack>
+        </Box>
       </Stack>
     </Stack>
   );
