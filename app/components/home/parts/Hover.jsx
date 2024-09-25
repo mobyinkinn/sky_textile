@@ -19,6 +19,7 @@ import img11 from "@/app/components/home/parts/assets/coverImages/image11.jpg";
 import image1 from "@/app/components/home/parts/assets/hoverImages/image1.jpg";
 import image2 from "@/app/components/home/parts/assets/hoverImages/image2.jpg";
 import image3 from "@/app/components/home/parts/assets/hoverImages/image3.jpg";
+import image4 from "@/app/components/home/parts/assets/hoverImages/image4.jpg";
 import image5 from "@/app/components/home/parts/assets/hoverImages/image5.jpg";
 import image6 from "@/app/components/home/parts/assets/hoverImages/image6.jpg";
 import image7 from "@/app/components/home/parts/assets/hoverImages/image7.jpg";
@@ -26,7 +27,6 @@ import image8 from "@/app/components/home/parts/assets/hoverImages/image8.jpg";
 import image9 from "@/app/components/home/parts/assets/hoverImages/image9.jpg";
 import image11 from "@/app/components/home/parts/assets/hoverImages/image11.jpg";
 import image10 from "@/app/components/home/parts/assets/hoverImages/image10.jpg";
-import image4 from "@/app/components/home/parts/assets/hoverImages/image4.jpg";
 
 const coverAnimation = {
   position: "relative",
@@ -39,7 +39,7 @@ const coverAnimation = {
   "& .cover-image": {
     clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)", // Initially hide the hover image
     transition: "clip-path 1s ease", // Smooth transition for hover image
-    transitionDelay: "0.2s",
+    // transitionDelay: "0.2s",
   },
 };
 const cover = {
@@ -105,10 +105,12 @@ const Hover = () => {
   console.log(currentImage);
 
   function setHover(event) {
+    // console.log(event);
     let e = event.target.alt;
-    console.log(e);
+    // console.log(e);
     if (e) {
       let i = (e - 1) % 11;
+      // console.log(i);
       setCurrentImage(i);
       setIsHovered(true);
     } else {

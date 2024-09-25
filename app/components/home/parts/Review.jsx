@@ -31,6 +31,9 @@ const reviewData = [
 
 export default function Reviews() {
   var settings = {
+    autoplay: true,
+    autoplaySpeed: 2000,
+    speed: 1000,
     dots: true,
     infinite: true,
     speed: 500,

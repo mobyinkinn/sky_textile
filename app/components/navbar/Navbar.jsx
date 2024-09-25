@@ -8,8 +8,47 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { MdOutlineClose } from "react-icons/io";
-
+import MuiAccordion from "@mui/material/Accordion";
+import MuiAccordionSummary from "@mui/material/AccordionSummary";
+import MuiAccordionDetails from "@mui/material/AccordionDetails";
+import { FaPlus } from "react-icons/fa6";
+import { styled } from "@mui/material/styles";
 import menu from "./parts/assets/menu.png";
+
+const Accordion = styled((props) => (
+  <MuiAccordion disableGutters elevation={0} square {...props} />
+))(({ theme }) => ({
+  "&:not(:last-child)": {
+    borderBottom: 0,
+  },
+  "&::before": {
+    display: "none",
+  },
+}));
+
+const AccordionSummary = styled((props) => (
+  <MuiAccordionSummary
+    expandIcon={<FaPlus sx={{ fontSize: "0.9rem" }} color={"black"} />}
+    {...props}
+  />
+))(({ theme }) => ({
+  backgroundColor: "rgba(255, 255, 255, .03)",
+  flexDirection: "row",
+  "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
+    transform: "rotate(45deg)",
+  },
+  "& .MuiAccordionSummary-content": {
+    marginLeft: theme.spacing(1),
+  },
+  ...theme.applyStyles("dark", {
+    backgroundColor: "rgba(255, 255, 255, .05)",
+  }),
+}));
+
+const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+  padding: theme.spacing(2),
+  borderTop: "1px solid rgba(0, 0, 0, .125)",
+}));
 
 const navData = [
   {
@@ -22,18 +61,21 @@ const navData = [
         head: "Sky Textiles.",
         data: "In publishing and graphic design.",
         color: "#FFDFE6",
+        route: "/company-profile/sky-textiles",
       },
       {
         id: 1,
         head: "SKY Primwear.",
         data: "Lorem ipsum is a placeholder text.",
         color: "#DFDFFD",
+        route: "/company-profile/sky-textiles",
       },
       {
         id: 2,
         head: "SKY International.",
         data: "used to demonstrate the visual.",
         color: "#DFD5E6",
+        route: "/company-profile/sky-textiles",
       },
     ],
   },
@@ -47,24 +89,28 @@ const navData = [
         head: "Sky Textiles.",
         data: "In publishing and graphic design.",
         color: "#FFDFE6",
+        route: "/infrastructure/sky-textiles",
       },
       {
         id: 1,
         head: "SKY Primwear.",
         data: "Lorem ipsum is a placeholder text.",
         color: "#DFDFFD",
+        route: "/infrastructure/sky-textiles",
       },
       {
         id: 2,
         head: "SKY International.",
         data: "used to demonstrate the visual.",
         color: "#DFD5E6",
+        route: "/infrastructure/sky-textiles",
       },
       {
         id: 3,
         head: "SKY International.",
         data: "used to demonstrate the visual.",
         color: "#DFD5E6",
+        route: "/infrastructure/sky-textiles",
       },
     ],
   },
@@ -78,18 +124,21 @@ const navData = [
         head: "Yarns",
         data: "In publishing and graphic design.",
         color: "#FFDFE6",
+        route: "/products/yarns",
       },
       {
         id: 1,
         head: "Fabrics",
         data: "Lorem ipsum is a placeholder text.",
         color: "#DFDFFD",
+        route: "/products/yarns",
       },
       {
         id: 2,
         head: "Garments",
         data: "used to demonstrate the visual.",
         color: "#DFD5E6",
+        route: "/products/yarns",
       },
     ],
   },
@@ -103,30 +152,35 @@ const navData = [
         head: "Overview",
         data: "In publishing and graphic design.",
         color: "#FFDFE6",
+        route: "/sustainability/overview",
       },
       {
         id: 1,
         head: "Customer Relations",
         data: "Lorem ipsum is a placeholder text.",
         color: "#DFDFFD",
+        route: "/sustainability/overview",
       },
       {
         id: 2,
         head: "Society",
         data: "used to demonstrate the visual.",
         color: "#DFD5E6",
+        route: "/sustainability/overview",
       },
       {
         id: 3,
         head: "Resource Management",
         data: "used to demonstrate the visual.",
         color: "#DFD5E6",
+        route: "/sustainability/overview",
       },
       {
         id: 4,
         head: "Social Responsiblity",
         data: "used to demonstrate the visual.",
         color: "#DFD5E6",
+        route: "/sustainability/overview",
       },
     ],
   },
@@ -140,18 +194,21 @@ const navData = [
         head: "Sky Textiles.",
         data: "In publishing and graphic design.",
         color: "#FFDFE6",
+        route: "/clients/sky-textiles",
       },
       {
         id: 1,
         head: "SKY Primwear.",
         data: "Lorem ipsum is a placeholder text.",
         color: "#DFDFFD",
+        route: "/clients/sky-textiles",
       },
       {
         id: 2,
         head: "SKY International.",
         data: "Lorem ipsum is a placeholder text.",
         color: "#DFDFFD",
+        route: "/clients/sky-textiles",
       },
     ],
   },
@@ -165,36 +222,42 @@ const navData = [
         head: "Vertical Setup",
         data: "In publishing and graphic design.",
         color: "#FFDFE6",
+        route: "why-us/verticle-setup",
       },
       {
         id: 1,
         head: "Cotton Rich  District",
         data: "Lorem ipsum is a placeholder text.",
         color: "#DFDFFD",
+        route: "why-us/verticle-setup",
       },
       {
         id: 2,
         head: "Compliances",
         data: "used to demonstrate the visual.",
         color: "#DFD5E6",
+        route: "why-us/verticle-setup",
       },
       {
         id: 3,
         head: "Transparency",
         data: "used to demonstrate the visual.",
         color: "#DFD5E6",
+        route: "why-us/verticle-setup",
       },
       {
         id: 4,
         head: "Customer Service",
         data: "used to demonstrate the visual.",
         color: "#DFD5E6",
+        route: "why-us/verticle-setup",
       },
       {
         id: 5,
         head: "EnvironMental Sustainablity",
         data: "used to demonstrate the visual.",
         color: "#DFD5E6",
+        route: "why-us/verticle-setup",
       },
     ],
   },
@@ -208,24 +271,28 @@ const navData = [
         head: "Enquiry",
         data: "In publishing and graphic design.",
         color: "#FFDFE6",
+        route: "/get-in-touch/careers",
       },
       {
         id: 1,
         head: "Careers",
         data: "Lorem ipsum is a placeholder text.",
         color: "#DFDFFD",
+        route: "/get-in-touch/careers",
       },
       {
         id: 2,
         head: "Events",
         data: "used to demonstrate the visual.",
         color: "#DFD5E6",
+        route: "/get-in-touch/events",
       },
       {
         id: 2,
         head: "Certifications",
         data: "used to demonstrate the visual.",
         color: "#DFD5E6",
+        route: "/get-in-touch/certifications",
       },
     ],
   },
@@ -240,8 +307,10 @@ export default function Navbar() {
   const pathname = usePathname();
   const [expanded, setExpanded] = useState("");
   const containerRef = React.useRef(null);
-  // console.log(showNav);
-  console.log(pathname);
+
+  const handleChange = (panel) => (event, newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
+  };
 
   const getTrasformStyles = (isHovered) => ({
     transform: `translateY(${isHovered ? "-100%" : "0"})`,
@@ -266,7 +335,7 @@ export default function Navbar() {
         justifyContent={"space-around"}
         alignItems={"center"}
         padding={"15px 0"}
-        position={"sticky"}
+        position={"fixed"}
         backgroundColor={"white"}
         zIndex={"100"}
         top={"0"}
@@ -322,10 +391,12 @@ export default function Navbar() {
                         <Stack
                           key={element.id}
                           backgroundColor={element.color}
+                          onClick={() => router.push(element.route)}
                           sx={{
                             margin: "20px 0",
                             padding: "20px 30px",
                             borderRadius: "10px",
+                            cursor: "pointer",
                           }}
                         >
                           <Typography fontSize={"1.9rem"} fontWeight={"bold"}>
@@ -337,7 +408,6 @@ export default function Navbar() {
                     })}
                   </Stack>
                 )}
-                {/* </Fade> */}
               </Stack>
             );
           })}
@@ -389,7 +459,7 @@ export default function Navbar() {
         ref={containerRef}
         alignItems={"center"}
         padding={"15px 20px"}
-        position={"sticky"}
+        position={"fixed"}
         backgroundColor={"white"}
         zIndex={"100"}
         top={"0"}
@@ -425,6 +495,7 @@ export default function Navbar() {
         <Stack
           width={"100vw"}
           height={"100vh"}
+          display={showNav ? "flex" : "none"}
           position={showNav ? "fixed" : "absolute"}
           top={0}
           left={0}
@@ -488,21 +559,52 @@ export default function Navbar() {
                     ></Box>
                   </Stack>
                 </Stack>
-                <Stack justifyContent={"space-between"} height={"100%"}>
+                <Stack
+                  justifyContent={"space-between"}
+                  height={"100%"}
+                  overflow={"scroll"}
+                >
                   <Stack>
                     {navData.map((el, i) => {
                       return (
-                        <Typography
-                          fontSize={"0.8rem"}
-                          fontWeight={"bold"}
-                          color={pathname === el.route ? "#FB5457" : "black"}
-                          marginBottom={"20px"}
-                          onClick={() => {
-                            router.push(el.route);
-                          }}
+                        <Accordion
+                          expanded={expanded === `panel${i + 1}`}
+                          onChange={handleChange(`panel${i + 1}`)}
                         >
-                          {el.name}
-                        </Typography>
+                          <AccordionSummary
+                            aria-controls="panel1d-content"
+                            id="panel1d-header"
+                          >
+                            <Typography fontWeight={"bold"}>
+                              {el.name}
+                            </Typography>
+                          </AccordionSummary>
+                          <AccordionDetails>
+                            {el.subRoutes.map((d, i) => {
+                              return (
+                                <Stack
+                                  key={d.id}
+                                  backgroundColor={d.color}
+                                  sx={{
+                                    margin: "10px 0",
+                                    padding: "10px 15px",
+                                    borderRadius: "10px",
+                                  }}
+                                >
+                                  <Typography
+                                    fontSize={"1.2rem"}
+                                    fontWeight={"bold"}
+                                  >
+                                    {d.head}
+                                  </Typography>
+                                  <Typography fontSize={"1rem"}>
+                                    {d.data}
+                                  </Typography>
+                                </Stack>
+                              );
+                            })}
+                          </AccordionDetails>
+                        </Accordion>
                       );
                     })}
                   </Stack>

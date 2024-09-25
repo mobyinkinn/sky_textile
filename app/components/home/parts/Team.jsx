@@ -126,7 +126,11 @@ export default function () {
           ))}
         </Slider>
       </Stack>
-      <Stack height={{ smm: "60vh" }} display={{ md: "none", xs: "flex" }}>
+      <Stack
+        height={{ smm: "60vh" }}
+        display={{ md: "none", xs: "flex" }}
+        margin={"30px 20px"}
+      >
         <Slider {...settings}>
           {teamData.map((el, i) => (
             <CardSmall el={el} />
@@ -139,7 +143,11 @@ export default function () {
 
 function CardSmall({ el }) {
   return (
-    <Stack height={"60vh"} width={"90%"} alignItems={"center"}>
+    <Stack
+      height={{ smm: "60vh", xs: "30vh" }}
+      width={"90%"}
+      alignItems={"center"}
+    >
       <Box
         height={{ smm: "60vh", xs: "30vh" }}
         width={"100%"}
@@ -154,15 +162,12 @@ function CardSmall({ el }) {
       ></Box>
       <Typography
         textAlign={"center"}
-        fontSize={{ lg: "1.2rem", xs: "1rem" }}
+        fontSize={{ smm: "1.2rem", xs: "1rem" }}
         fontWeight={"bold"}
       >
         {el.name}
       </Typography>
-      <Typography
-        textAlign={"center"}
-        fontSize={{ lg: "0.9rem", xs: "0.8rem" }}
-      >
+      <Typography textAlign={"center"} fontSize={{ smm: "1rem", xs: "0.8rem" }}>
         {el.designation}
       </Typography>
     </Stack>
