@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <Box
       width={"100%"}
-      height={{ lg: "90vh", smm: "50vh", xs: "30vh" }}
+      height={{ lg: "100vh", smm: "50vh", xs: "30vh" }}
       position={"relative"}
     >
       {/* <Image src={hero} alt="" fill objectFit="cover" /> */}
