@@ -13,63 +13,64 @@ import "slick-carousel/slick/slick-theme.css";
 
 import anand from "./assets/team/AnandMishra.png";
 import anurag from "./assets/team/Anurag.png";
-import travadai from "./assets/team/MohammadTravadi.png";
+import travadi from "./assets/team/MohammadTravadi.png";
 import rajiv from "./assets/team/Rajiv.png";
 import rakes from "./assets/team/Rakes.png";
 import satendar from "./assets/team/Satendar.png";
 import uday from "./assets/team/UdayKambe.png";
-import Vishno from "./assets/team/Vishno.png";
+import vishno from "./assets/team/Vishno.png";
 
 const teamData = [
   {
     id: 0,
     name: "Rajiv Sharma",
     designation: "AVP Production Fabrics",
-    img: anand,
+    img: rajiv,
   },
   {
-    id: 0,
+    id: 1,
     name: "Vishnoo Pachori",
-    designation: "GM Production Garments",
-    img: anand,
+    designation: "VP Marketing Fabrics",
+    img: vishno,
   },
   {
-    id: 0,
+    id: 2,
     name: "Rakesh Jayaraman",
-    designation: "GM Production Garments",
-    img: anand,
+    designation: "VP Marketing Garments",
+    img: rakes,
   },
   {
-    id: 0,
+    id: 3,
     name: "Anand Mishra",
     designation: "GM Production Garments",
     img: anand,
   },
   {
-    id: 0,
+    id: 4,
     name: "Satendra Singh",
-    designation: "GM Production Garments",
-    img: anand,
+    designation: "Head Accounts & Commercial",
+    img: satendar,
   },
   {
-    id: 0,
+    id: 5,
     name: "Anurag Duglach",
-    designation: "GM Production Garments",
-    img: anand,
+    designation: "Head Ecommerce & Social Media",
+    img: anurag,
   },
   {
-    id: 0,
+    id: 6,
     name: "Uday Kambe",
-    designation: "GM Production Garments",
-    img: anand,
+    designation: "Head IT",
+    img: uday,
   },
   {
-    id: 0,
+    id: 7,
     name: "Mohammad Travedi",
-    designation: "GM Production Garments",
-    img: anand,
+    designation: "GM B2B",
+    img: travadi,
   },
 ];
+
 export default function () {
   var settings = {
     // arrows: true,
@@ -114,102 +115,97 @@ export default function () {
         Professionals
       </Typography>
       <Stack
-        direction={"row"}
-        justifyContent={"center"}
+        width={"90%"}
+        margin={"0px auto"}
         marginTop={"40px"}
-        gap={"10px"}
         display={{ md: "flex", xs: "none" }}
       >
-        <Stack height={"50vh"} width={"20vw"} alignItems={"center"}>
-          <Box position={"relative"} height={"100%"} width={"100%"}>
-            <Image src={megan} alt="" fill objectFit="contain" sizes="100vw" />
-          </Box>
-          <Typography fontSize={"1.2rem"} fontWeight={"bold"}>
-            Megan Palms
-          </Typography>
-          <Typography fontSize={"0.9rem"}> Marketing Director</Typography>
-        </Stack>
-        <Stack height={"50vh"} width={"20vw"} alignItems={"center"}>
-          <Box position={"relative"} height={"100%"} width={"100%"}>
-            <Image src={team2} alt="" fill objectFit="contain" sizes="100vw" />
-          </Box>
-          <Typography fontSize={"1.2rem"} fontWeight={"bold"}>
-            Megan Palms
-          </Typography>
-          <Typography fontSize={"0.9rem"}>Marketing Director</Typography>
-        </Stack>
-        <Stack height={"50vh"} width={"20vw"} alignItems={"center"}>
-          <Box position={"relative"} height={"100%"} width={"100%"}>
-            <Image src={team3} alt="" fill objectFit="contain" sizes="100vw" />
-          </Box>
-          <Typography fontSize={"1.2rem"} fontWeight={"bold"}>
-            Megan Palms
-          </Typography>
-          <Typography fontSize={"0.9rem"}>Marketing Director</Typography>
-        </Stack>
-        <Stack height={"50vh"} width={"20vw"} alignItems={"center"}>
-          <Box position={"relative"} height={"100%"} width={"100%"}>
-            <Image src={team2} alt="" fill objectFit="contain" sizes="100vw" />
-          </Box>
-          <Typography fontSize={"1.2rem"} fontWeight={"bold"}>
-            Megan Palms
-          </Typography>
-          <Typography fontSize={"0.9rem"}>Marketing Director</Typography>
-        </Stack>
+        <Slider {...settingLarge}>
+          {teamData.map((el, i) => (
+            <Card el={el} />
+          ))}
+        </Slider>
       </Stack>
       <Stack height={{ smm: "60vh" }} display={{ md: "none", xs: "flex" }}>
         <Slider {...settings}>
-          <Box padding={"10px"}>
-            <Box
-              height={{ smm: "60vh", xs: "30vh" }}
-              sx={{
-                backgroundImage: `url(${megan.src})`,
-                transition: "filter 0.5s ease",
-                backgroundSize: "cover",
-                borderRadius: "20px",
-                backgroundPosition: "center center",
-              }}
-            ></Box>
-          </Box>
-          <Box padding={"10px"}>
-            <Box
-              height={{ smm: "60vh", xs: "30vh" }}
-              sx={{
-                backgroundImage: `url(${team3.src})`,
-                transition: "filter 0.5s ease",
-                backgroundSize: "cover",
-                borderRadius: "20px",
-                backgroundPosition: "center center",
-                cursor: "pointer",
-              }}
-            ></Box>
-          </Box>
-          <Box padding={"10px"}>
-            <Box
-              height={{ smm: "60vh", xs: "30vh" }}
-              sx={{
-                backgroundImage: `url(${team2.src})`,
-                transition: "filter 0.5s ease",
-                backgroundSize: "cover",
-                borderRadius: "20px",
-                backgroundPosition: "center center",
-              }}
-            ></Box>
-          </Box>
-          <Box padding={"10px"}>
-            <Box
-              height={{ smm: "60vh", xs: "30vh" }}
-              sx={{
-                backgroundImage: `url(${megan.src})`,
-                transition: "filter 0.5s ease",
-                backgroundSize: "cover",
-                borderRadius: "20px",
-                backgroundPosition: "center center",
-              }}
-            ></Box>
-          </Box>
+          {teamData.map((el, i) => (
+            <CardSmall el={el} />
+          ))}
         </Slider>
       </Stack>
+    </Stack>
+  );
+}
+
+function CardSmall({ el }) {
+  return (
+    <Stack height={"60vh"} width={"90%"} alignItems={"center"}>
+      <Box
+        height={{ smm: "60vh", xs: "30vh" }}
+        width={"100%"}
+        sx={{
+          backgroundImage: `url(${el.img.src})`,
+          backgroundSize: "contain",
+          backgroundColor: "#E7E7E7",
+          backgroundRepeat: "no-repeat",
+          borderRadius: "20px",
+          backgroundPosition: "center center",
+        }}
+      ></Box>
+      <Typography
+        textAlign={"center"}
+        fontSize={{ lg: "1.2rem", xs: "1rem" }}
+        fontWeight={"bold"}
+      >
+        {el.name}
+      </Typography>
+      <Typography
+        textAlign={"center"}
+        fontSize={{ lg: "0.9rem", xs: "0.8rem" }}
+      >
+        {el.designation}
+      </Typography>
+    </Stack>
+  );
+}
+
+function Card({ el }) {
+  return (
+    <Stack
+      height={"fit-content"}
+      width={"20vw"}
+      marginBottom={"50px"}
+      alignItems={"center"}
+    >
+      <Box
+        position={"relative"}
+        height={{ lg: "40vh", xs: "30vh" }}
+        width={"100%"}
+        backgroundColor={"#E7E7E7"}
+        borderRadius={"5px"}
+      >
+        <Image
+          src={el.img}
+          alt=""
+          fill
+          objectPosition="bottom"
+          objectFit="contain"
+          sizes="100vw"
+        />
+      </Box>
+      <Typography
+        textAlign={"center"}
+        fontSize={{ lg: "1.2rem", xs: "1rem" }}
+        fontWeight={"bold"}
+      >
+        {el.name}
+      </Typography>
+      <Typography
+        textAlign={"center"}
+        fontSize={{ lg: "0.9rem", xs: "0.8rem" }}
+      >
+        {el.designation}
+      </Typography>
     </Stack>
   );
 }

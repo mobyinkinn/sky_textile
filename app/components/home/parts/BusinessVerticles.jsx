@@ -14,7 +14,7 @@ import ReactLenis from "@studio-freight/react-lenis";
 
 gsap.registerPlugin(useGSAP);
 
-export default function BusinessVerticles() {
+export default function BusinessVerticles({ mapRef }) {
   const container = useRef(null);
   useGSAP(() => {
     const innerHeight = window.innerHeight;
@@ -104,8 +104,8 @@ export default function BusinessVerticles() {
         scrollTrigger: {
           trigger: ".garmentsContainer",
           start: "center 35%",
-          endTrigger: ".garmentsContainer",
-          end: "bottom center",
+          endTrigger: mapRef.current,
+          end: "top bottom",
           anticipatePin: 0.1,
           inertia: false,
           pin: true,
@@ -141,8 +141,8 @@ export default function BusinessVerticles() {
       scrollTrigger: {
         trigger: ".imageContainer",
         start: "top 15%",
-        endTrigger: ".garmentsContainer",
-        end: "bottom center",
+        endTrigger: mapRef.current,
+        end: "top bottom",
         anticipatePin: 0.1,
         inertia: false,
         pin: true,

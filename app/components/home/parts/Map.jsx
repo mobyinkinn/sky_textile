@@ -2,9 +2,9 @@ import { Box, Stack, Typography } from "@mui/material";
 import map from "./assets/realMap.gif";
 import Image from "next/image";
 
-export default function () {
+export default function ({ mapRef }) {
   return (
-    <Stack margin={{ md: "300px 0 100px 0", xs: "30px 0" }}>
+    <Stack margin={{ md: "300px 0 100px 0", xs: "30px 0" }} ref={mapRef}>
       <Typography
         fontSize={{ md: "3rem", smm: "2rem", xs: "1.5rem" }}
         sx={{
