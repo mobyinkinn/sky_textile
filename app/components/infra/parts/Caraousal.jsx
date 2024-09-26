@@ -4,34 +4,51 @@ import { Stack, Typography } from "@mui/material";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
-import knitting from "./assets/knitting.png";
 import { useRef, useState } from "react";
+
+import dyeing from "./assets/main/dyeing.jpg";
+import design from "./assets/main/design.jpg";
+import cutting from "./assets/main/cutting.jpg";
+import printing from "./assets/main/printing.jpg";
+import sewing from "./assets/main/sewing.jpg";
+import warehousing from "./assets/main/warehousing.jpg";
 
 const processData = [
   {
     id: 0,
-    head: "Knitting",
-    img: knitting,
-    data: "Our Knitting Facility Is Capable Of Producing A Total Of 15 Tons Of High-quality Knitted Fabrics Per Day. It Is Well-equipped With Advanced High-speed Automatic Circular (Mayer & Cie) & Flat Knitting (Matsuya) Machines.",
+    head: "Dyeing",
+    img: dyeing,
+    data: "Our advanced dyeing machines ensure precise and consistent color application, delivering high-quality, vibrant fabrics with superior durability.",
   },
   {
     id: 1,
-    head: "Knitting 2",
-    img: knitting,
-    data: "Our Knitting Facility Is Capable Of Producing A Total Of 15 Tons Of High-quality Knitted Fabrics Per Day. It Is Well-equipped With Advanced High-speed Automatic Circular (Mayer & Cie) & Flat Knitting (Matsuya) Machines.",
+    head: "Printing",
+    img: printing,
+    data: "Fabric printing at our textile company utilizes various advanced techniques, including pigment, reactive, discharge, disperse, and burnout printing.",
   },
   {
     id: 2,
-    head: "Knitting 3",
-    img: knitting,
-    data: "Our Knitting Facility Is Capable Of Producing A Total Of 15 Tons Of High-quality Knitted Fabrics Per Day. It Is Well-equipped With Advanced High-speed Automatic Circular (Mayer & Cie) & Flat Knitting (Matsuya) Machines.",
+    head: "Design Studios",
+    img: design,
+    data: "The brand's design studios buzz with innovation, where talented designers conceptualize and sketch breathtaking fashion ideas. Equipped with the latest design software and an extensive library of resources, the studios inspire the creation of captivating collections.",
   },
   {
     id: 3,
-    head: "Knitting 4",
-    img: knitting,
-    data: "Our Knitting Facility Is Capable Of Producing A Total Of 15 Tons Of High-quality Knitted Fabrics Per Day. It Is Well-equipped With Advanced High-speed Automatic Circular (Mayer & Cie) & Flat Knitting (Matsuya) Machines.",
+    head: "Cutting and Pattern Making Departments",
+    img: cutting,
+    data: "Precision and meticulousness define the cutting and pattern making departments. Equipped with state-of-the-art equipment, skilled artisans ensure that each garment's pattern is flawless, maximizing fabric utilization and minimizing waste.",
+  },
+  {
+    id: 4,
+    head: "Sewing and Production Lines",
+    img: sewing,
+    data: "The heart of the factory lies in its production lines, where skilled tailors and seamstresses translate designs into reality. Combining traditional craftsmanship with modern techniques, they sew, stitch, and assemble garments with utmost care and attention to detail.",
+  },
+  {
+    id: 5,
+    head: "Warehousing and Distribution Facilities",
+    img: warehousing,
+    data: "The factory's warehousing and distribution facilities are efficient and well-organized, ensuring smooth inventory management and timely global deliveries.",
   },
 ];
 

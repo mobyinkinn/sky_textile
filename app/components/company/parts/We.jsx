@@ -40,28 +40,55 @@ export default function We() {
         />
       </Box>
       <Typography>
-        We are thrilled to announce that SKY Textiles has emerged as a premier
-        fully vertical facility, offering a comprehensive, one-stop solution for
-        all your garment needs. From raw cotton to finished apparel, we handle
-        every stage of production, including design, development, sourcing,
-        industrial manufacturing, and sales. Our mission is to empower our
-        clients by helping them unlock new possibilities and innovations in
-        their product lines. Through close collaboration, we craft unique,
-        high-quality garments that inspire confidence and bring delight to every
-        customer.
+        We are a fully integrated textile company, providing a one-stop solution
+        for all your textile and garment needs. From sourcing the finest cotton
+        to delivering high-quality finished garments, our vertical setup ensures
+        seamless production, reducing both costs and lead times. By streamlining
+        the entire process under one roof, we eliminate the need for multiple
+        vendors and minimize transportation delays, allowing for quicker, more
+        efficient service. Our commitment to excellence is reflected in the
+        top-notch quality of our products, paired with an unparalleled level of
+        customer service. Equipped with cutting-edge technology and a focus on
+        innovation, we continually push the boundaries of what’s possible in the
+        textile industry. At Sky Textiles, we don’t just produce garments; we
+        deliver solutions that meet your unique needs with speed, precision, and
+        quality that stands out in the market.
       </Typography>
       <Typography>
         Founded in October 2020 under the Companies Act of 2013 (CIN:
-        U17299GJ2020PTC116984), SKY Textiles is headquartered at B-105, Westgate
-        Tower Unit 2, near YMCA Club, S.G. Highway, Makarba, Ahmedabad, Gujarat.
-        We take pride in our cutting-edge vertical facility, located at Survey
-        No Paiki, 32 & 33, Bhavnagar Road, Lathidad, District Botad, Gujarat.
+        U17299GJ2020PTC116984), SKY Textiles is headquartered in Gujarat at
+        B-105, Westgate Tower Unit 2, near YMCA Club, S.G. Highway, Makarba,
+        Ahmedabad-380015. Our state-of-the-art facility is located in Cotton
+        rich district of Gujarat ie:Botad is equipped with advanced technology
+        for producing premium cotton threads in various counts.
       </Typography>
       <Typography>
-        With our commitment to excellence, innovation, and customer
-        satisfaction, SKY Textiles is poised to become a leading partner for all
-        your garment production needs. We look forward to an exciting journey
-        ahead, creating world-class apparel together !
+        Specializing in high-quality, competitively priced garments for the
+        global market, we offer a wide range of apparel, including polo
+        t-shirts, crew necks, tracks, boxers, hoodies, and more, catering to
+        men, women, kids, and infants. With cutting-edge infrastructure,
+        advanced software, and a team of dedicated professionals, SKY Textiles
+        is committed to innovation and excellence. From modest beginnings, we
+        have grown rapidly, supplying some of the world’s top apparel brands and
+        expanding our global reach.
+      </Typography>
+      <Typography>
+        After four years of operation, SKY Textiles has evolved into a key
+        player in the global textile industry. Our fully integrated, vertically
+        structured setup has proven to be a game-changer, enabling us to reduce
+        costs and production times while maintaining the highest standards of
+        quality. With cutting-edge technology, we've expanded our capabilities
+        to produce a wide range of garments, including polo t-shirts, crew
+        necks, tracks, boxers, and hoodies, for men, women, kids, and infants.
+      </Typography>
+      <Typography>
+        Today, we proudly partner with some of the world's most recognized
+        apparel brands, delivering tailored solutions that meet their unique
+        needs. Our advanced infrastructure and innovative approach have allowed
+        us to consistently push the boundaries of what's possible in garment
+        manufacturing. As we continue to grow, we remain committed to providing
+        excellence, innovation, and unmatched service, expanding our global
+        reach and impact in the fashion industry.
       </Typography>
 
       <Stack

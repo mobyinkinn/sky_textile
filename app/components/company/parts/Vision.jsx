@@ -14,20 +14,20 @@ const data = [
   {
     id: 0,
     icon: icon1,
-    head: "Knitting",
-    body: " The process of creating fabric by interlocking yarn loops to form flexible, stretchable textiles.",
+    head: "Quality",
+    body: "Delivering uncompromised quality across yarns, textile fabrics, and garments, ensuring excellence at every stage of production.",
   },
   {
     id: 1,
     icon: icon2,
-    head: "Dyeing",
-    body: "Applying color to fabric through various methods to achieve vibrant and consistent shades.",
+    head: "Service",
+    body: "Delivering end-to-end textile solutions, from yarn to finished garments, with a commitment to quality, innovation, and customer satisfaction.",
   },
   {
     id: 2,
     icon: icon3,
-    head: "Finishing",
-    body: " Enhancing fabric properties like texture, strength, and appearance through treatments and processes after knitting and dyeing.",
+    head: "Transparency",
+    body: "Building trust through complete transparency in every step of our process, ensuring clarity and confidence for our customers.",
   },
 ];
 
@@ -112,21 +112,21 @@ export default function Vision() {
             fontWeight={"bold"}
             className="visionHead"
           >
-            Vision
+            Yarns
           </Typography>
           <Typography
             fontSize={{ lg: "3.5rem", md: "2.5rem" }}
             fontWeight={"bold"}
             className="missionHead"
           >
-            Mission
+            Fabrics
           </Typography>
           <Typography
             fontSize={{ lg: "3.5rem", md: "2.5rem" }}
             fontWeight={"bold"}
             className="valuesHead"
           >
-            Values
+            Garment
           </Typography>
         </Stack>
         <Stack width={{ md: "60%" }}>
@@ -138,15 +138,15 @@ export default function Vision() {
               color={"#FB5457"}
               fontSize={"3rem"}
             >
-              Vision
+              Yarns
             </Typography>
             <Typography
               fontSize={{ lg: "3rem", xs: "2rem" }}
               fontWeight={"bold"}
               className="vision"
             >
-              Lead the industry with innovative, sustainable textile solutions
-              for eco-friendly fashion.
+              Delivering uncompromised quality across yarns, textile fabrics,
+              and garments, ensuring excellence at every stage of production.
             </Typography>
           </Box>
           <Box height={{ md: "90vh" }}>
@@ -157,15 +157,15 @@ export default function Vision() {
               color={"#9C38F1"}
               fontSize={"3rem"}
             >
-              Mission
+              Fabrics
             </Typography>
             <Typography
               fontSize={{ lg: "3rem", xs: "2rem" }}
               fontWeight={"bold"}
               className="mission"
             >
-              Produce high-quality, sustainable textiles through innovation and
-              ethical practices.
+              Where comfort meets innovation, creating a seamless blend of
+              flexibility and style
             </Typography>
           </Box>
           <Box height={{ md: "90vh" }}>
@@ -176,15 +176,15 @@ export default function Vision() {
               marginTop={"20px"}
               fontSize={"3rem"}
             >
-              Values
+              Garment
             </Typography>
             <Typography
               fontSize={{ lg: "3rem", xs: "2rem" }}
               fontWeight={"bold"}
               className="values"
             >
-              Quality, Sustainability, Innovation, Integrity, Customer Focus,
-              Collaboration, Responsibility
+              Crafting excellence with every stitch, turning vision into vibrant
+              fashion.
             </Typography>
           </Box>
         </Stack>

@@ -6,6 +6,11 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import img1 from "./assets/main/1.jpg";
+import img2 from "./assets/main/2.jpg";
+import img3 from "./assets/main/3.jpg";
+import img4 from "./assets/main/4.jpg";
+
 export default function Our() {
   var settings = {
     arrows: false,
@@ -27,15 +32,15 @@ export default function Our() {
       </Typography>
       <Typography>
         We are India's only composite manufacturing plant having
-        state-of-the-art manufacturing facilities right from Fiber to Made-ups.
-        With an area of 82,100 sq.mtrs. We are equipped with highly advanced and
-        modern machineries like Knitting, Singeing, Inspection, Processing,
-        Cutting, Embroidery, Stitching & Packing facilities that helps us in
-        delivering an impeccable range.
+        state-of-the-art manufacturing facilities right from Fiber to Made-ups..
+        We are equipped with highly advanced and modern machineries like
+        Knitting, Singeing, Inspection, Processing, Cutting, Embroidery,
+        Stitching & Packing facilities that helps us in delivering an impeccable
+        range.
       </Typography>
       <Typography>
         Today SKY textiles has Unit at Lathidad manufacturing a wide range of
-        kintted fabrics for Indian and International markets.
+        knitted fabrics for Indian and International markets.
       </Typography>
       <Stack
         direction={"row"}
@@ -47,9 +52,10 @@ export default function Our() {
           width={"20%"}
           height={"100%"}
           sx={{
-            backgroundImage: `url(${img.src})`,
+            backgroundImage: `url(${img1.src})`,
             transition: "filter 0.5s ease",
             backgroundSize: "cover",
+            backgroundPosition: "center center",
             borderRadius: "20px",
             filter: "grayscale(100%)",
             cursor: "pointer",
@@ -62,9 +68,10 @@ export default function Our() {
           width={"20%"}
           height={"100%"}
           sx={{
-            backgroundImage: `url(${img.src})`,
+            backgroundImage: `url(${img2.src})`,
             transition: "filter 0.5s ease",
             backgroundSize: "cover",
+            backgroundPosition: "center center",
             borderRadius: "20px",
             cursor: "pointer",
             filter: "grayscale(100%)",
@@ -77,8 +84,9 @@ export default function Our() {
           width={"20%"}
           height={"100%"}
           sx={{
-            backgroundImage: `url(${img.src})`,
+            backgroundImage: `url(${img3.src})`,
             backgroundSize: "cover",
+            backgroundPosition: "center center",
             borderRadius: "20px",
             cursor: "pointer",
             filter: "grayscale(100%)",
@@ -92,7 +100,8 @@ export default function Our() {
           width={"20%"}
           height={"100%"}
           sx={{
-            backgroundImage: `url(${img.src})`,
+            backgroundImage: `url(${img4.src})`,
+            backgroundPosition: "center center",
             transition: "filter 0.5s ease",
             backgroundSize: "cover",
             borderRadius: "20px",
@@ -110,7 +119,26 @@ export default function Our() {
             <Box
               height={{ smm: "60vh", xs: "30vh" }}
               sx={{
-                backgroundImage: `url(${img.src})`,
+                backgroundImage: `url(${img1.src})`,
+                transition: "filter 0.5s ease",
+                backgroundSize: "cover",
+                backgroundPosition: "center center",
+                borderRadius: "20px",
+                backgroundPosition: "center center",
+                filter: "grayscale(100%)",
+                cursor: "pointer",
+                "&:hover": {
+                  filter: "grayscale(0%)",
+                },
+              }}
+            ></Box>
+          </Box>
+          <Box padding={"10px"}>
+            <Box
+              height={{ smm: "60vh", xs: "30vh" }}
+              sx={{
+                backgroundImage: `url(${img2.src})`,
+                backgroundPosition: "center center",
                 transition: "filter 0.5s ease",
                 backgroundSize: "cover",
                 borderRadius: "20px",
@@ -127,7 +155,8 @@ export default function Our() {
             <Box
               height={{ smm: "60vh", xs: "30vh" }}
               sx={{
-                backgroundImage: `url(${img.src})`,
+                backgroundImage: `url(${img3.src})`,
+                backgroundPosition: "center center",
                 transition: "filter 0.5s ease",
                 backgroundSize: "cover",
                 borderRadius: "20px",
@@ -144,24 +173,8 @@ export default function Our() {
             <Box
               height={{ smm: "60vh", xs: "30vh" }}
               sx={{
-                backgroundImage: `url(${img.src})`,
-                transition: "filter 0.5s ease",
-                backgroundSize: "cover",
-                borderRadius: "20px",
+                backgroundImage: `url(${img4.src})`,
                 backgroundPosition: "center center",
-                filter: "grayscale(100%)",
-                cursor: "pointer",
-                "&:hover": {
-                  filter: "grayscale(0%)",
-                },
-              }}
-            ></Box>
-          </Box>
-          <Box padding={"10px"}>
-            <Box
-              height={{ smm: "60vh", xs: "30vh" }}
-              sx={{
-                backgroundImage: `url(${img.src})`,
                 transition: "filter 0.5s ease",
                 backgroundSize: "cover",
                 borderRadius: "20px",

@@ -382,6 +382,7 @@ export default function Navbar() {
                       width: "100%",
                       justifyContent: "center",
                       gap: "20px",
+                      borderTop: "1px solid black",
                       borderBottom: "1px solid black",
                     }}
                     onMouseLeave={() => setShowSubRoutes(false)}
@@ -397,6 +398,12 @@ export default function Navbar() {
                             padding: "20px 30px",
                             borderRadius: "10px",
                             cursor: "pointer",
+                            boxShadow: "inset 0 0 0 0 rgba(255, 255, 255, 0.4)",
+                            transition: "ease-out 0.5s",
+                            "&: hover": {
+                              boxShadow:
+                                "inset 0 -300px 0 0 rgba(255, 255, 255, 0.9)",
+                            },
                           }}
                         >
                           <Typography fontSize={"1.9rem"} fontWeight={"bold"}>

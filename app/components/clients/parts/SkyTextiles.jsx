@@ -445,6 +445,7 @@ export default function SkyTextiles() {
             </Stack>
             <Stack
               width={{ lg: "70%", md: "100%" }}
+              padding={"20px"}
               paddingLeft={0}
               direction={"row"}
               gap={"20px"}
@@ -462,6 +463,7 @@ export default function SkyTextiles() {
             </Stack>
             <Stack
               width={{ lg: "70%", md: "100%" }}
+              padding={"20px"}
               paddingLeft={0}
               direction={"row"}
               gap={"20px"}

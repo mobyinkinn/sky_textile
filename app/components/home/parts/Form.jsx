@@ -1,6 +1,12 @@
 import { Button, Stack, TextField, Typography } from "@mui/material";
+import { useState } from "react";
+
+const getTrasformStyles = (isHovered) => ({
+  transform: `translateY(${isHovered ? "-100%" : "0"})`,
+});
 
 export default function Form() {
+  const [isHovered, setIsHovered] = useState(false);
   return (
     <Stack
       margin={{
@@ -29,10 +35,10 @@ export default function Form() {
       </Typography>
 
       <Stack
-        width={{xll:"60vw",smm:"60vw",sm:"none"}}
+        width={{ xll: "60vw", smm: "60vw", sm: "none" }}
         gap={"10px"}
         alignItems={"center"}
-        margin={{xll:"30px auto", smm:"30px auto", sm:"0px"}}
+        margin={{ xll: "30px auto", smm: "30px auto", sm: "0px" }}
       >
         <Stack
           direction={{ xll: "row", smm: "row", sm: "column" }}
@@ -113,12 +119,31 @@ export default function Form() {
           }}
         />
       </Stack>
-      <Button
-        variant="contained"
-        sx={{ width: "200px", margin: "auto", backgroundColor: "black" }}
+      <button
+        style={{
+          color: "white",
+          backgroundColor: "black",
+          padding: "10px 25px",
+          borderRadius: "5px",
+          fontWeight: "bold",
+          width: "fit-content",
+          margin: "0 auto",
+          cursor: "pointer",
+          outline: "none",
+          border: "none",
+        }}
+        onMouseEnter={() => {
+          setIsHovered(true);
+        }}
+        onMouseLeave={() => {
+          setIsHovered(false);
+        }}
       >
-        Send Request
-      </Button>
+        <span className="fancy-button-text-container">
+          <span style={getTrasformStyles(isHovered)}>Contact</span>
+          <span style={getTrasformStyles(isHovered)}>Contact</span>
+        </span>
+      </button>
     </Stack>
   );
 }

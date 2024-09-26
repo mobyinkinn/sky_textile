@@ -1,3 +1,5 @@
+"use client";
+
 import { Box, Stack, Typography } from "@mui/material";
 import Navbar from "../../navbar/Navbar";
 import Footer from "../../footer/Footer";
@@ -9,8 +11,17 @@ import tree from "./assets/sustainable.gif";
 import sun from "./assets/sun.png";
 import maskGroup from "./assets/maskgroup.png";
 import bg from "./assets/bgVector.png";
+import graph from "./assets/graph.png";
+import happyMan from "./assets/happyMan.png";
+
+import community from "./assets/1.jpg";
+import curiosity from "./assets/2.jpg";
+import collab from "./assets/3.jpg";
+import { useState } from "react";
 
 export default function SkyTextiles() {
+  const [img, setImg] = useState(community);
+  const [activeDiv, setActiveDiv] = useState(0);
   return (
     <Stack>
       <Navbar />
@@ -228,6 +239,115 @@ export default function SkyTextiles() {
             <Image src={tree} fill objectFit="contain" />
           </Stack>
         </Stack>
+      </Stack>
+      <Stack
+        direction={{ md: "row" }}
+        gap={"20px"}
+        backgroundColor={"#f9f9f9"}
+        padding={{ lg: "50px 70px", xs: "30px" }}
+        marginBottom={"70px"}
+      >
+        <Stack width={{ md: "60%" }}>
+          <Typography
+            fontWeight={"bold"}
+            fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
+          >
+            We Are Passionate About
+          </Typography>
+          <Typography
+            fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
+            fontWeight={"bold"}
+          >
+            Solving Problems
+          </Typography>
+          <Stack margin={{ lg: "40px 0" }}>
+            <Stack
+              width={{ lg: "70%", md: "100%" }}
+              padding={"20px"}
+              paddingLeft={0}
+              direction={"row"}
+              gap={"20px"}
+              color={activeDiv === 0 ? "black" : "#d2d2d2"}
+              onMouseEnter={() => {
+                setImg(community), setActiveDiv(0);
+              }}
+              sx={{
+                cursor: "pointer",
+              }}
+            >
+              <Image src={graph} alt="" width={50} height={50} />
+              <Stack gap={"10px"}>
+                <Typography fontSize={"1rem"} fontWeight={"bold"}>
+                  Community
+                </Typography>
+                <Typography fontSize={"1rem"}>
+                  It is a Long Established Fact That a Reader Will Be Distracted
+                  By The Readable Content of a Page When Looking At Its Layout.
+                </Typography>
+              </Stack>
+            </Stack>
+            <Stack
+              width={{ lg: "70%", md: "100%" }}
+              padding={"20px"}
+              paddingLeft={0}
+              direction={"row"}
+              gap={"20px"}
+              color={activeDiv === 1 ? "black" : "#d2d2d2"}
+              onMouseEnter={() => {
+                setImg(curiosity), setActiveDiv(1);
+              }}
+              sx={{
+                cursor: "pointer",
+              }}
+            >
+              <Image src={graph} alt="" width={50} height={50} />
+              <Stack gap={"10px"}>
+                <Typography fontSize={"1rem"} fontWeight={"bold"}>
+                  Curiosity
+                </Typography>
+                <Typography fontSize={"1rem"}>
+                  It is a Long Established Fact That a Reader Will Be Distracted
+                  By The Readable Content of a Page When Looking At Its Layout.
+                </Typography>
+              </Stack>
+            </Stack>
+            <Stack
+              width={{ lg: "70%", md: "100%" }}
+              padding={"20px"}
+              paddingLeft={0}
+              direction={"row"}
+              gap={"20px"}
+              color={activeDiv === 2 ? "black" : "#d2d2d2"}
+              onMouseEnter={() => {
+                setImg(collab), setActiveDiv(2);
+              }}
+              sx={{
+                cursor: "pointer",
+              }}
+            >
+              <Image src={graph} alt="" width={50} height={50} />
+              <Stack gap={"10px"}>
+                <Typography fontSize={"1rem"} fontWeight={"bold"}>
+                  Collaboration
+                </Typography>
+                <Typography fontSize={"1rem"}>
+                  It is a Long Established Fact That a Reader Will Be Distracted
+                  By The Readable Content of a Page When Looking At Its Layout.
+                </Typography>
+              </Stack>
+            </Stack>
+          </Stack>
+        </Stack>
+        <Stack
+          height={"90vh"}
+          width={{ md: "40%" }}
+          sx={{
+            backgroundImage: `url(${img.src})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            borderRadius: "30px",
+          }}
+        ></Stack>
       </Stack>
       <Stack
         direction={{ md: "row", xs: "column-reverse" }}
