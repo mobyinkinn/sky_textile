@@ -10,22 +10,28 @@ import hannah from "./assets/hannah.png";
 import stars from "./assets/stars.png";
 import quotes from "./assets/quotes.png";
 import Image from "next/image";
+import richa from "./assets/richa.png";
+import shakti from "./assets/shakti.png";
+import tropic from "./assets/tropic.png";
 
 const reviewData = [
   {
     id: 0,
     name: "Richa Global Export",
     data: "Thank you for consistently providing high-quality products and timely deliveries. Your reliability and dedication have greatly contributed to improving our business operations. We truly value your support and look forward to continuing our successful partnership.",
+    img: richa,
   },
   {
     id: 1,
     name: "Shakti Knitting",
     data: "Thank you for consistently providing tested quality fabrics. Your commitment ensures we achieve the best results, greatly benefiting our business.",
+    img: shakti,
   },
   {
     id: 2,
     name: "Tropic Knitting India",
     data: "We are truly impressed by your vertical setup, from cotton to garment production. This seamless integration ensures exceptional quality and efficiency, which has greatly benefited our business.",
+    img: tropic,
   },
 ];
 
@@ -62,7 +68,7 @@ export default function Reviews() {
       >
         <Slider {...settings}>
           {reviewData.map((el, i) => (
-            <ReviewsCard name={el.name} data={el.data} />
+            <ReviewsCard image={el.img} name={el.name} data={el.data} />
           ))}
         </Slider>
       </Box>
@@ -70,7 +76,7 @@ export default function Reviews() {
   );
 }
 
-function ReviewsCard({ name, data }) {
+function ReviewsCard({ name, data, image }) {
   return (
     <Stack
       padding={{ md: "0 10px 20px 10px", xs: "10px" }}
@@ -80,7 +86,16 @@ function ReviewsCard({ name, data }) {
       alignItems={"center"}
     >
       <Stack textAlign={"center"} width={{ md: "30%" }} alignItems={"center"}>
-        <Image src={hannah} width={100} height={100} alt="" />
+        <Box
+          height={100}
+          width={100}
+          sx={{
+            backgroundImage: `url(${image.src})`,
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+          }}
+        ></Box>
         <Typography fontSize={"1.2rem"} marginTop={"10px"}>
           {name}
         </Typography>
@@ -99,9 +114,6 @@ function ReviewsCard({ name, data }) {
           fontSize={{ md: "1rem", smm: "0.8rem", xs: "0.7rem" }}
         >
           {data}
-        </Typography>
-        <Typography fontSize={{ md: "0.9rem", xs: "0.6rem" }}>
-          May 8, 2020
         </Typography>
       </Stack>
     </Stack>
