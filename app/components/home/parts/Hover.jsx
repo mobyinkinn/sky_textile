@@ -7,7 +7,7 @@ import Image from "next/image";
 import img1 from "@/app/components/home/parts/assets/coverImages/image1.jpeg";
 import img2 from "@/app/components/home/parts/assets/coverImages/image2.jpg";
 import img3 from "@/app/components/home/parts/assets/coverImages/image3.jpg";
-import img4 from "@/app/components/home/parts/assets/coverImages/image4.jpg";
+import img4 from "@/app/components/home/parts/assets/coverImages/image8.jpg";
 import img5 from "@/app/components/home/parts/assets/coverImages/image5.jpg";
 import img6 from "@/app/components/home/parts/assets/coverImages/image6.jpg";
 import img7 from "@/app/components/home/parts/assets/coverImages/image7.jpg";

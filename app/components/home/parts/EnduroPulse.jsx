@@ -83,13 +83,13 @@ export default function Enduro() {
         fontWeight={"bold"}
         padding={"20px 0"}
       >
-        Enduro Pulse
+        Events at Sky Textiles
       </Typography>
       <Stack
         display={{ md: "flex", xs: "none" }}
         width={"100%"}
         alignItems={"end"}
-        height={"100vh"}
+        height={{ lg: "80vh", md: "55vh" }}
         direction={"row"}
         gap={"10px"}
       >
@@ -99,9 +99,24 @@ export default function Enduro() {
           position={"relative"}
           sx={{
             backgroundImage: `url(${enduro3.src})`,
-            backgroundSize: "cover",
+            // backgroundSize: "cover",
+            backgroundSize: "160%",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center center",
+            transition: "all 0.3s ease",
+            "&:hover": {
+              backgroundSize: "175%",
+            },
+            "&::after": {
+              content: '""',
+              position: "absolute",
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              backgroundColor: "rgba(0, 0, 0, 0.4)", // Black overlay with 20% opacity
+              zIndex: 1,
+            },
           }}
           className="image3"
         >
@@ -109,10 +124,10 @@ export default function Enduro() {
             position={"absolute"}
             direction={"row"}
             sx={{
-              top: "80%",
-              backgroundColor: "rgba(0, 0, 0, 0.6)",
+              bottom: "0",
               width: "100%",
               padding: "20px",
+              zIndex: 3,
             }}
             justifyContent={"space-between"}
           >
@@ -124,6 +139,13 @@ export default function Enduro() {
               justifyContent={"center"}
               alignItems={"center"}
               borderRadius={"2px"}
+              sx={{
+                transition: "all 0.4s ease",
+                cursor: "pointer",
+                "&: hover": {
+                  scale: "1.6",
+                },
+              }}
             >
               <MdOutlineArrowOutward color="white" />
             </Stack>
@@ -135,9 +157,23 @@ export default function Enduro() {
           position={"relative"}
           sx={{
             backgroundImage: `url(${enduro1.src})`,
-            backgroundSize: "cover",
+            backgroundSize: "150%",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center 0px",
+            transition: "all 0.3s ease",
+            "&:hover": {
+              backgroundSize: "175%",
+            },
+            "&::after": {
+              content: '""',
+              position: "absolute",
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              backgroundColor: "rgba(0, 0, 0, 0.4)", // Black overlay with 20% opacity
+              zIndex: 1,
+            },
           }}
           className="image"
         >
@@ -145,9 +181,9 @@ export default function Enduro() {
             position={"absolute"}
             direction={"row"}
             sx={{
-              top: "85%",
-              backgroundColor: "rgba(0, 0, 0, 0.6)",
+              bottom: "0",
               width: "100%",
+              zIndex: 3,
               padding: "20px",
             }}
             justifyContent={"space-between"}
@@ -160,6 +196,13 @@ export default function Enduro() {
               justifyContent={"center"}
               alignItems={"center"}
               borderRadius={"2px"}
+              sx={{
+                transition: "all 0.4s ease",
+                cursor: "pointer",
+                "&: hover": {
+                  scale: "1.6",
+                },
+              }}
             >
               <MdOutlineArrowOutward color="white" />
             </Stack>
@@ -170,7 +213,7 @@ export default function Enduro() {
         display={{ md: "flex", xs: "none" }}
         width={"100%"}
         alignItems={"start"}
-        height={"100vh"}
+        height={{ lg: "80vh", md: "55vh" }}
         direction={"row"}
         gap={"10px"}
       >
@@ -180,9 +223,23 @@ export default function Enduro() {
           position={"relative"}
           sx={{
             backgroundImage: `url(${enduro2.src})`,
-            backgroundSize: "cover",
+            backgroundSize: "150%",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center 0px",
+            transition: "all 0.3s ease",
+            "&:hover": {
+              backgroundSize: "175%",
+            },
+            "&::after": {
+              content: '""',
+              position: "absolute",
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              backgroundColor: "rgba(0, 0, 0, 0.4)", // Black overlay with 20% opacity
+              zIndex: 1,
+            },
           }}
           className="image2"
         >
@@ -190,9 +247,9 @@ export default function Enduro() {
             position={"absolute"}
             direction={"row"}
             sx={{
-              top: "75%",
-              backgroundColor: "rgba(0, 0, 0, 0.6)",
+              bottom: "0",
               width: "100%",
+              zIndex: 3,
               padding: "20px",
             }}
             justifyContent={"space-between"}
@@ -205,6 +262,13 @@ export default function Enduro() {
               justifyContent={"center"}
               alignItems={"center"}
               borderRadius={"2px"}
+              sx={{
+                transition: "all 0.4s ease",
+                cursor: "pointer",
+                "&: hover": {
+                  scale: "1.6",
+                },
+              }}
             >
               <MdOutlineArrowOutward color="white" />
             </Stack>
@@ -216,9 +280,23 @@ export default function Enduro() {
           position={"relative"}
           sx={{
             backgroundImage: `url(${enduro4.src})`,
-            backgroundSize: "cover",
+            backgroundSize: "160%",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center center",
+            transition: "all 0.3s ease",
+            "&:hover": {
+              backgroundSize: "175%",
+            },
+            "&::after": {
+              content: '""',
+              position: "absolute",
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              backgroundColor: "rgba(0, 0, 0, 0.4)", // Black overlay with 20% opacity
+              zIndex: 1,
+            },
           }}
           className="image4"
         >
@@ -226,9 +304,9 @@ export default function Enduro() {
             position={"absolute"}
             direction={"row"}
             sx={{
-              top: "80%",
-              backgroundColor: "rgba(0, 0, 0, 0.6)",
+              bottom: "0",
               width: "100%",
+              zIndex: 3,
               padding: "20px",
             }}
             justifyContent={"space-between"}
@@ -241,6 +319,13 @@ export default function Enduro() {
               justifyContent={"center"}
               alignItems={"center"}
               borderRadius={"2px"}
+              sx={{
+                transition: "all 0.4s ease",
+                cursor: "pointer",
+                "&: hover": {
+                  scale: "1.6",
+                },
+              }}
             >
               <MdOutlineArrowOutward color="white" />
             </Stack>
