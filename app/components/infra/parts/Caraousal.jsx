@@ -95,38 +95,39 @@ export default function Caraosal() {
               <Stack
                 key={el.id}
                 width={"100%"}
-                height={{ md: "fit-content", xs: "fit-content" }}
+                height={"80vh"}
                 sx={{
                   backgroundImage: `url(${el.img.src})`,
                   backgroundSize: { lg: "contain", xs: "cover" },
                   backgroundRepeat: "no-repeat",
-                  backgroundPosition: { lg: "right", xs: "center center" },
+                  backgroundPosition: { lg: "100%", xs: "center center" },
                 }}
               >
                 <Stack
-                  width={{ lg: "40%", md: "50%", xs: "80%" }}
+                  width={{ lg: "40%", md: "60%", xs: "80%" }}
+                  height={{ lg: "50%", sm: "40%", xs: "70%" }}
                   backgroundColor={"#FB5457"}
                   padding={"30px"}
                   color={"white"}
                   gap={"10px"}
-                  margin={{ md: "100px", xs: "10vh auto" }}
+                  margin={{ xs: "10vh auto" }}
+                  marginLeft={{ lg: "0px" }}
                   marginBottom={{ md: "10px", xs: "10px" }}
-                  marginLeft={"0"}
                 >
                   <Typography
-                    fontSize={{ lg: "2rem", md: "1.5rem", xs: "1rem" }}
+                    fontSize={{ lg: "1.5rem", md: "1.2rem", xs: "1rem" }}
                   >
                     {el.head}
                   </Typography>
                   <Typography
-                    fontSize={{ lg: "1.2rem", md: "1rem", xs: "0.8rem" }}
+                    fontSize={{ lg: "1rem", md: "0.9rem", xs: "0.8rem" }}
                   >
                     {el.data}
                   </Typography>
                 </Stack>
                 <Stack
                   width={{ lg: "40%", md: "50%", xs: "80%" }}
-                  margin={{ md: "0 100px 0 100px", xs: "0 auto" }}
+                  margin={{ lg: "0 100px 0 0", xs: "0 auto" }}
                   justifyContent={"space-evenly"}
                   direction={"row"}
                 >

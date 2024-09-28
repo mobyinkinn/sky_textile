@@ -7,7 +7,7 @@ import ProductAnimated from "./parts/ProductsAnimated";
 
 export default function Products() {
   return (
-    <Stack>
+    <Stack sx={{ scrollSnapType: "mandatory y" }}>
       <Navbar />
       <Box
         height={{ lg: "80vh", smm: "50vh", xs: "30vh" }}

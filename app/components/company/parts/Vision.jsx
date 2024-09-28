@@ -56,7 +56,7 @@ export default function Vision() {
         color: "#B0B0B0",
         scrollTrigger: {
           trigger: ".mission",
-          start: "top 15%",
+          start: "top center",
           end: `+=100`,
           scrub: true,
           //   markers: true,
@@ -64,19 +64,21 @@ export default function Vision() {
       })
       .to(".missionHead", {
         color: "#9C38F1",
+        duration: 0.5,
         scrollTrigger: {
           trigger: ".mission",
-          start: "top 15%",
-          end: `+=100`,
-          scrub: true,
-          //   markers: true,
+          start: "top center",
+          toggleActions: "play reverse play reset",
+          // end: `+=100`,
+          // scrub: true,
+          markers: true,
         },
       })
       .to(".missionHead", {
         color: "#B0B0B0",
         scrollTrigger: {
           trigger: ".values",
-          start: "top 15%",
+          start: "top center",
           end: `+=100`,
           scrub: true,
           //   markers: true,
@@ -84,11 +86,13 @@ export default function Vision() {
       })
       .to(".valuesHead", {
         color: "#5A57FF",
+        duration: 0.5,
         scrollTrigger: {
           trigger: ".values",
-          start: "top 15%",
-          end: `+=100`,
-          scrub: true,
+          start: "top center",
+          toggleActions: "play reverse play reset",
+          // end: `+=100`,
+          // scrub: true,
           //   markers: true,
         },
       });

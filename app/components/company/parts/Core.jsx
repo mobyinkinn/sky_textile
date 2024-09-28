@@ -63,7 +63,7 @@ export default function Core() {
             <Image
               src={yarn}
               alt=""
-              width={400}
+              width={245}
               height={400}
               style={{
                 transform: `rotate(${rotation}deg)`,
@@ -93,7 +93,8 @@ export default function Core() {
             <Box
               width={"80px"}
               height={"80px"}
-              backgroundColor={"white"}
+              // backgroundColor={"white"}
+              border={"1px solid white"}
               padding={"15px"}
               borderRadius={"100%"}
               margin={"0 auto"}
@@ -137,7 +138,8 @@ export default function Core() {
             <Box
               width={"80px"}
               height={"80px"}
-              backgroundColor={"white"}
+              border={"1px solid white"}
+              // backgroundColor={"white"}
               padding={"15px"}
               borderRadius={"100%"}
               margin={"0 auto"}
@@ -180,7 +182,8 @@ export default function Core() {
             <Box
               width={"80px"}
               height={"80px"}
-              backgroundColor={"white"}
+              border={"1px solid white"}
+              // backgroundColor={"white"}
               padding={"15px"}
               borderRadius={"100%"}
               margin={"0 auto"}
@@ -224,7 +227,8 @@ export default function Core() {
             <Box
               width={"80px"}
               height={"80px"}
-              backgroundColor={"white"}
+              border={"1px solid white"}
+              // backgroundColor={"white"}
               padding={"15px"}
               borderRadius={"100%"}
               margin={"0 auto"}
@@ -267,8 +271,9 @@ export default function Core() {
           >
             <Box
               width={"80px"}
+              border={"1px solid white"}
               height={"80px"}
-              backgroundColor={"white"}
+              // backgroundColor={"white"}
               padding={"15px"}
               borderRadius={"100%"}
               margin={"0 auto"}
@@ -311,7 +316,8 @@ export default function Core() {
             <Box
               width={"80px"}
               height={"80px"}
-              backgroundColor={"white"}
+              border={"1px solid white"}
+              // backgroundColor={"white"}
               padding={"15px"}
               borderRadius={"100%"}
               margin={"0 auto"}
@@ -369,7 +375,8 @@ export default function Core() {
               <Stack
                 width={"80px"}
                 height={"80px"}
-                backgroundColor={"white"}
+                border={"1px solid white"}
+                // backgroundColor={"white"}
                 padding={"15px"}
                 borderRadius={"100%"}
                 sx={{}}
@@ -381,55 +388,60 @@ export default function Core() {
               <Stack
                 width={"80px"}
                 height={"80px"}
-                backgroundColor={"white"}
+                border={"1px solid white"}
+                // backgroundColor={"white"}
                 padding={"15px"}
                 borderRadius={"100%"}
                 sx={{}}
               >
-                <Image src={icon6} alt="" width={50} height={50} />
+                <Image src={icon2} alt="" width={50} height={50} />
               </Stack>
             </Stack>
             <Stack>
               <Stack
                 width={"80px"}
                 height={"80px"}
-                backgroundColor={"white"}
+                border={"1px solid white"}
+                // backgroundColor={"white"}
                 padding={"15px"}
                 borderRadius={"100%"}
                 sx={{}}
               >
-                <Image src={icon6} alt="" width={50} height={50} />
+                <Image src={icon3} alt="" width={50} height={50} />
               </Stack>
             </Stack>
             <Stack>
               <Stack
                 width={"80px"}
                 height={"80px"}
-                backgroundColor={"white"}
+                border={"1px solid white"}
+                // backgroundColor={"white"}
                 padding={"15px"}
                 borderRadius={"100%"}
                 sx={{}}
               >
-                <Image src={icon6} alt="" width={50} height={50} />
+                <Image src={icon4} alt="" width={50} height={50} />
               </Stack>
             </Stack>
             <Stack>
               <Stack
                 width={"80px"}
                 height={"80px"}
-                backgroundColor={"white"}
+                border={"1px solid white"}
+                // backgroundColor={"white"}
                 padding={"15px"}
                 borderRadius={"100%"}
                 sx={{}}
               >
-                <Image src={icon6} alt="" width={50} height={50} />
+                <Image src={icon5} alt="" width={50} height={50} />
               </Stack>
             </Stack>
             <Stack>
               <Stack
                 width={"80px"}
                 height={"80px"}
-                backgroundColor={"white"}
+                border={"1px solid white"}
+                // backgroundColor={"white"}
                 padding={"15px"}
                 borderRadius={"100%"}
                 sx={{}}
