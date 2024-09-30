@@ -8,8 +8,28 @@ import "slick-carousel/slick/slick-theme.css";
 import rnd from "./assets/main/rnd.jpg";
 import rnd2 from "./assets/main/rnd2.jpg";
 import rnd3 from "./assets/main/rnd3.jpg";
+import { useState } from "react";
+
+const rndContent = [
+  {
+    head1: "Verticle setup from ",
+    head2: "Cotten to Garment",
+    data: "Our vertical setup streamlines the entire process from raw cotton to finished garments, ensuring complete control over quality and efficiency. This integrated approach allows us to deliver premium products while reducing lead times.",
+  },
+  {
+    head1: "Research and Development",
+    head2: "(Rnd) center",
+    data: "Our Research and Development department continuously innovates to create high-quality, sustainable fabrics that meet evolving market trends. We focus on advanced materials and techniques to ensure exceptional performance and durability across all textiles.",
+  },
+  {
+    head1: "Quality control and",
+    head2: "Inspection Units",
+    data: "Committed to maintaining exceptional quality, the brand's quality control and inspection units rigorously examine each garment. The implementation of advanced technology and manual checks guarantees that only the finest products bear the SKY PRIMWEAR label.",
+  },
+];
 
 export default function Rnd() {
+  const [content, setContent] = useState(0);
   var settings = {
     arrows: false,
     dots: false,
@@ -31,7 +51,7 @@ export default function Rnd() {
         fontWeight={"bold"}
         textAlign={"center"}
       >
-        Research And Development
+        {rndContent[content].head1}
       </Typography>
       <Typography
         fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
@@ -39,14 +59,10 @@ export default function Rnd() {
         textAlign={"center"}
         color={"#FB5457"}
       >
-        (R&D) Center
+        {rndContent[content].head2}
       </Typography>
       <Typography textAlign={"center"} width={"70vw"} margin={"0 auto"}>
-        Innovation drives us forward, and our dedicated R&D centre plays a vital
-        role in fostering breakthroughs in our industry. Our team of experienced
-        researchers, designers, and engineers work tirelessly to develop new
-        fabrics, textures, and patterns, staying at the forefront of market
-        trends.
+        {rndContent[content].data}
       </Typography>
       <Stack
         direction={"row"}
@@ -58,20 +74,35 @@ export default function Rnd() {
         <Box
           width={"25%"}
           height={"30vh"}
+          onMouseEnter={() => setContent(1)}
           borderRadius={"10px"}
-          sx={{ backgroundImage: `url(${rnd.src})`, backgroundSize: "cover" }}
+          sx={{
+            cursor: "pointer",
+            backgroundImage: `url(${rnd.src})`,
+            backgroundSize: "cover",
+          }}
         ></Box>
         <Box
           width={"25%"}
           height={"30vh"}
+          onMouseEnter={() => setContent(0)}
           borderRadius={"10px"}
-          sx={{ backgroundImage: `url(${rnd2.src})`, backgroundSize: "cover" }}
+          sx={{
+            cursor: "pointer",
+            backgroundImage: `url(${rnd2.src})`,
+            backgroundSize: "cover",
+          }}
         ></Box>
         <Box
           width={"25%"}
           height={"30vh"}
+          onMouseEnter={() => setContent(2)}
           borderRadius={"10px"}
-          sx={{ backgroundImage: `url(${rnd3.src})`, backgroundSize: "cover" }}
+          sx={{
+            cursor: "pointer",
+            backgroundImage: `url(${rnd3.src})`,
+            backgroundSize: "cover",
+          }}
         ></Box>
       </Stack>
       <Stack height={{ smm: "40vh" }} display={{ md: "none", xs: "flex" }}>

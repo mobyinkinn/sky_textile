@@ -37,7 +37,6 @@ export default function ProductAnimated() {
           scrollTrigger: {
             trigger: ".fabrics",
             start: "top center",
-            toggleActions: "play none reverse reverse",
             end: `+=100`,
             scrub: true,
             // markers: true,
@@ -54,7 +53,6 @@ export default function ProductAnimated() {
           scrollTrigger: {
             trigger: ".fabrics",
             start: "top center",
-            toggleActions: "play none none reverse",
             end: `+=100`,
             scrub: true,
             // markers: true,
@@ -70,7 +68,6 @@ export default function ProductAnimated() {
             trigger: ".garments",
             start: "top center",
             end: `+=100`,
-            toggleActions: "play none none reverse",
             scrub: true,
             // markers: true,
           },
@@ -85,7 +82,6 @@ export default function ProductAnimated() {
           clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
           scrollTrigger: {
             trigger: ".garments",
-            toggleActions: "play none none reverse",
             start: "top center",
             end: `+=100`,
             scrub: true,
@@ -103,7 +99,13 @@ export default function ProductAnimated() {
         display={{ md: "flex", xs: "none" }}
       >
         <Stack width={"55%"} className="content">
-          <Stack height={"90vh"} className="yarns">
+          <Stack
+            height={"90vh"}
+            className="yarns"
+            sx={{
+              scrollSnapAlign: "start",
+            }}
+          >
             <Typography
               fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
               fontWeight={"bold"}
@@ -117,7 +119,13 @@ export default function ProductAnimated() {
               more.
             </Typography>
           </Stack>
-          <Stack height={"90vh"} className="fabrics">
+          <Stack
+            height={"90vh"}
+            className="fabrics"
+            sx={{
+              scrollSnapAlign: "start",
+            }}
+          >
             <Typography
               fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
               fontWeight={"bold"}
@@ -131,7 +139,13 @@ export default function ProductAnimated() {
               more.
             </Typography>
           </Stack>
-          <Stack height={"90vh"} className="garments">
+          <Stack
+            height={"90vh"}
+            className="garments"
+            sx={{
+              scrollSnapAlign: "start",
+            }}
+          >
             <Typography
               fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
               fontWeight={"bold"}
