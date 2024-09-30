@@ -24,70 +24,58 @@ import "slick-carousel/slick/slick-theme.css";
 const processData = [
   {
     id: 0,
-    head: "Innovations",
+    head: "Brand Identity",
     data1:
-      "SKY Textiles drives innovation by responding to customer needs for unique, high-quality products that reflect emerging trends and changing consumer preferences.",
-    data2:
-      "We stay ahead of the curve, consistently delivering tailored, differentiated solutions to meet market demands.",
-    data3:
-      "By monitoring trends and end-user expectations, we provide cutting-edge designs and superior products that exceed client expectations in a dynamic industry.",
+      "A clear, distinct, and memorable image that resonates with customers and sets the brand apart.",
+    data2: null,
+    data3: null,
   },
   {
     id: 1,
-    head: "Technologies",
+    head: "Product Quality",
     data1:
-      "SKY Textiles integrates technology into every facet of production, quality assurance, and R&D, ensuring precision, efficiency, and innovation.",
-    data2:
-      "Our use of cutting-edge tools and techniques allows us to maintain top-quality standards while fostering continuous improvement and creativity in our products.",
-    data3:
-      "This commitment to technology empowers us to meet the evolving needs of our clients and stay ahead in the market.",
+      " Consistent delivery of high-quality products that meet or exceed customer expectations.",
+    data2: null,
+    data3: null,
   },
   {
     id: 2,
-    head: "Economy Scale",
+    head: "Customer Loyality",
     data1:
-      "SKY Textiles' large production capacity optimizes every stage, from sourcing raw materials to delivering a wide range of products across the vertical.",
-    data2:
-      "Our capacity advantage allows us to efficiently meet diverse customer demands while maintaining flexibility and offering a superior variety of products.",
-    data3:
-      "Operating at scale enables us to provide clients with both quality and choice, ensuring competitiveness and responsiveness to market needs.",
+      "Strong emotional connection and trust built with customers, leading to repeat business and advocacy.",
+    data2: null,
+    data3: null,
   },
   {
     id: 3,
-    head: "Verticle Integration",
+    head: "Innovation",
     data1:
-      "SKY Textiles has established a strong presence across the entire textile and garment value chain, from yarns and fabrics to finished garments.",
-    data2:
-      "Our comprehensive integration allows us to oversee every production stage, ensuring quality and consistency throughout the process.",
-    data3:
-      "With end-to-end capabilities, we efficiently meet diverse customer needs, making us a trusted partner in the textile and garment industry.",
+      "Continuous improvement and creativity in products, services, or experiences that keep the brand relevant.",
+    data2: null,
+    data3: null,
   },
   {
     id: 4,
-    head: "Product Range",
+    head: "Market Presence",
     data1:
-      "SKY Textiles offers an end-to-end solution across a wide range of product categories, from raw cotton to finished garments.",
-    data2:
-      "Our fully integrated services manage every aspect of the textile production process, ensuring quality and efficiency at each stage.",
-    data3:
-      "This comprehensive approach enables us to meet diverse client needs, making us a reliable partner for all textile and garment requirements.",
+      " A wide and strong distribution network, both online and offline, ensuring accessibility and visibility.",
+    data2: null,
+    data3: null,
   },
   {
     id: 5,
-    head: "Global Presence",
+    head: "Authenticity",
     data1:
-      "SKY Textiles has established a global presence in 14 countries, delivering exceptional quality and innovation as one of India's fastest-growing textile units.",
-    data2:
-      "We cater to the biggest domestic brands, providing high-quality garments and fabrics, making us a trusted partner in the industry.",
-    data3:
-      "Our commitment to excellence and innovation drives growth and expansion both in India and internationally, keeping us ahead in the competitive global market.",
+      "Genuine communication and ethical practices that align with brand values, fostering credibility and trust.",
+    data2: null,
+    data3: null,
   },
 ];
 
 const milestoneData = [
-  "To lead the industry with innovative, sustainable textile solutions, delivering exceptional quality and design while fostering a responsible, eco-friendly future for fashion and fabric production",
-  "To produce high-quality, sustainable textiles through innovation and ethical practices, exceeding customer expectations while minimizing environmental impact and supporting the growth of our communities and partners.",
-  "Quality, Sustainability, Innovation, Integrity, Customer Focus, Collaboration, Responsibility.",
+  "To deliver stylish, high-quality garments that blend innovation with sustainability, catering to the diverse fashion needs of our customers.",
+  "To become a global leader in fashion, recognized for creating trendsetting, eco-conscious clothing that empowers individuals worldwide.",
+  "Innovation, sustainability, quality, customer satisfaction, and integrity in every garment we create.",
 ];
 
 export default function SkyTextiles() {
@@ -136,7 +124,7 @@ export default function SkyTextiles() {
           margin={"20px auto"}
           marginTop={"0"}
         >
-          Where innovation meets tradition, we weave quality into every thread.
+          Sky International Llp
         </Typography>
 
         <Typography
@@ -145,15 +133,13 @@ export default function SkyTextiles() {
           fontSize={{ md: "1.0rem", xs: "0.8rem" }}
           margin={"0 auto"}
         >
-          We are thrilled to announce that SKY Textiles has emerged as a premier
-          fully vertical facility, offering a comprehensive, one-stop solution
-          for all your garment needs. From raw cotton to finished apparel, we
-          handle every stage of production, including design, development,
-          sourcing, industrial manufacturing, and sales. Our mission is to
-          empower our clients by helping them unlock new possibilities and
-          innovations in their product lines. Through close collaboration, we
-          craft unique, high-quality garments that inspire confidence and bring
-          delight to every customer.
+          We are thrilled to announce the exciting journey of Sky International
+          LLP under our brand ONE SKY! We’re expanding our horizons by offering
+          a seamless shopping experience both online and offline, bringing our
+          premium garments closer to you than ever before. You can now find ONE
+          SKY apparel on all major platforms including Myntra, Amazon, Flipkart,
+          Ajio, Limeroad, and Nykaa, making it easier than ever to shop your
+          favorite styles.
         </Typography>
       </Stack>
       <Stack
@@ -175,14 +161,14 @@ export default function SkyTextiles() {
         <Stack alignItems={"center"}>
           <Image src={handShake} alt="" width={100} height={100} />
           <Typography fontSize={"2.5rem"} fontWeight={"bold"}>
-            2020
+            2021
           </Typography>
           <Typography fontSize={"1.2rem"}>Since we are</Typography>
         </Stack>
         <Stack alignItems={"center"}>
           <Image src={handShake} alt="" width={100} height={100} />
           <Typography fontSize={"2.5rem"} fontWeight={"bold"}>
-            100+
+            150+
           </Typography>
           <Typography fontSize={"1.2rem"}>Valid Certifications</Typography>
         </Stack>
@@ -194,16 +180,13 @@ export default function SkyTextiles() {
           textAlign={"center"}
           fontSize={{ md: "1rem", xs: "0.7rem" }}
         >
-          Founded in October 2020 under the Companies Act of 2013 (CIN:
-          U17299GJ2020PTC116984), SKY Textiles is headquartered at B-105,
-          Westgate Tower Unit 2, near YMCA Club, S.G. Highway, Makarba,
-          Ahmedabad, Gujarat. We take pride in our cutting-edge vertical
-          facility, located at Survey No Paiki, 32 & 33, Bhavnagar Road,
-          Lathidad, District Botad, Gujarat. With our commitment to excellence,
-          innovation, and customer satisfaction, SKY Textiles is poised to
-          become a leading partner for all your garment production needs. We
-          look forward to an exciting journey ahead, creating world-class
-          apparel together !
+          That's not all! We are also proud to be trusted B2B suppliers,
+          providing ONE SKY garments to retailers across India. From trendy
+          outfits to timeless classics, we’re delivering high-quality clothing
+          nationwide, bringing the ONE SKY brand to every corner of the country.
+          Whether you’re shopping for yourself or stocking your retail shelves,
+          ONE SKY is your go-to for fashionable, top-tier garments. Let’s make
+          this journey unforgettable, together!
         </Typography>
         <Stack
           direction={"row"}
@@ -290,11 +273,12 @@ export default function SkyTextiles() {
           </Slider>
         </Stack>
       </Stack>
-      <Stack backgroundColor={"#FB5457"} padding={10}>
+      <Stack backgroundColor={"#FB5457"} padding={10} height={"75vh"}>
         <Slider ref={sliderRef} {...settings}>
           {processData.map((el, i) => {
             return (
               <Stack
+                height={"60vh"}
                 direction={{ md: "row", xs: "column-reverse" }}
                 justifyContent={"space-between"}
                 gap={{ md: "40px", xs: "10px" }}
@@ -336,30 +320,45 @@ export default function SkyTextiles() {
                       <Image src={sun} alt="" width={"10px"} height={"10px"} />
                       <Typography>{el.data1}</Typography>
                     </Stack>
-                    <Stack
-                      direction={"row"}
-                      gap={"20px"}
-                      alignItems={"center"}
-                      border={"1px solid #FB5457"}
-                      padding={"15px"}
-                      backgroundColor={"white"}
-                      marginBottom={"20px"}
-                    >
-                      <Image src={sun} alt="" width={"10px"} height={"10px"} />
-                      <Typography>{el.data2}</Typography>
-                    </Stack>
-                    <Stack
-                      direction={"row"}
-                      gap={"20px"}
-                      alignItems={"center"}
-                      border={"1px solid #FB5457"}
-                      padding={"15px"}
-                      backgroundColor={"white"}
-                      marginBottom={"20px"}
-                    >
-                      <Image src={sun} alt="" width={"10px"} height={"10px"} />
-                      <Typography>{el.data3}</Typography>
-                    </Stack>
+                    {el.data2 && (
+                      <Stack
+                        direction={"row"}
+                        gap={"20px"}
+                        alignItems={"center"}
+                        border={"1px solid #FB5457"}
+                        padding={"15px"}
+                        backgroundColor={"white"}
+                        marginBottom={"20px"}
+                      >
+                        <Image
+                          src={sun}
+                          alt=""
+                          width={"10px"}
+                          height={"10px"}
+                        />
+                        <Typography>{el.data2}</Typography>
+                      </Stack>
+                    )}
+
+                    {el.data3 && (
+                      <Stack
+                        direction={"row"}
+                        gap={"20px"}
+                        alignItems={"center"}
+                        border={"1px solid #FB5457"}
+                        padding={"15px"}
+                        backgroundColor={"white"}
+                        marginBottom={"20px"}
+                      >
+                        <Image
+                          src={sun}
+                          alt=""
+                          width={"10px"}
+                          height={"10px"}
+                        />
+                        <Typography>{el.data3}</Typography>
+                      </Stack>
+                    )}
                   </Stack>
                   <Stack
                     width={{ lg: "33%", md: "50%", xs: "90%" }}
@@ -379,20 +378,16 @@ export default function SkyTextiles() {
         backgroundColor={"#f9f9f9"}
         padding={{ lg: "50px 70px", xs: "30px" }}
         marginBottom={"70px"}
+        alignItems={"center"}
       >
         <Stack width={{ md: "60%" }}>
           <Typography
             fontWeight={"bold"}
             fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
           >
-            We Are Passionate About
+            We Are Passionate About Solving Problems
           </Typography>
-          <Typography
-            fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
-            fontWeight={"bold"}
-          >
-            Solving Problems
-          </Typography>
+
           <Stack margin={{ lg: "40px 0" }}>
             <Stack
               width={{ lg: "70%", md: "100%" }}
@@ -411,11 +406,11 @@ export default function SkyTextiles() {
               <Image src={graph} alt="" width={50} height={50} />
               <Stack gap={"10px"}>
                 <Typography fontSize={"1rem"} fontWeight={"bold"}>
-                  Knitting
+                  Unique Brand Identity
                 </Typography>
                 <Typography fontSize={"1rem"}>
-                  The process of creating fabric by interlocking yarn loops to
-                  form flexible, stretchable textiles.
+                  A strong, recognizable image that differentiates the brand
+                  from competitors and resonates with the target audience.
                 </Typography>
               </Stack>
             </Stack>
@@ -436,11 +431,12 @@ export default function SkyTextiles() {
               <Image src={graph} alt="" width={50} height={50} />
               <Stack gap={"10px"}>
                 <Typography fontSize={"1rem"} fontWeight={"bold"}>
-                  Dyeing
+                  Product Quality and Design
                 </Typography>
                 <Typography fontSize={"1rem"}>
-                  Applying color to fabric through various methods to achieve
-                  vibrant and consistent shades.
+                  Consistently delivering well-crafted, stylish garments that
+                  meet customer expectations in terms of comfort, durability,
+                  and aesthetics.
                 </Typography>
               </Stack>
             </Stack>
@@ -461,12 +457,12 @@ export default function SkyTextiles() {
               <Image src={graph} alt="" width={50} height={50} />
               <Stack gap={"10px"}>
                 <Typography fontSize={"1rem"} fontWeight={"bold"}>
-                  Finishing
+                  Customer Experience and Engagement
                 </Typography>
                 <Typography fontSize={"1rem"}>
-                  Enhancing fabric properties like texture, strength, and
-                  appearance through treatments and processes after knitting and
-                  dyeing.
+                  Building strong relationships through excellent service,
+                  personalized experiences, and a responsive approach to
+                  customer needs and feedback.
                 </Typography>
               </Stack>
             </Stack>
@@ -553,6 +549,7 @@ export default function SkyTextiles() {
         <Stack
           direction={{ md: "row" }}
           justifyContent={"center"}
+          alignItems={"center"}
           gap={"20px"}
           margin={"30px 0"}
         >

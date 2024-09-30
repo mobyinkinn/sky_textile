@@ -68,14 +68,14 @@ const navData = [
         head: "SKY Primwear.",
         data: "Lorem ipsum is a placeholder text.",
         color: "#DFDFFD",
-        route: "/company-profile/sky-textiles",
+        route: "/company-profile/sky-primware",
       },
       {
         id: 2,
         head: "SKY International.",
         data: "used to demonstrate the visual.",
         color: "#DFD5E6",
-        route: "/company-profile/sky-textiles",
+        route: "/company-profile/sky-international",
       },
     ],
   },
@@ -363,7 +363,7 @@ export default function Navbar() {
                 >
                   <Typography
                     fontSize={"0.9rem"}
-                    color={pathname === el.route ? "#FB5457" : "black"}
+                    color={pathname.startsWith(el.route) ? "#FB5457" : "black"}
                   >
                     {el.name}
                   </Typography>
@@ -513,7 +513,7 @@ export default function Navbar() {
         >
           <Stack
             // backgroundColor={"#fff"}
-            width={{ smm: "40%", xs: "60%" }}
+            width={{ smm: "50%", xs: "80%" }}
             height={"100vh"}
           >
             <Slide
