@@ -17,11 +17,94 @@ import happyMan from "./assets/happyMan.png";
 import community from "./assets/1.jpg";
 import curiosity from "./assets/2.jpg";
 import collab from "./assets/3.jpg";
-import { useState } from "react";
-
+import { useRef, useState } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+const processData = [
+  {
+    id: 0,
+    head: "Innovations",
+    data1:
+      "SKY Textiles drives innovation by responding to customer needs for unique, high-quality products that reflect emerging trends and changing consumer preferences.",
+    data2:
+      "We stay ahead of the curve, consistently delivering tailored, differentiated solutions to meet market demands.",
+    data3:
+      "By monitoring trends and end-user expectations, we provide cutting-edge designs and superior products that exceed client expectations in a dynamic industry.",
+  },
+  {
+    id: 1,
+    head: "Technologies",
+    data1:
+      "SKY Textiles integrates technology into every facet of production, quality assurance, and R&D, ensuring precision, efficiency, and innovation.",
+    data2:
+      "Our use of cutting-edge tools and techniques allows us to maintain top-quality standards while fostering continuous improvement and creativity in our products.",
+    data3:
+      "This commitment to technology empowers us to meet the evolving needs of our clients and stay ahead in the market.",
+  },
+  {
+    id: 2,
+    head: "Economy Scale",
+    data1:
+      "SKY Textiles' large production capacity optimizes every stage, from sourcing raw materials to delivering a wide range of products across the vertical.",
+    data2:
+      "Our capacity advantage allows us to efficiently meet diverse customer demands while maintaining flexibility and offering a superior variety of products.",
+    data3:
+      "Operating at scale enables us to provide clients with both quality and choice, ensuring competitiveness and responsiveness to market needs.",
+  },
+  {
+    id: 3,
+    head: "Verticle Integration",
+    data1:
+      "SKY Textiles has established a strong presence across the entire textile and garment value chain, from yarns and fabrics to finished garments.",
+    data2:
+      "Our comprehensive integration allows us to oversee every production stage, ensuring quality and consistency throughout the process.",
+    data3:
+      "With end-to-end capabilities, we efficiently meet diverse customer needs, making us a trusted partner in the textile and garment industry.",
+  },
+  {
+    id: 4,
+    head: "Product Range",
+    data1:
+      "SKY Textiles offers an end-to-end solution across a wide range of product categories, from raw cotton to finished garments.",
+    data2:
+      "Our fully integrated services manage every aspect of the textile production process, ensuring quality and efficiency at each stage.",
+    data3:
+      "This comprehensive approach enables us to meet diverse client needs, making us a reliable partner for all textile and garment requirements.",
+  },
+  {
+    id: 5,
+    head: "Global Presence",
+    data1:
+      "SKY Textiles has established a global presence in 14 countries, delivering exceptional quality and innovation as one of India's fastest-growing textile units.",
+    data2:
+      "We cater to the biggest domestic brands, providing high-quality garments and fabrics, making us a trusted partner in the industry.",
+    data3:
+      "Our commitment to excellence and innovation drives growth and expansion both in India and internationally, keeping us ahead in the competitive global market.",
+  },
+];
 export default function SkyTextiles() {
   const [img, setImg] = useState(community);
   const [activeDiv, setActiveDiv] = useState(0);
+  const sliderRef = useRef(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  var settings = {
+    arrows: false,
+    dots: false,
+    infinite: true,
+    autoplay:true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    afterChange: (index) => setCurrentSlide(index),
+    appendDots: (dots) => (
+      <div>
+        <ul>{dots}</ul>
+      </div>
+    ),
+    customPaging: (i) => <div>{i + 1}</div>,
+  };
+
   return (
     <Stack>
       <Navbar />
@@ -34,17 +117,24 @@ export default function SkyTextiles() {
           margin={"20px auto"}
           marginTop={"0"}
         >
-          We Inspire Trust In The Textile And Leather Industry.
+          Where innovation meets tradition, we weave quality into every thread.
         </Typography>
+
         <Typography
           textAlign={"center"}
           width={{ md: "50%", xs: "80%" }}
-          fontSize={{ md: "1.2rem", xs: "0.8rem" }}
+          fontSize={{ md: "1.0rem", xs: "0.8rem" }}
           margin={"0 auto"}
         >
-          Driven By Sustainability And A Dedication To Transparency, Our Work Is
-          Grounded In Proven Science. Our Standards Allow Everyone To Make
-          Responsible Decisions And Protect Natural Resources.
+          We are thrilled to announce that SKY Textiles has emerged as a premier
+          fully vertical facility, offering a comprehensive, one-stop solution
+          for all your garment needs. From raw cotton to finished apparel, we
+          handle every stage of production, including design, development,
+          sourcing, industrial manufacturing, and sales. Our mission is to
+          empower our clients by helping them unlock new possibilities and
+          innovations in their product lines. Through close collaboration, we
+          craft unique, high-quality garments that inspire confidence and bring
+          delight to every customer.
         </Typography>
       </Stack>
       <Stack
@@ -57,64 +147,44 @@ export default function SkyTextiles() {
         <Stack alignItems={"center"}>
           <Image src={handShake} alt="" width={100} height={100} />
           <Typography fontSize={"2.5rem"} fontWeight={"bold"}>
-            35,000
+            150+
           </Typography>
           <Typography fontSize={"1.2rem"}>
-            Companies Who Work With Us
+            Trusted by companies who believe in us.
           </Typography>
         </Stack>
         <Stack alignItems={"center"}>
           <Image src={handShake} alt="" width={100} height={100} />
           <Typography fontSize={"2.5rem"} fontWeight={"bold"}>
-            35,000
+            2020
           </Typography>
-          <Typography fontSize={"1.2rem"}>
-            Companies Who Work With Us
-          </Typography>
+          <Typography fontSize={"1.2rem"}>Since we are</Typography>
         </Stack>
         <Stack alignItems={"center"}>
           <Image src={handShake} alt="" width={100} height={100} />
           <Typography fontSize={"2.5rem"} fontWeight={"bold"}>
-            35,000
+            100+
           </Typography>
-          <Typography fontSize={"1.2rem"}>
-            Companies Who Work With Us
-          </Typography>
+          <Typography fontSize={"1.2rem"}>Valid Certifications</Typography>
         </Stack>
       </Stack>
       <Stack margin={{ md: "100px 70px", xs: "50px 30px" }}>
         <Typography
-          fontSize={{ lg: "3rem", smm: "2rem", xs: "1.3rem" }}
-          width={{ md: "50%", xs: "100%" }}
-          fontWeight={"bold"}
-          margin={"20px auto"}
-          textAlign={"center"}
-        >
-          What We Offer As A Garment Manufacture
-        </Typography>
-        <Typography
           width={{ md: "70%" }}
-          margin={"0 auto"}
-          fontSize={{ md: "1rem", xs: "0.7rem" }}
-          textAlign={"center"}
-        >
-          We Guarantee The Highest Quality Standards And Timely Delivery For All
-          Customer’s Needs. With Our Strengths, As Listed Below, We Provide Many
-          Advantages Over Competitors In The Textile Manufacturing Industry.
-        </Typography>
-        <Typography
-          width={{ md: "70%" }}
-          margin={"10px auto"}
+          margin={"5px auto"}
           textAlign={"center"}
           fontSize={{ md: "1rem", xs: "0.7rem" }}
         >
-          Planning ability with high sell-through rates. The Well-established
-          workflow of design lead product planning that matches customer’s need
-          with high sell-through rates, backed by cutting-edge information
-          aggregated to the design office in Istanbul – Turkey. Garment
-          Manufacturing line enabling a short delivery period. Business
-          relationship with some 100 textile manufacturers and some 80 sewing
-          factories in Turkey boasting a textile industry.
+          Founded in October 2020 under the Companies Act of 2013 (CIN:
+          U17299GJ2020PTC116984), SKY Textiles is headquartered at B-105,
+          Westgate Tower Unit 2, near YMCA Club, S.G. Highway, Makarba,
+          Ahmedabad, Gujarat. We take pride in our cutting-edge vertical
+          facility, located at Survey No Paiki, 32 & 33, Bhavnagar Road,
+          Lathidad, District Botad, Gujarat. With our commitment to excellence,
+          innovation, and customer satisfaction, SKY Textiles is poised to
+          become a leading partner for all your garment production needs. We
+          look forward to an exciting journey ahead, creating world-class
+          apparel together !
         </Typography>
         <Stack
           marginTop={"30px"}
@@ -163,82 +233,88 @@ export default function SkyTextiles() {
           ></Box>
         </Stack>
       </Stack>
-      <Stack backgroundColor={"#FB5457"}>
-        <Stack
-          direction={{ md: "row", xs: "column-reverse" }}
-          justifyContent={"space-between"}
-          gap={{ md: "40px", xs: "10px" }}
-          alignItems={"center"}
-          backgroundColor={"#F9F9F9"}
-          margin={{ lg: "70px 100px", xs: "40px 30px" }}
-          padding={{ md: "40px", xs: "10px" }}
-        >
-          <Stack>
-            <Typography
-              fontWeight={"bold"}
-              fontSize={{ lg: "3rem", md: "2rem", xs: "1.5rem" }}
-              color={"#FB5457"}
-              marginBottom={"20px"}
-            >
-              Sustainable Business Practices
-            </Typography>
-            <Box
-              height={"1.5px"}
-              width={"200px"}
-              backgroundColor={"black"}
-              marginBottom={"40px"}
-            ></Box>
-            <Stack
-              direction={"row"}
-              gap={"20px"}
-              alignItems={"center"}
-              border={"1px solid #FB5457"}
-              padding={"15px"}
-              backgroundColor={"white"}
-              marginBottom={"20px"}
-            >
-              <Image src={sun} alt="" width={"10px"} height={"10px"} />
-              <Typography>
-                62.3 MW of Green Power from wind and solar energy.
-              </Typography>
-            </Stack>
-            <Stack
-              direction={"row"}
-              gap={"20px"}
-              alignItems={"center"}
-              border={"1px solid #FB5457"}
-              padding={"15px"}
-              backgroundColor={"white"}
-              marginBottom={"20px"}
-            >
-              <Image src={sun} alt="" width={"10px"} height={"10px"} />
-              <Typography>
-                62.3 MW of Green Power from wind and solar energy.
-              </Typography>
-            </Stack>
-            <Stack
-              direction={"row"}
-              gap={"20px"}
-              alignItems={"center"}
-              border={"1px solid #FB5457"}
-              padding={"15px"}
-              backgroundColor={"white"}
-              marginBottom={"20px"}
-            >
-              <Image src={sun} alt="" width={"10px"} height={"10px"} />
-              <Typography>
-                62.3 MW of Green Power from wind and solar energy.
-              </Typography>
-            </Stack>
-          </Stack>
-          <Stack
-            width={{ lg: "40%", md: "50%", xs: "90%" }}
-            height={"300px"}
-            position={"relative"}
-          >
-            <Image src={tree} fill objectFit="contain" />
-          </Stack>
-        </Stack>
+      <Stack backgroundColor={"#FB5457"} padding={10}>
+        <Slider ref={sliderRef} {...settings}>
+          {processData.map((el, i) => {
+            return (
+              <Stack
+                direction={{ md: "row", xs: "column-reverse" }}
+                justifyContent={"space-between"}
+                gap={{ md: "40px", xs: "10px" }}
+                alignItems={"center"}
+                backgroundColor={"#F9F9F9"}
+
+                // margin={{ lg: "70px 100px", xs: "40px 30px" }}
+                // padding={{ md: "40px", xs: "10px" }}
+              >
+                <Stack
+                  direction={"row"}
+                  padding={5}
+                  justifyContent={"space-evenly"}
+                >
+                  <Stack width={"62%"}>
+                    <Typography
+                      fontWeight={"bold"}
+                      fontSize={{ lg: "3rem", md: "2rem", xs: "1.5rem" }}
+                      color={"#FB5457"}
+                      marginBottom={"20px"}
+                    >
+                      {el.head}
+                    </Typography>
+                    <Box
+                      height={"1.5px"}
+                      width={"200px"}
+                      backgroundColor={"black"}
+                      marginBottom={"40px"}
+                    ></Box>
+                    <Stack
+                      direction={"row"}
+                      gap={"20px"}
+                      alignItems={"center"}
+                      border={"1px solid #FB5457"}
+                      padding={"15px"}
+                      backgroundColor={"white"}
+                      marginBottom={"20px"}
+                    >
+                      <Image src={sun} alt="" width={"10px"} height={"10px"} />
+                      <Typography>{el.data1}</Typography>
+                    </Stack>
+                    <Stack
+                      direction={"row"}
+                      gap={"20px"}
+                      alignItems={"center"}
+                      border={"1px solid #FB5457"}
+                      padding={"15px"}
+                      backgroundColor={"white"}
+                      marginBottom={"20px"}
+                    >
+                      <Image src={sun} alt="" width={"10px"} height={"10px"} />
+                      <Typography>{el.data2}</Typography>
+                    </Stack>
+                    <Stack
+                      direction={"row"}
+                      gap={"20px"}
+                      alignItems={"center"}
+                      border={"1px solid #FB5457"}
+                      padding={"15px"}
+                      backgroundColor={"white"}
+                      marginBottom={"20px"}
+                    >
+                      <Image src={sun} alt="" width={"10px"} height={"10px"} />
+                      <Typography>{el.data3}</Typography>
+                    </Stack>
+                  </Stack>
+                  <Stack
+                    width={{ lg: "33%", md: "50%", xs: "90%" }}
+                    position={"relative"}
+                  >
+                    <Image src={tree} fill objectFit="contain" />
+                  </Stack>
+                </Stack>
+              </Stack>
+            );
+          })}
+        </Slider>
       </Stack>
       <Stack
         direction={{ md: "row" }}
@@ -278,11 +354,11 @@ export default function SkyTextiles() {
               <Image src={graph} alt="" width={50} height={50} />
               <Stack gap={"10px"}>
                 <Typography fontSize={"1rem"} fontWeight={"bold"}>
-                  Community
+                  Knitting
                 </Typography>
                 <Typography fontSize={"1rem"}>
-                  It is a Long Established Fact That a Reader Will Be Distracted
-                  By The Readable Content of a Page When Looking At Its Layout.
+                  The process of creating fabric by interlocking yarn loops to
+                  form flexible, stretchable textiles.
                 </Typography>
               </Stack>
             </Stack>
@@ -303,11 +379,11 @@ export default function SkyTextiles() {
               <Image src={graph} alt="" width={50} height={50} />
               <Stack gap={"10px"}>
                 <Typography fontSize={"1rem"} fontWeight={"bold"}>
-                  Curiosity
+                  Dyeing
                 </Typography>
                 <Typography fontSize={"1rem"}>
-                  It is a Long Established Fact That a Reader Will Be Distracted
-                  By The Readable Content of a Page When Looking At Its Layout.
+                  Applying color to fabric through various methods to achieve
+                  vibrant and consistent shades.
                 </Typography>
               </Stack>
             </Stack>
@@ -328,11 +404,12 @@ export default function SkyTextiles() {
               <Image src={graph} alt="" width={50} height={50} />
               <Stack gap={"10px"}>
                 <Typography fontSize={"1rem"} fontWeight={"bold"}>
-                  Collaboration
+                  Finishing
                 </Typography>
                 <Typography fontSize={"1rem"}>
-                  It is a Long Established Fact That a Reader Will Be Distracted
-                  By The Readable Content of a Page When Looking At Its Layout.
+                  Enhancing fabric properties like texture, strength, and
+                  appearance through treatments and processes after knitting and
+                  dyeing.
                 </Typography>
               </Stack>
             </Stack>
@@ -349,7 +426,7 @@ export default function SkyTextiles() {
           }}
         ></Stack>
       </Stack>
-      <Stack
+      {/* <Stack
         direction={{ md: "row", xs: "column-reverse" }}
         margin={{ md: "100px 70px", xs: "50px 30px" }}
         gap={"10px"}
@@ -399,8 +476,7 @@ export default function SkyTextiles() {
             backgroundPosition: "center",
           }}
         ></Stack>
-      </Stack>
-
+      </Stack> */}
       <Stack margin={{ md: "50px 0", xs: "30px 0" }}>
         <Typography
           fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
@@ -461,42 +537,8 @@ export default function SkyTextiles() {
           >
             Discover
           </Stack>
-          <Stack
-            minWidth={{ lg: "150px", xs: "100px" }}
-            maxWidth={{ lg: "150px", xs: "100px" }}
-            height={{ lg: "150px", xs: "100px" }}
-            backgroundColor="#FB5457"
-            borderRadius={"50%"}
-            alignItems={"center"}
-            justifyContent={"center"}
-            color={"white"}
-          >
-            Discover
-          </Stack>
-          <Stack
-            minWidth={{ lg: "150px", xs: "100px" }}
-            maxWidth={{ lg: "150px", xs: "100px" }}
-            height={{ lg: "150px", xs: "100px" }}
-            backgroundColor="#FB5457"
-            borderRadius={"50%"}
-            alignItems={"center"}
-            justifyContent={"center"}
-            color={"white"}
-          >
-            Discover
-          </Stack>
-          <Stack
-            minWidth={{ lg: "150px", xs: "100px" }}
-            maxWidth={{ lg: "150px", xs: "100px" }}
-            height={{ lg: "150px", xs: "100px" }}
-            backgroundColor="#FB5457"
-            borderRadius={"50%"}
-            alignItems={"center"}
-            justifyContent={"center"}
-            color={"white"}
-          >
-            Discover
-          </Stack>
+          
+         
         </Stack>
       </Stack>
       <Footer />

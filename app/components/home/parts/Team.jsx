@@ -76,6 +76,8 @@ export default function () {
     // arrows: true,
     dots: false,
     infinite: true,
+    autoplaySpeed: 500,
+    autoplay: true,
     speed: 500,
     slidesToShow: 1.1,
     slidesToScroll: 1,
@@ -85,6 +87,8 @@ export default function () {
   var settingLarge = {
     arrows: true,
     dots: true,
+    autoplaySpeed: 1000,
+    autoplay: true,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
