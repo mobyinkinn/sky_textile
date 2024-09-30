@@ -10,18 +10,14 @@ export default function Pdt() {
         Our <span style={{ color: "#FB5457" }}>Product</span>
       </Typography>
       <Typography fontSize={{ md: "1rem", xs: "0.8rem" }}>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book.
-      </Typography>
-      <Typography fontSize={{ md: "1rem", xs: "0.8rem" }}>
-        Founded on October 2020, under the Companies Act of 2013 (CIN:
-        U17299GJ2020PTC116984), SKY Textiles is headquartered in Gujarat B-105,
-        Westgate Tower Unit 2,Nr. YMCA Club, S.G. HIGHWAY ,Makarba , AHMEDABAD-
-        380015. Our facility is equipped with the latest technology, including
-        27,360 spindles for producing high-quality cotton threads in a range of
-        counts.
+        At SKY Textiles, we pride ourselves on being a fully vertical facility,
+        providing a comprehensive one-stop solution for all our clients'
+        needs—from cotton to finished garments. Our services encompass every
+        stage, including design, development, sourcing, industrial production,
+        and sales. Our mission is to empower clients by helping them innovate
+        and explore new opportunities in their product lines. Through close
+        collaboration, we deliver unique products that build trust and delight
+        customers.
       </Typography>
     </Stack>
   );

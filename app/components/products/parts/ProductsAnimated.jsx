@@ -113,10 +113,13 @@ export default function ProductAnimated() {
               Yarn
             </Typography>
             <Typography fontSize={{ md: "1.2rem", xs: "0.8rem" }}>
-              Maral manufactures a diverse range of blended & innovative yarns
-              to various textile end uses from knitting, weaving, towels,
-              sweaters, socks, home furnishing, denims, protective workwear and
-              more.
+              We produce high-quality cotton yarns using the latest technology
+              and state-of-the-art Swiss and German machinery. Our yarns are
+              spun with precision, ensuring consistent strength, softness, and
+              durability. With a focus on meeting global standards, producing
+              yarns that are suitable for various applications, including
+              knitting and weaving. Each batch undergoes rigorous testing,
+              guaranteeing the finest quality for our customers.
             </Typography>
           </Stack>
           <Stack
@@ -133,10 +136,15 @@ export default function ProductAnimated() {
               Fabrics
             </Typography>
             <Typography fontSize={{ md: "1.2rem", xs: "0.8rem" }}>
-              Maral manufactures a diverse range of blended & innovative yarns
-              to various textile end uses from knitting, weaving, towels,
-              sweaters, socks, home furnishing, denims, protective workwear and
-              more.
+              We manufactures a wide range of fabrics, utilizing advanced
+              knitting and weaving techniques. Our fabrics are crafted from the
+              finest yarns, ensuring excellent texture, durability, and comfort.
+              We offer a variety of fabric types, catering to industries from
+              fashion to home textiles. Our facility is equipped with the latest
+              machinery, allowing us to produce fabrics that meet global
+              standards for quality, appearance, and functionality. From basic
+              cotton to specialized blends, our fabrics are designed to exceed
+              customer expectations.
             </Typography>
           </Stack>
           <Stack
@@ -153,10 +161,15 @@ export default function ProductAnimated() {
               Garments
             </Typography>
             <Typography fontSize={{ md: "1.2rem", xs: "0.8rem" }}>
-              Maral manufactures a diverse range of blended & innovative yarns
-              to various textile end uses from knitting, weaving, towels,
-              sweaters, socks, home furnishing, denims, protective workwear and
-              more.
+              Our garment division produces high-quality apparel with a focus on
+              precision and craftsmanship. From design to finished product, we
+              ensure that every garment reflects our commitment to quality. Our
+              factory follows a meticulous process, including fabric selection,
+              cutting, sewing, and finishing, ensuring each piece meets global
+              fashion standards. Our skilled team and modern equipment enable us
+              to deliver a wide range of garments, from casual wear to
+              specialized items, always prioritizing comfort, style, and
+              durability for our customers.
             </Typography>
           </Stack>
         </Stack>
@@ -215,9 +228,13 @@ export default function ProductAnimated() {
             Yarn
           </Typography>
           <Typography fontSize={{ md: "1.2rem", xs: "0.8rem" }}>
-            Maral manufactures a diverse range of blended & innovative yarns to
-            various textile end uses from knitting, weaving, towels, sweaters,
-            socks, home furnishing, denims, protective workwear and more.
+            We produce high-quality cotton yarns using the latest technology and
+            state-of-the-art Swiss and German machinery. Our yarns are spun with
+            precision, ensuring consistent strength, softness, and durability.
+            With a focus on meeting global standards, producing yarns that are
+            suitable for various applications, including knitting and weaving.
+            Each batch undergoes rigorous testing, guaranteeing the finest
+            quality for our customers.
           </Typography>
         </Stack>
         <Stack
@@ -239,9 +256,15 @@ export default function ProductAnimated() {
             Fabrics
           </Typography>
           <Typography fontSize={{ md: "1.2rem", xs: "0.8rem" }}>
-            Maral manufactures a diverse range of blended & innovative yarns to
-            various textile end uses from knitting, weaving, towels, sweaters,
-            socks, home furnishing, denims, protective workwear and more.
+            We manufactures a wide range of fabrics, utilizing advanced knitting
+            and weaving techniques. Our fabrics are crafted from the finest
+            yarns, ensuring excellent texture, durability, and comfort. We offer
+            a variety of fabric types, catering to industries from fashion to
+            home textiles. Our facility is equipped with the latest machinery,
+            allowing us to produce fabrics that meet global standards for
+            quality, appearance, and functionality. From basic cotton to
+            specialized blends, our fabrics are designed to exceed customer
+            expectations.
           </Typography>
         </Stack>
         <Stack
@@ -263,9 +286,15 @@ export default function ProductAnimated() {
             Garments
           </Typography>
           <Typography fontSize={{ md: "1.2rem", xs: "0.8rem" }}>
-            Maral manufactures a diverse range of blended & innovative yarns to
-            various textile end uses from knitting, weaving, towels, sweaters,
-            socks, home furnishing, denims, protective workwear and more.
+            Our garment division produces high-quality apparel with a focus on
+            precision and craftsmanship. From design to finished product, we
+            ensure that every garment reflects our commitment to quality. Our
+            factory follows a meticulous process, including fabric selection,
+            cutting, sewing, and finishing, ensuring each piece meets global
+            fashion standards. Our skilled team and modern equipment enable us
+            to deliver a wide range of garments, from casual wear to specialized
+            items, always prioritizing comfort, style, and durability for our
+            customers.
           </Typography>
         </Stack>
         <Stack
