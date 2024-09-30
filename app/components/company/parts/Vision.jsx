@@ -5,9 +5,9 @@ import { Box, Stack, Typography } from "@mui/material";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-import icon1 from "./assets/redIcon1.png";
-import icon2 from "./assets/redIcon2.png";
-import icon3 from "./assets/redIcon3.png";
+import icon1 from "./assets/redIcon1.svg";
+import icon2 from "./assets/redIcon2.svg";
+import icon3 from "./assets/redIcon3.svg";
 import Image from "next/image";
 
 const data = [
