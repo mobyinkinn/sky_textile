@@ -11,7 +11,7 @@ export default function Yarns() {
   return (
     <Stack>
       <Navbar />
-      <Stack margin={{ md: "70px 100px 30px 100px", xs: "50px 30px" }}>
+      <Stack margin={{ md: "100px 100px 30px 100px", xs: "50px 30px" }}>
         <Typography
           marginBottom={"10px"}
           textAlign={"center"}
@@ -24,15 +24,15 @@ export default function Yarns() {
           fontSize={{ md: "1rem", xs: "0.7rem" }}
           textAlign={"center"}
         >
-          We Are The Largest Producer And One Of The Leading Exporters Of
-          Value-added Synthetic And Blended Dyed Spun Yarn In India. We Are Also
-          A Prominent Manufacturer Of Cotton Blended Dyed And Mélange Yarn. Some
-          Of Our Yarns Include Polyester, Acrylic, Cotton Mélange, Injection
-          Slub Yarn, Neppy Yarn, Roving Grindle Yarn, Siro Spun, Siro Compact,
-          Lycra Twisted, Core Spun And Double Core Yarns, In Single-ply,
-          Double-ply And Multi-fold. Besides, We Are Among The Few Exclusive
-          Spinners In India To Manufacture Specialty Yarns Such As Modal,
-          Lyocell, Tencel, Coolmax, Lycra, Thermolite Fiber.
+          At Sky Textiles, we utilize cutting-edge technology to transform
+          cotton into premium, sustainable yarns. Our unique plant,
+          strategically located and equipped with advanced operational methods,
+          sets us apart in both capacity and innovation. It’s our superior
+          production techniques and commitment to quality that allow us to craft
+          a wide range of high-demand yarns for domestic and international
+          markets. With our state-of-the-art technology, we are pioneering the
+          production of "no touch yarns," delivering 100% cotton combed compact
+          yarns, crafted to perfection using the latest spinning machines.
         </Typography>
       </Stack>
       <Stack
@@ -61,10 +61,10 @@ export default function Yarns() {
           margin={"10px auto"}
           fontSize={{ md: "1rem", xs: "0.7rem" }}
         >
-          Amazing finished knitting, crochet, and weaving projects start with
-          amazing yarn. WEBS is committed to sourcing and producing the best
-          quality we can find and bringing them direct to you at stashable
-          prices.
+          Our specialty yarns are crafted with precision, offering exceptional
+          strength, softness, and versatility. Designed for diverse
+          applications, they meet the highest global standards in quality and
+          performance.
         </Typography>
         <Stack
           marginTop={"30px"}

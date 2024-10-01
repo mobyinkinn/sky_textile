@@ -71,7 +71,7 @@ export default function Vision() {
           toggleActions: "play reverse play reset",
           // end: `+=100`,
           // scrub: true,
-          markers: true,
+          // markers: true,
         },
       })
       .to(".missionHead", {

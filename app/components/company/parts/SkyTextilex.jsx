@@ -6,21 +6,24 @@ import Footer from "../../footer/Footer";
 import Image from "next/image";
 
 import handShake from "./assets/handShake.png";
-import img from "./assets/manufaturerImage.png";
 import tree from "./assets/sustainable.gif";
 import sun from "./assets/sun.png";
-import maskGroup from "./assets/maskgroup.png";
-import bg from "./assets/bgVector.png";
 import graph from "./assets/graph.png";
-import happyMan from "./assets/happyMan.png";
 
-import community from "./assets/1.jpg";
-import curiosity from "./assets/2.jpg";
-import collab from "./assets/3.jpg";
+import community from "./assets/skyTextile/Knitting.jpg";
+import curiosity from "./assets/skyTextile/DEYING.jpg";
+import collab from "./assets/skyTextile/FABRIC.jpg";
+
 import { useRef, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
+import img1 from "./assets/skyTextile/1.1.jpg";
+import img2 from "./assets/skyTextile/1.2.jpg";
+import img3 from "./assets/skyTextile/1.3.jpg";
+import img4 from "./assets/skyTextile/1.4.jpg";
+
 const processData = [
   {
     id: 0,
@@ -215,34 +218,50 @@ export default function SkyTextiles() {
           <Box
             width={"25%"}
             height={"30vh"}
-            onMouseEnter={() => setContent(1)}
+            // onMouseEnter={() => setContent(1)}
             borderRadius={"10px"}
             sx={{
               cursor: "pointer",
-              backgroundImage: `url(${img.src})`,
+              backgroundImage: `url(${img1.src})`,
               backgroundSize: "cover",
+              backgroundPosition: "center center",
             }}
           ></Box>
           <Box
             width={"25%"}
             height={"30vh"}
-            onMouseEnter={() => setContent(0)}
+            // onMouseEnter={() => setContent(0)}
             borderRadius={"10px"}
             sx={{
               cursor: "pointer",
-              backgroundImage: `url(${img.src})`,
+              backgroundImage: `url(${img2.src})`,
               backgroundSize: "cover",
+              backgroundPosition: "center center",
+            }}
+          ></Box>
+
+          <Box
+            width={"25%"}
+            height={"30vh"}
+            // onMouseEnter={() => setContent(2)}
+            borderRadius={"10px"}
+            sx={{
+              cursor: "pointer",
+              backgroundImage: `url(${img3.src})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center center",
             }}
           ></Box>
           <Box
             width={"25%"}
             height={"30vh"}
-            onMouseEnter={() => setContent(2)}
+            // onMouseEnter={() => setContent(2)}
             borderRadius={"10px"}
             sx={{
               cursor: "pointer",
-              backgroundImage: `url(${img.src})`,
+              backgroundImage: `url(${img4.src})`,
               backgroundSize: "cover",
+              backgroundPosition: "center center",
             }}
           ></Box>
         </Stack>
@@ -252,7 +271,7 @@ export default function SkyTextiles() {
               <Box
                 height={{ smm: "40vh", xs: "40vh" }}
                 sx={{
-                  backgroundImage: `url(${img.src})`,
+                  backgroundImage: `url(${img1.src})`,
                   transition: "filter 0.5s ease",
                   backgroundSize: "cover",
                   borderRadius: "20px",
@@ -265,7 +284,7 @@ export default function SkyTextiles() {
               <Box
                 height={{ smm: "40vh", xs: "40vh" }}
                 sx={{
-                  backgroundImage: `url(${img.src})`,
+                  backgroundImage: `url(${img2.src})`,
                   transition: "filter 0.5s ease",
                   backgroundSize: "cover",
                   borderRadius: "20px",
@@ -278,7 +297,20 @@ export default function SkyTextiles() {
               <Box
                 height={{ smm: "40vh", xs: "40vh" }}
                 sx={{
-                  backgroundImage: `url(${img.src})`,
+                  backgroundImage: `url(${img3.src})`,
+                  transition: "filter 0.5s ease",
+                  backgroundSize: "cover",
+                  borderRadius: "20px",
+                  backgroundPosition: "center center",
+                  cursor: "pointer",
+                }}
+              ></Box>
+            </Box>
+            <Box padding={"10px"}>
+              <Box
+                height={{ smm: "40vh", xs: "40vh" }}
+                sx={{
+                  backgroundImage: `url(${img4.src})`,
                   transition: "filter 0.5s ease",
                   backgroundSize: "cover",
                   borderRadius: "20px",
@@ -478,7 +510,7 @@ export default function SkyTextiles() {
           sx={{
             backgroundImage: `url(${img.src})`,
             backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundPosition: "center center",
             borderRadius: "30px",
           }}
         ></Stack>
