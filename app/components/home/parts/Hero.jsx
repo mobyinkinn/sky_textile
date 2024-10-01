@@ -6,6 +6,7 @@ export default function Hero() {
   return (
     <Box
       width={"100%"}
+      marginTop={"70px"}
       height={{ lg: "100vh", smm: "50vh", xs: "30vh" }}
       position={"relative"}
     >
@@ -17,7 +18,7 @@ export default function Hero() {
         loop
         muted
         controls={false}
-        style={{objectFit:"cover"}}
+        style={{ objectFit: "cover" }}
       >
         <source src="/assets/New.mp4" type="video/mp4" />
       </video>

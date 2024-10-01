@@ -13,16 +13,10 @@ export const data = [
     img: icon1,
   },
   {
-    id: 1,
-    head: "Fabric and Accessories Store Department",
-    data: "Managing the inventory of fabrics and accessories for production.",
-    img: icon2,
-  },
-  {
-    id: 2,
-    head: "Marker, Cutting, Sewing, Washing",
-    img: icon3,
-    data: " Preparing, cutting, assembling, and washing garments for quality and fit.",
+    id: 5,
+    head: "Pack & Dispatch",
+    img: icon6,
+    data: "Securely packing and dispatching garments for on-time delivery.",
   },
   {
     id: 3,
@@ -31,15 +25,22 @@ export const data = [
     data: "Ensuring garments meet quality standards through rigorous inspections.",
   },
   {
+    id: 2,
+    head: "Marker, Cutting, Sewing, Washing",
+    img: icon3,
+    data: " Preparing, cutting, assembling, and washing garments for quality and fit.",
+  },
+
+  {
     id: 4,
     head: "Finishing: Ironing and Folding",
     data: "Perfecting garments with ironing and precise folding.",
     img: icon5,
   },
   {
-    id: 5,
-    head: "Pack & Dispatch",
-    img: icon6,
-    data: "Securely packing and dispatching garments for on-time delivery.",
+    id: 1,
+    head: "Fabric and Accessories Store Department",
+    data: "Managing the inventory of fabrics and accessories for production.",
+    img: icon2,
   },
 ];

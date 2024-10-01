@@ -1,3 +1,5 @@
+"use client";
+
 import { Box, Stack, Typography } from "@mui/material";
 import banner from "./assets/yarnsBanner.png";
 import bannerMobile from "./assets/yarnsBannerMobile.png";
@@ -6,6 +8,71 @@ import Strength from "./StrengthFabrics";
 import yarns from "./assets/popularYarns.png";
 import gradient from "./assets/gradient.png";
 import Footer from "../../footer/Footer";
+import Grid from "@mui/material/Grid";
+
+import img1 from "./assets/Garments/INNERWEAR.jpg";
+import img2 from "./assets/Garments/CASUALWEAR.jpg";
+import img3 from "./assets/Garments/LOUNGEWEAR.jpg";
+import img4 from "./assets/Garments/WINTERWEAR.jpg";
+import img5 from "./assets/Garments/Athleisure.jpg";
+import img6 from "./assets/Garments/Outerwear.jpg";
+
+const gridData = [
+  {
+    id: 0,
+    name: "Single Jersey",
+    data: "A lightweight, stretchy fabric commonly used for t-shirts and casual wear.",
+    img: img1,
+  },
+  {
+    id: 1,
+    name: "Double Jersey",
+    data: "2.Thicker and more stable than single jersey, with a smooth finish on both sides. Used for more structured garments like polo shirts.",
+    img: img2,
+  },
+  {
+    id: 2,
+    name: "Rib Knit",
+    data: "A fabric with a textured, ribbed pattern created by alternating knit and purl stitches. It offers great elasticity and is used for cuffs, collars, and waistbands.",
+    img: img3,
+  },
+  {
+    id: 3,
+    name: "Jacquard Knit",
+    data: "Complex knit patterns, typically used for textured or patterned garments.",
+    img: img4,
+  },
+  {
+    id: 4,
+    name: "Fleece",
+    data: "5.A knitted fabric that is brushed on one or both sides to create a soft, fluffy texture. Commonly used for sweatshirts and jackets",
+    img: img5,
+  },
+  {
+    id: 5,
+    name: "Waffle",
+    data: "Waffle fabric, also known as honeycomb fabric, has raised threads that form small rectangles. It can be made by either weaving or knitting.",
+    img: img6,
+  },
+  {
+    id: 6,
+    name: "Pointelle",
+    data: "Pointelle is a knit fabric pattern with tiny holes typically in the shape of chevrons; the structure is geometric in shape and with repeated design similar to lace.",
+    img: img6,
+  },
+  {
+    id: 7,
+    name: "Polyster",
+    data: "Polyester knit fabric is a synthetic, man-made fabric made of the most widely used fiber in the world.",
+    img: img6,
+  },
+  {
+    id: 8,
+    name: "Pique",
+    data: "Pique is a durable cotton knit fabric covered with a tiny, textured pattern. The cross-tuck knit construction creates a cellular effect with a unique, subtle texture.",
+    img: img6,
+  },
+];
 
 export default function Yarns() {
   return (
@@ -44,7 +111,7 @@ export default function Yarns() {
         }}
       ></Stack>
       <Strength />
-      <Stack>
+      <Stack margin={{ md: "10px 70px", xs: "10px 30px" }}>
         <Typography
           fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
           textAlign={"center"}
@@ -63,7 +130,41 @@ export default function Yarns() {
           quality we can find and bringing them direct to you at stashable
           prices.
         </Typography>
-        <Stack
+
+        <Box margin={"40px 0"}>
+          <Grid container spacing={8}>
+            {gridData.map((el, i) => {
+              return (
+                <Grid key={el.id} item md={4} smm={6} xs={12}>
+                  <Stack height={"100%"} justifyContent={"space-between"}>
+                    <Stack>
+                      <Typography
+                        fontWeight={"bold"}
+                        fontSize={{ md: "1.2rem", xs: "1rem" }}
+                      >
+                        {el.name}
+                      </Typography>
+                      <Typography fontSize={{ md: "1rem", xs: "0.7rem" }}>
+                        {el.data}
+                      </Typography>
+                    </Stack>
+                    <Box
+                      width={"100%"}
+                      height={"30vh"}
+                      marginTop={"20px"}
+                      sx={{
+                        backgroundImage: `url(${el.img.src})`,
+                        backgroundSize: "cover",
+                        backgroundPosition: "center center",
+                      }}
+                    ></Box>
+                  </Stack>
+                </Grid>
+              );
+            })}
+          </Grid>
+        </Box>
+        {/* <Stack
           marginTop={"30px"}
           flexWrap={"wrap"}
           direction={"row"}
@@ -111,7 +212,7 @@ export default function Yarns() {
               borderRadius: "15px",
             }}
           ></Box>
-        </Stack>
+        </Stack> */}
       </Stack>
       <Stack
         width={"100%"}

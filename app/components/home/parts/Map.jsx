@@ -27,7 +27,7 @@ export default function ({ mapRef }) {
       <Box
         position={"relative"}
         width={"100%"}
-        height={{ md: "80vh", xs: "50vh" }}
+        height={{ md: "90vh", xs: "50vh" }}
       >
         <Image src={map} alt="" fill objectFit="contain" />
       </Box>

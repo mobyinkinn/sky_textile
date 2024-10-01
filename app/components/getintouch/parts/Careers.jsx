@@ -51,7 +51,7 @@ export default function Careers() {
       <Navbar />
       <Stack
         direction={"row"}
-        margin={{ md: "0 70px", xs: "30px" }}
+        margin={{ md: "100px 70px", xs: "30px" }}
         alignItems={"center"}
         height={{ md: "70vh" }}
       >

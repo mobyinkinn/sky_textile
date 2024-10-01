@@ -1,3 +1,5 @@
+"use client";
+
 import { Box, Stack, Typography } from "@mui/material";
 import banner from "./assets/yarnsBanner.png";
 import bannerMobile from "./assets/yarnsBannerMobile.png";
@@ -6,7 +8,7 @@ import Strength from "./StrengthGarments";
 import yarns from "./assets/popularYarns.png";
 import gradient from "./assets/gradient.png";
 import Footer from "../../footer/Footer";
-import Grid from "@mui/material/Grid2";
+import Grid from "@mui/material/Grid";
 
 import img1 from "./assets/Garments/INNERWEAR.jpg";
 import img2 from "./assets/Garments/CASUALWEAR.jpg";
@@ -67,10 +69,7 @@ export default function Yarns() {
         >
           Introduction to Garments
         </Typography>
-        <Typography
-          fontSize={{ md: "1rem", xs: "0.7rem" }}
-          textAlign={"center"}
-        >
+        <Typography fontSize={{ md: "1rem", xs: "0.7rem" }}>
           SKY Primwear is a state-of-the-art garment manufacturing unit,
           equipped with cutting-edge machinery and staffed by highly trained
           professionals dedicated to delivering superior quality at every stage
@@ -113,7 +112,7 @@ export default function Yarns() {
         }}
       ></Stack>
       <Strength />
-      <Stack>
+      <Stack margin={{ md: "10px 70px", xs: "10px 30px" }}>
         <Typography
           fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
           textAlign={"center"}
@@ -132,9 +131,39 @@ export default function Yarns() {
           quality we can find and bringing them direct to you at stashable
           prices.
         </Typography>
-        <Stack>
-          <Grid></Grid>
-        </Stack>
+        <Box margin={"40px 0"}>
+          <Grid container spacing={8}>
+            {gridData.map((el, i) => {
+              return (
+                <Grid key={el.id} item md={4} smm={6} xs={12}>
+                  <Stack height={"100%"} justifyContent={"space-between"}>
+                    <Stack>
+                      <Typography
+                        fontWeight={"bold"}
+                        fontSize={{ md: "1.2rem", xs: "1rem" }}
+                      >
+                        {el.name}
+                      </Typography>
+                      <Typography fontSize={{ md: "1rem", xs: "0.7rem" }}>
+                        {el.data}
+                      </Typography>
+                    </Stack>
+                    <Box
+                      width={"100%"}
+                      height={"30vh"}
+                      marginTop={"20px"}
+                      sx={{
+                        backgroundImage: `url(${el.img.src})`,
+                        backgroundSize: "cover",
+                        backgroundPosition: "center center",
+                      }}
+                    ></Box>
+                  </Stack>
+                </Grid>
+              );
+            })}
+          </Grid>
+        </Box>
         {/* <Stack
           marginTop={"30px"}
           flexWrap={"wrap"}

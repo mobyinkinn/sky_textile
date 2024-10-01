@@ -130,7 +130,7 @@ export default function SkyTextiles() {
   return (
     <Stack>
       <Navbar />
-      <Stack margin={{ md: "100px 0", xs: "100px 0" }}>
+      <Stack margin={{ md: "150px 0", xs: "150px 0" }}>
         <Typography
           fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
           textAlign={"center"}
@@ -166,28 +166,32 @@ export default function SkyTextiles() {
         justifyContent={"space-around"}
         gap={"20px"}
       >
-        <Stack alignItems={"center"}>
+        <Stack alignItems={"center"} width={{ md: "30%" }}>
           <Image src={handShake} alt="" width={100} height={100} />
           <Typography fontSize={"2.5rem"} fontWeight={"bold"}>
             150+
           </Typography>
-          <Typography fontSize={"1.2rem"}>
+          <Typography fontSize={"1.2rem"} textAlign={"center"}>
             Trusted by companies who believe in us.
           </Typography>
         </Stack>
-        <Stack alignItems={"center"}>
+        <Stack alignItems={"center"} width={{ md: "30%" }}>
           <Image src={handShake} alt="" width={100} height={100} />
           <Typography fontSize={"2.5rem"} fontWeight={"bold"}>
             2020
           </Typography>
-          <Typography fontSize={"1.2rem"}>Since we are</Typography>
+          <Typography fontSize={"1.2rem"} textAlign={"center"}>
+            Since we are
+          </Typography>
         </Stack>
-        <Stack alignItems={"center"}>
+        <Stack alignItems={"center"} width={{ md: "30%" }}>
           <Image src={handShake} alt="" width={100} height={100} />
           <Typography fontSize={"2.5rem"} fontWeight={"bold"}>
             100+
           </Typography>
-          <Typography fontSize={"1.2rem"}>Valid Certifications</Typography>
+          <Typography fontSize={"1.2rem"} textAlign={"center"}>
+            Valid Certifications
+          </Typography>
         </Stack>
       </Stack>
       <Stack margin={{ md: "100px 70px", xs: "50px 30px" }}>
