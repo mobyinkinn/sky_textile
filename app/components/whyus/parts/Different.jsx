@@ -11,32 +11,42 @@ export default function Different() {
       <Stack direction={{ md: "row", xs: "column" }} gap={"50px"}>
         <Stack justifyContent={"center"} alignItems={"center"} gap={"5px"}>
           <Image src={icon} alt="" width={50} height={50} />
-          <Typography fontSize={"2rem"} textAlign={"center"}>
-            Lorem Ipsum is
+          <Typography
+            fontSize={{ lg: "2rem", md: "1.5rem", xs: "1.3rem" }}
+            textAlign={"center"}
+          >
+            Sustainability Commitment
           </Typography>
           <Typography textAlign={"center"}>
-            orem Ipsum Is Simply Dummy Text Of The Printing And Typesetting
-            Industry. Lorem Ipsum Has Been The Industry's Standard Dummy Text
+            SKY Textiles prioritizes eco-friendly practices, using renewable
+            energy and sustainable materials, setting us apart in minimizing
+            environmental impact.
           </Typography>
         </Stack>
         <Stack justifyContent={"center"} alignItems={"center"} gap={"5px"}>
           <Image src={icon} alt="" width={50} height={50} />
-          <Typography fontSize={"2rem"} textAlign={"center"}>
-            Lorem Ipsum is
+          <Typography
+            fontSize={{ lg: "2rem", md: "1.5rem", xs: "1.3rem" }}
+            textAlign={"center"}
+          >
+            Transparent Supply Chain
           </Typography>
           <Typography textAlign={"center"}>
-            orem Ipsum Is Simply Dummy Text Of The Printing And Typesetting
-            Industry. Lorem Ipsum Has Been The Industry's Standard Dummy Text
+            Our Fiber-to-Fashion model ensures complete traceability and ethical
+            sourcing from farms to production.
           </Typography>
         </Stack>
         <Stack justifyContent={"center"} alignItems={"center"} gap={"5px"}>
           <Image src={icon} alt="" width={50} height={50} />
-          <Typography fontSize={"2rem"} textAlign={"center"}>
-            Lorem Ipsum is
+          <Typography
+            fontSize={{ lg: "2rem", md: "1.5rem", xs: "1.3rem" }}
+            textAlign={"center"}
+          >
+            Empowerment Focus
           </Typography>
           <Typography textAlign={"center"}>
-            orem Ipsum Is Simply Dummy Text Of The Printing And Typesetting
-            Industry. Lorem Ipsum Has Been The Industry's Standard Dummy Text
+            We empower communities through local employment and skill
+            development, fostering social responsibility.
           </Typography>
         </Stack>
       </Stack>

@@ -11,35 +11,28 @@ import Image from "next/image";
 export default function Careers() {
   const data = [
     {
-      designation: "Product Designer",
+      designation: "HR Head",
       Description:
         "We're Looking For A Mid-level Product Designer To Join Our Team.",
       type: "Full-time",
       Remote: "100% Remote",
     },
     {
-      designation: "Product Designer",
+      designation: "Textiles Merchandiser",
       Description:
         "We're Looking For A Mid-level Product Designer To Join Our Team.",
       type: "Full-time",
       Remote: "100% Remote",
     },
     {
-      designation: "Product Designer",
+      designation: "Shift Supervisor",
       Description:
         "We're Looking For A Mid-level Product Designer To Join Our Team.",
       type: "Full-time",
       Remote: "100% Remote",
     },
     {
-      designation: "Product Designer",
-      Description:
-        "We're Looking For A Mid-level Product Designer To Join Our Team.",
-      type: "Full-time",
-      Remote: "100% Remote",
-    },
-    {
-      designation: "Product Designer",
+      designation: "Sales and Marketing Garments",
       Description:
         "We're Looking For A Mid-level Product Designer To Join Our Team.",
       type: "Full-time",
@@ -97,12 +90,17 @@ export default function Careers() {
           textAlign={"center"}
           fontSize={{ ms: "1rem", xs: "0.7rem" }}
         >
-          We At Maral Overseas Limited Endeavor To Believe In The Idea Of
-          Sustainability That Is Achieved When People On Earth Can Live Well
-          Without Compromising The Quality For Future Generations. Strategies To
-          Meet Sustainability Goals Vary From Sustainable Designs And The Use Of
-          Innovative Materials And Processes To The Optimization Of Resource
-          Consumption And Recycling.
+          Joining SKY Textiles means becoming part of an innovative and
+          sustainable textile company dedicated to quality and social
+          responsibility. We prioritize employee growth, offering training and
+          development programs to enhance skills and career advancement. Our
+          commitment to eco-friendly practices ensures you contribute to a
+          greener future while working with high-quality materials in a fully
+          integrated setup. As part of our team, you’ll collaborate with
+          passionate professionals who value creativity and excellence.
+          Additionally, our focus on ethical labor practices fosters a
+          supportive and inclusive work environment. Join SKY Textiles to make a
+          meaningful impact in the textile industry while advancing your career.
         </Typography>
       </Stack>
       <Stack margin={{ md: "100px 70px", xs: "30px" }}>

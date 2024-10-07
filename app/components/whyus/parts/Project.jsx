@@ -26,12 +26,14 @@ export default function Project() {
             {({ countUpRef }) => (
               <Typography
                 fontWeight={"bold"}
-                fontSize={"7rem"}
+                fontSize={{ lg: "6rem", md: "4rem", xs: "6rem" }}
                 ref={countUpRef}
               />
             )}
           </CountUp>
-          <Typography>text of the printing and typesetting.</Typography>
+          <Typography textAlign={"center"}>
+            text of the printing and typesetting.
+          </Typography>
         </Stack>
         <Stack alignItems={"center"}>
           <CountUp
@@ -45,12 +47,14 @@ export default function Project() {
             {({ countUpRef }) => (
               <Typography
                 fontWeight={"bold"}
-                fontSize={"7rem"}
+                fontSize={{ lg: "6rem", md: "4rem", xs: "6rem" }}
                 ref={countUpRef}
               />
             )}
           </CountUp>
-          <Typography>text of the printing and typesetting.</Typography>
+          <Typography textAlign={"center"}>
+            text of the printing and typesetting.
+          </Typography>
         </Stack>
         <Stack alignItems={"center"}>
           <CountUp
@@ -64,12 +68,14 @@ export default function Project() {
             {({ countUpRef }) => (
               <Typography
                 fontWeight={"bold"}
-                fontSize={"7rem"}
+                fontSize={{ lg: "6rem", md: "4rem", xs: "6rem" }}
                 ref={countUpRef}
               />
             )}
           </CountUp>
-          <Typography>text of the printing and typesetting.</Typography>
+          <Typography textAlign={"center"}>
+            text of the printing and typesetting.
+          </Typography>
         </Stack>
       </Stack>
     </Stack>

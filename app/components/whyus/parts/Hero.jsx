@@ -5,7 +5,8 @@ export default function Hero() {
   return (
     <Stack
       width={"100%"}
-      height={{ lg: "80vh", smm: "50vh", xs: "30vh" }}
+      height={{ md: "80vh", smm: "50vh", xs: "40vh" }}
+      marginTop={"70px"}
       sx={{
         backgroundImage: `url(${banner.src})`,
         backgroundSize: "cover",
@@ -32,9 +33,10 @@ export default function Hero() {
           width={{ md: "35%", xs: "80%" }}
           textAlign={"center"}
         >
-          Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting
-          Industry Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever
-          Since The 1500s.
+          SKY Textiles delivers sustainable, high-quality products through
+          eco-friendly practices, ethical labor, and transparency. With
+          renewable energy and fair wages, we ensure responsible production from
+          raw materials to finished garments.
         </Typography>
         <hr style={{ width: "30%", height: "1px", marginTop: "20px" }} />
       </Stack>

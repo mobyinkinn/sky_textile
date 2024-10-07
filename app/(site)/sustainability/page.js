@@ -1,5 +1,5 @@
-import Sustainiblity from "@/app/components/sustainiblity/Sustainiblity";
+import Overview from "@/app/components/sustainiblity/parts/SutainabilityNew";
 
 export default function index() {
-  return <Sustainiblity />;
+  return <Overview />;
 }

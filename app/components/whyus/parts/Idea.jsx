@@ -21,7 +21,7 @@ export default function Idea() {
         fontWeight={"bold"}
         textAlign={"center"}
       >
-        Idea. Research. Teamwork.
+        Verticle Setup. Cotten Rich District. Compliances.
       </Typography>
       <Stack direction={"row"} gap="50px" display={{ md: "flex", xs: "none" }}>
         <Box position={"relative"}>
