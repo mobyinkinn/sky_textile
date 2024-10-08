@@ -26,6 +26,7 @@ import Typewriter from "typewriter-effect";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useRef, useState } from "react";
 
 const weData = [
   {
@@ -61,16 +62,25 @@ const weData = [
 ];
 
 export default function We() {
+  const sliderRef = useRef(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
   var contentSettings = {
     arrows: false,
     fade: true,
     dots: false,
     infinite: true,
     speed: 3500,
-    autoplay: true,
+    // autoplay: true,
     // autoplaySpeed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
+  };
+
+  const handleStringTyped = () => {
+    console.log(sliderRef.current);
+    console.log(currentSlide);
+    // sliderRef.current.slickGoTo(currentSlide + 1); // Move to the next slide
+    setCurrentSlide((currentSlide) => currentSlide + 1); // Update currentSlide state
   };
 
   return (
@@ -86,12 +96,20 @@ export default function We() {
             autoStart: true,
             html: true,
             loop: true,
+            // onStringTyped: handleStringTyped,
+          }}
+          onInit={(typewriter) => {
+            typewriter
+              .callFunction(() => {
+                handleStringTyped();
+              })
+              .start();
           }}
         />
       </Box>
-      <Slider {...contentSettings}>
+      <Slider ref={sliderRef} {...contentSettings}>
         {weData.map((el, i) => {
-          return <WeDataCard el={el} />;
+          return <WeDataCard el={el} key={i} />;
         })}
       </Slider>
     </Stack>

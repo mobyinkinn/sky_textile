@@ -87,10 +87,40 @@ const processData = [
   },
 ];
 
+const PassionateData = [
+  {
+    id: 0,
+    name: "Knitting",
+    data: "The process of creating fabric by interlocking yarn loops to form flexible, stretchable textiles.",
+    img: community,
+  },
+  {
+    id: 1,
+    name: "Dyeing",
+    data: "Applying color to fabric through various methods to achieve vibrant and consistent shades.",
+    img: curiosity,
+  },
+  {
+    id: 2,
+    name: "Finishing",
+    data: "Enhancing fabric properties like texture, strength, and appearance through treatments and processes after knitting and dyeing.",
+    img: collab,
+  },
+];
+
 const milestoneData = [
-  "To lead the industry with innovative, sustainable textile solutions, delivering exceptional quality and design while fostering a responsible, eco-friendly future for fashion and fabric production",
-  "To produce high-quality, sustainable textiles through innovation and ethical practices, exceeding customer expectations while minimizing environmental impact and supporting the growth of our communities and partners.",
-  "Quality, Sustainability, Innovation, Integrity, Customer Focus, Collaboration, Responsibility.",
+  {
+    name: "Vision",
+    data: "To lead the industry with innovative, sustainable textile solutions, delivering exceptional quality and design while fostering a responsible, eco-friendly future for fashion and fabric production",
+  },
+  {
+    name: "Mission",
+    data: "To produce high-quality, sustainable textiles through innovation and ethical practices, exceeding customer expectations while minimizing environmental impact and supporting the growth of our communities and partners.",
+  },
+  {
+    name: "Values",
+    data: "Quality, Sustainability, Innovation, Integrity, Customer Focus, Collaboration, Responsibility.",
+  },
 ];
 
 export default function SkyTextiles() {
@@ -125,6 +155,17 @@ export default function SkyTextiles() {
       </div>
     ),
     customPaging: (i) => <div>{i + 1}</div>,
+  };
+
+  var settingsPassionalte = {
+    arrows: false,
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
   };
 
   return (
@@ -409,8 +450,23 @@ export default function SkyTextiles() {
           })}
         </Slider>
       </Stack>
+      <Stack display={{ md: "none" }} margin={"50px 0"} width={"100%"}>
+        <Typography
+          fontWeight={"bold"}
+          fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
+          margin={"0 20px 30px 20px"}
+        >
+          We Are Passionate About
+        </Typography>
+        <Slider {...settingsPassionalte}>
+          {PassionateData.map((el, i) => (
+            <PassionateCard key={i} el={el} />
+          ))}
+        </Slider>
+      </Stack>
       <Stack
         direction={{ md: "row" }}
+        display={{ md: "flex", xs: "none" }}
         gap={"20px"}
         backgroundColor={"#f9f9f9"}
         padding={{ lg: "50px 70px", xs: "30px" }}
@@ -519,58 +575,31 @@ export default function SkyTextiles() {
           }}
         ></Stack>
       </Stack>
-      {/* <Stack
-        direction={{ md: "row", xs: "column-reverse" }}
-        margin={{ md: "100px 70px", xs: "50px 30px" }}
-        gap={"10px"}
-        alignItems={"center"}
-        sx={{
-          backgroundImage: `url(${bg.src})`,
-          backgroundSize: "contain",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-        }}
+
+      <Stack
+        margin={{ md: "50px 0", xs: "30px 0" }}
+        display={{ xs: "flex", md: "none" }}
       >
-        <Stack gap={"10px"} width={{ md: "50%", smm: "70%", xs: "100%" }}>
-          <Typography
-            fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
-            fontWeight={"bold"}
-          >
-            What Is Lorem Ipsum?
-          </Typography>
-          <Typography
-            fontSize={{ md: "1rem", xs: "0.7rem" }}
-            width={{ md: "70%" }}
-          >
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s.
-          </Typography>
-          <button
-            style={{
-              backgroundColor: "#FB5457",
-              border: "none",
-              width: "100px",
-              padding: "10px",
-              color: "white",
-              borderRadius: "5px",
-            }}
-          >
-            Button
-          </button>
-        </Stack>
-        <Stack
-          width={{ md: "50%", xs: "100%" }}
-          height={{ md: "30vw", xs: "30vh" }}
-          sx={{
-            backgroundImage: `url(${maskGroup.src})`,
-            backgroundSize: "contain",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-          }}
-        ></Stack>
-      </Stack> */}
-      <Stack margin={{ md: "50px 0", xs: "30px 0" }}>
+        <Typography
+          fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
+          textAlign={"center"}
+          fontWeight={"bold"}
+        >
+          Milestones
+        </Typography>
+        {milestoneData.map((el, i) => {
+          return (
+            <Stack key={i} margin={"20px"}>
+              <Typography fontWeight={"bold"}>{el.name}</Typography>
+              <Typography fontSize={"0.8rem"}>{el.data}</Typography>
+            </Stack>
+          );
+        })}
+      </Stack>
+      <Stack
+        margin={{ md: "50px 0", xs: "30px 0" }}
+        display={{ xs: "none", md: "flex" }}
+      >
         <Typography
           fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
           textAlign={"center"}
@@ -584,7 +613,7 @@ export default function SkyTextiles() {
           width={"60%"}
           margin={"0 auto"}
         >
-          {milestoneData[activeMileStone]}
+          {milestoneData[activeMileStone.data]}
         </Typography>
         <Stack
           direction={{ md: "row" }}
@@ -655,6 +684,27 @@ export default function SkyTextiles() {
         </Stack>
       </Stack>
       <Footer />
+    </Stack>
+  );
+}
+
+function PassionateCard({ el }) {
+  return (
+    <Stack margin={"0 20px"} gap={"20px"} justifyContent={"space-between"}>
+      <Stack gap={"10px"}>
+        <Typography fontWeight={"bold"}>{el.name}</Typography>
+        <Typography fontSize={"0.8rem"}>{el.data}</Typography>
+      </Stack>
+      <Stack
+        height={"70vh"}
+        width={{ md: "40%" }}
+        sx={{
+          backgroundImage: `url(${el.img.src})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center center",
+          borderRadius: "30px",
+        }}
+      ></Stack>
     </Stack>
   );
 }
