@@ -1,6 +1,7 @@
 "use client";
 
 import { Box, Stack, Typography } from "@mui/material";
+
 import img from "./assets/We1.png";
 import img1 from "./assets/1.jpg";
 import img2 from "./assets/2.jpg";

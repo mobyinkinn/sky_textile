@@ -24,6 +24,10 @@ import img2 from "./assets/skyPrimware/Main/2.jpg";
 import img3 from "./assets/skyPrimware/Main/3.jpg";
 import img4 from "./assets/skyPrimware/Main/4.jpg";
 
+import trust from "./assets/Trust.png";
+import back from "./assets/back.png";
+import cert from "./assets/Certification.png";
+
 const processData = [
   {
     id: 0,
@@ -80,10 +84,41 @@ const processData = [
   },
 ];
 
+const PassionateData = [
+  {
+    id: 0,
+    name: "Unrivled Experties",
+
+    data: "SKY PRIMWEAR's journey began with skilled professionals mastering the art of knitting. Over time, they’ve refined their expertise, using premium yarns and advanced knitting technologies to produce high-quality, expertly crafted knitted clothing.",
+    img: community,
+  },
+  {
+    id: 1,
+    name: "Quality Assurance",
+    data: "We are dedicated to uncompromising quality, with rigorous control at every stage of production. Skilled technicians ensure consistency, durability, and flawless finishing in all our knitted garments.",
+    img: curiosity,
+  },
+  {
+    id: 2,
+    name: "Product Range",
+    data: "SKY PRIMWEAR offers a diverse range of knitted apparel for men, women, and children, including stylish sweaters, cardigans, and dresses. Blending classic designs with modern aesthetics, our products provide timeless style and comfort for various occasions.",
+    img: collab,
+  },
+];
+
 const milestoneData = [
-  "To be a leading global garment manufacturer, recognized for innovation, sustainability, and unmatched quality.",
-  "To produce high-quality, sustainable garments that exceed customer expectations while fostering innovation and ethical practices in every step of our process.",
-  "Quality, sustainability, integrity, innovation, and customer satisfaction drive everything we do in crafting exceptional garments.",
+  {
+    name: "Vision",
+    data: "To be a leading global garment manufacturer, recognized for innovation, sustainability, and unmatched quality.",
+  },
+  {
+    name: "Vision",
+    data: "To produce high-quality, sustainable garments that exceed customer expectations while fostering innovation and ethical practices in every step of our process.",
+  },
+  {
+    name: "Vision",
+    data: "Quality, sustainability, integrity, innovation, and customer satisfaction drive everything we do in crafting exceptional garments.",
+  },
 ];
 
 export default function SkyTextiles() {
@@ -120,6 +155,17 @@ export default function SkyTextiles() {
     customPaging: (i) => <div>{i + 1}</div>,
   };
 
+  var settingsPassionalte = {
+    arrows: false,
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+  };
+
   return (
     <Stack>
       <Navbar />
@@ -154,11 +200,12 @@ export default function SkyTextiles() {
         backgroundColor={"#F9F9F9"}
         padding={{ md: "100px 70px", xs: "50px 50px" }}
         direction={{ md: "row" }}
+        alignItems={"center"}
         justifyContent={"space-around"}
         gap={"20px"}
       >
         <Stack alignItems={"center"} width={"30%"}>
-          <Image src={handShake} alt="" width={100} height={100} />
+          <Image src={trust} alt="" width={100} height={100} />
           <Typography fontSize={"2.5rem"} fontWeight={"bold"}>
             150+
           </Typography>
@@ -167,7 +214,7 @@ export default function SkyTextiles() {
           </Typography>
         </Stack>
         <Stack alignItems={"center"} width={"30%"}>
-          <Image src={handShake} alt="" width={100} height={100} />
+          <Image src={back} alt="" width={100} height={100} />
           <Typography fontSize={"2.5rem"} fontWeight={"bold"}>
             2021
           </Typography>
@@ -176,7 +223,7 @@ export default function SkyTextiles() {
           </Typography>
         </Stack>
         <Stack alignItems={"center"} width={"30%"}>
-          <Image src={handShake} alt="" width={100} height={100} />
+          <Image src={cert} alt="" width={100} height={100} />
           <Typography fontSize={"2.5rem"} fontWeight={"bold"}>
             150+
           </Typography>
@@ -414,9 +461,24 @@ export default function SkyTextiles() {
           })}
         </Slider>
       </Stack>
+      <Stack display={{ md: "none" }} margin={"50px 0"} width={"100%"}>
+        <Typography
+          fontWeight={"bold"}
+          fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
+          margin={"0 20px 30px 20px"}
+        >
+          We Are Passionate About
+        </Typography>
+        <Slider {...settingsPassionalte}>
+          {PassionateData.map((el, i) => (
+            <PassionateCard key={i} el={el} />
+          ))}
+        </Slider>
+      </Stack>
       <Stack
         direction={{ md: "row" }}
         gap={"20px"}
+        display={{ md: "flex", xs: "none" }}
         backgroundColor={"#f9f9f9"}
         padding={{ lg: "50px 70px", xs: "30px" }}
         marginBottom={"70px"}
@@ -578,7 +640,31 @@ export default function SkyTextiles() {
           }}
         ></Stack>
       </Stack> */}
-      <Stack margin={{ md: "50px 0", xs: "30px 0" }}>
+      <Stack
+        margin={{ md: "50px 0", xs: "30px 0" }}
+        display={{ xs: "flex", md: "none" }}
+      >
+        <Typography
+          fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
+          textAlign={"center"}
+          fontWeight={"bold"}
+        >
+          Milestones
+        </Typography>
+        {milestoneData.map((el, i) => {
+          return (
+            <Stack key={i} margin={"20px"}>
+              <Typography fontWeight={"bold"}>{el.name}</Typography>
+              <Typography fontSize={"0.8rem"}>{el.data}</Typography>
+            </Stack>
+          );
+        })}
+      </Stack>
+
+      <Stack
+        margin={{ md: "50px 0", xs: "30px 0" }}
+        display={{ xs: "none", md: "flex" }}
+      >
         <Typography
           fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
           textAlign={"center"}
@@ -592,7 +678,7 @@ export default function SkyTextiles() {
           width={"60%"}
           margin={"0 auto"}
         >
-          {milestoneData[activeMileStone]}
+          {milestoneData[activeMileStone].data}
         </Typography>
         <Stack
           direction={{ md: "row" }}
@@ -664,6 +750,27 @@ export default function SkyTextiles() {
         </Stack>
       </Stack>
       <Footer />
+    </Stack>
+  );
+}
+
+function PassionateCard({ el }) {
+  return (
+    <Stack margin={"0 20px"} gap={"20px"} justifyContent={"space-between"}>
+      <Stack gap={"10px"}>
+        <Typography fontWeight={"bold"}>{el.name}</Typography>
+        <Typography fontSize={"0.8rem"}>{el.data}</Typography>
+      </Stack>
+      <Stack
+        height={"70vh"}
+        width={{ md: "40%" }}
+        sx={{
+          backgroundImage: `url(${el.img.src})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center center",
+          borderRadius: "30px",
+        }}
+      ></Stack>
     </Stack>
   );
 }

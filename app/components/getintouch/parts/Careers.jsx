@@ -4,8 +4,10 @@ import Navbar from "../../navbar/Navbar";
 import Footer from "../../footer/Footer";
 
 import arrow from "./assets/arrow.png";
+import career from "./assets/career.gif";
 import location from "./assets/location.png";
 import time from "./assets/time.png";
+
 import Image from "next/image";
 
 export default function Careers() {
@@ -43,12 +45,12 @@ export default function Careers() {
     <Stack>
       <Navbar />
       <Stack
-        direction={"row"}
+        direction={{ md: "row" }}
         margin={{ md: "100px 70px", xs: "30px" }}
         alignItems={"center"}
         height={{ md: "70vh" }}
       >
-        <Stack>
+        <Stack width={{ md: "70%" }}>
           <Typography
             fontSize={{ lg: "4.5rem", smm: "3rem", xs: "2rem" }}
             fontWeight={"bold"}
@@ -62,18 +64,19 @@ export default function Careers() {
             The Team ?
           </Typography>
           <Typography
-            fontSize={{ lg: "3rem", smm: "2rem", xs: "1rem" }}
+            fontSize={{ lg: "2.5rem", smm: "1.7rem", xs: "1rem" }}
             fontWeight={"bold"}
           >
             Be Our Next Human Experience
           </Typography>
           <Typography
-            fontSize={{ lg: "3rem", smm: "2rem", xs: "1rem" }}
+            fontSize={{ lg: "2.5rem", smm: "1.7rem", xs: "1rem" }}
             fontWeight={"bold"}
           >
             Designer
           </Typography>
         </Stack>
+        <Image src={career} alt="" width={300} height={300} />
       </Stack>
       <Stack>
         <Typography

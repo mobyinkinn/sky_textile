@@ -1,5 +1,6 @@
 import { Stack, Typography } from "@mui/material";
 import icon from "./assets/icon.png";
+
 import Image from "next/image";
 
 export default function Different() {

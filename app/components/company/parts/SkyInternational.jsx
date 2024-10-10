@@ -24,6 +24,10 @@ import img2 from "./assets/skyInternational/2.jpg";
 import img3 from "./assets/skyInternational/3.jpg";
 import img4 from "./assets/skyInternational/4.jpg";
 
+import trust from "./assets/Trust.png";
+import back from "./assets/back.png";
+import cert from "./assets/Certification.png";
+
 const processData = [
   {
     id: 0,
@@ -75,10 +79,40 @@ const processData = [
   },
 ];
 
+const PassionateData = [
+  {
+    id: 0,
+    name: "Unique Brand Identity",
+    data: "A strong, recognizable image that differentiates the brand from competitors and resonates with the target audience.",
+    img: community,
+  },
+  {
+    id: 1,
+    name: "Product Quality and Design",
+    data: "Consistently delivering well-crafted, stylish garments that meet customer expectations in terms of comfort, durability, and aesthetics.",
+    img: curiosity,
+  },
+  {
+    id: 2,
+    name: "Customer Experience and Engagement",
+    data: "Building strong relationships through excellent service, personalized experiences, and a responsive approach to customer needs and feedback.",
+    img: collab,
+  },
+];
+
 const milestoneData = [
-  "To deliver stylish, high-quality garments that blend innovation with sustainability, catering to the diverse fashion needs of our customers.",
-  "To become a global leader in fashion, recognized for creating trendsetting, eco-conscious clothing that empowers individuals worldwide.",
-  "Innovation, sustainability, quality, customer satisfaction, and integrity in every garment we create.",
+  {
+    name: "Vision",
+    data: "To deliver stylish, high-quality garments that blend innovation with sustainability, catering to the diverse fashion needs of our customers.",
+  },
+  {
+    name: "Vision",
+    data: "To become a global leader in fashion, recognized for creating trendsetting, eco-conscious clothing that empowers individuals worldwide.",
+  },
+  {
+    name: "Vision",
+    data: "Innovation, sustainability, quality, customer satisfaction, and integrity in every garment we create.",
+  },
 ];
 
 export default function SkyTextiles() {
@@ -113,6 +147,17 @@ export default function SkyTextiles() {
       </div>
     ),
     customPaging: (i) => <div>{i + 1}</div>,
+  };
+
+  var settingsPassionalte = {
+    arrows: false,
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
   };
 
   return (
@@ -150,10 +195,11 @@ export default function SkyTextiles() {
         padding={{ md: "100px 70px", xs: "50px 50px" }}
         direction={{ md: "row" }}
         justifyContent={"space-around"}
+        alignItems={"center"}
         gap={"20px"}
       >
         <Stack alignItems={"center"} width={"30%"}>
-          <Image src={handShake} alt="" width={100} height={100} />
+          <Image src={trust} alt="" width={100} height={100} />
           <Typography fontSize={"2.5rem"} fontWeight={"bold"}>
             150+
           </Typography>
@@ -162,7 +208,7 @@ export default function SkyTextiles() {
           </Typography>
         </Stack>
         <Stack alignItems={"center"} width={"30%"}>
-          <Image src={handShake} alt="" width={100} height={100} />
+          <Image src={back} alt="" width={100} height={100} />
           <Typography fontSize={"2.5rem"} fontWeight={"bold"}>
             2021
           </Typography>
@@ -171,7 +217,7 @@ export default function SkyTextiles() {
           </Typography>
         </Stack>
         <Stack alignItems={"center"} width={"30%"}>
-          <Image src={handShake} alt="" width={100} height={100} />
+          <Image src={cert} alt="" width={100} height={100} />
           <Typography fontSize={"2.5rem"} fontWeight={"bold"}>
             150+
           </Typography>
@@ -195,6 +241,7 @@ export default function SkyTextiles() {
           ONE SKY is your go-to for fashionable, top-tier garments. Let’s make
           this journey unforgettable, together!
         </Typography>
+
         <Stack
           direction={"row"}
           gap={"40px"}
@@ -403,12 +450,27 @@ export default function SkyTextiles() {
           })}
         </Slider>
       </Stack>
+      <Stack display={{ md: "none" }} margin={"50px 0"} width={"100%"}>
+        <Typography
+          fontWeight={"bold"}
+          fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
+          margin={"0 20px 30px 20px"}
+        >
+          We Are Passionate About
+        </Typography>
+        <Slider {...settingsPassionalte}>
+          {PassionateData.map((el, i) => (
+            <PassionateCard key={i} el={el} />
+          ))}
+        </Slider>
+      </Stack>
       <Stack
         direction={{ md: "row" }}
         gap={"20px"}
         backgroundColor={"#f9f9f9"}
         padding={{ lg: "50px 70px", xs: "30px" }}
         marginBottom={"70px"}
+        display={{ md: "flex", xs: "none" }}
         alignItems={"center"}
       >
         <Stack width={{ md: "60%" }}>
@@ -510,58 +572,30 @@ export default function SkyTextiles() {
           }}
         ></Stack>
       </Stack>
-      {/* <Stack
-        direction={{ md: "row", xs: "column-reverse" }}
-        margin={{ md: "100px 70px", xs: "50px 30px" }}
-        gap={"10px"}
-        alignItems={"center"}
-        sx={{
-          backgroundImage: `url(${bg.src})`,
-          backgroundSize: "contain",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-        }}
+      <Stack
+        margin={{ md: "50px 0", xs: "30px 0" }}
+        display={{ xs: "flex", md: "none" }}
       >
-        <Stack gap={"10px"} width={{ md: "50%", smm: "70%", xs: "100%" }}>
-          <Typography
-            fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
-            fontWeight={"bold"}
-          >
-            What Is Lorem Ipsum?
-          </Typography>
-          <Typography
-            fontSize={{ md: "1rem", xs: "0.7rem" }}
-            width={{ md: "70%" }}
-          >
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s.
-          </Typography>
-          <button
-            style={{
-              backgroundColor: "#FB5457",
-              border: "none",
-              width: "100px",
-              padding: "10px",
-              color: "white",
-              borderRadius: "5px",
-            }}
-          >
-            Button
-          </button>
-        </Stack>
-        <Stack
-          width={{ md: "50%", xs: "100%" }}
-          height={{ md: "30vw", xs: "30vh" }}
-          sx={{
-            backgroundImage: `url(${maskGroup.src})`,
-            backgroundSize: "contain",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-          }}
-        ></Stack>
-      </Stack> */}
-      <Stack margin={{ md: "50px 0", xs: "30px 0" }}>
+        <Typography
+          fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
+          textAlign={"center"}
+          fontWeight={"bold"}
+        >
+          Milestones
+        </Typography>
+        {milestoneData.map((el, i) => {
+          return (
+            <Stack key={i} margin={"20px"}>
+              <Typography fontWeight={"bold"}>{el.name}</Typography>
+              <Typography fontSize={"0.8rem"}>{el.data}</Typography>
+            </Stack>
+          );
+        })}
+      </Stack>
+      <Stack
+        margin={{ md: "50px 0", xs: "30px 0" }}
+        display={{ xs: "none", md: "flex" }}
+      >
         <Typography
           fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
           textAlign={"center"}
@@ -575,7 +609,7 @@ export default function SkyTextiles() {
           width={"60%"}
           margin={"0 auto"}
         >
-          {milestoneData[activeMileStone]}
+          {milestoneData[activeMileStone].data}
         </Typography>
         <Stack
           direction={{ md: "row" }}
@@ -647,6 +681,27 @@ export default function SkyTextiles() {
         </Stack>
       </Stack>
       <Footer />
+    </Stack>
+  );
+}
+
+function PassionateCard({ el }) {
+  return (
+    <Stack margin={"0 20px"} gap={"20px"} justifyContent={"space-between"}>
+      <Stack gap={"10px"}>
+        <Typography fontWeight={"bold"}>{el.name}</Typography>
+        <Typography fontSize={"0.8rem"}>{el.data}</Typography>
+      </Stack>
+      <Stack
+        height={"70vh"}
+        width={{ md: "40%" }}
+        sx={{
+          backgroundImage: `url(${el.img.src})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center center",
+          borderRadius: "30px",
+        }}
+      ></Stack>
     </Stack>
   );
 }

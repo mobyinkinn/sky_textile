@@ -10,12 +10,15 @@ import gradient from "./assets/gradient.png";
 import Footer from "../../footer/Footer";
 import Grid from "@mui/material/Grid";
 
-import img1 from "./assets/Garments/INNERWEAR.jpg";
-import img2 from "./assets/Garments/CASUALWEAR.jpg";
-import img3 from "./assets/Garments/LOUNGEWEAR.jpg";
-import img4 from "./assets/Garments/WINTERWEAR.jpg";
-import img5 from "./assets/Garments/Athleisure.jpg";
-import img6 from "./assets/Garments/Outerwear.jpg";
+import img1 from "./assets/Fabrics/SingleJersey.jpeg";
+import img2 from "./assets/Fabrics/DoubleJersey.jpeg";
+import img3 from "./assets/Fabrics/RIBKNIT.jpeg";
+import img4 from "./assets/Fabrics/Jacquard.jpeg";
+import img5 from "./assets/Fabrics/Fleece.jpeg";
+import img6 from "./assets/Fabrics/Waffle.jpeg";
+import img7 from "./assets/Fabrics/Pointel.jpeg";
+import img8 from "./assets/Fabrics/Polyster.jpeg";
+import img9 from "./assets/Fabrics/Pique.jpeg";
 
 const gridData = [
   {
@@ -58,19 +61,19 @@ const gridData = [
     id: 6,
     name: "Pointelle",
     data: "Pointelle is a knit fabric pattern with tiny holes typically in the shape of chevrons; the structure is geometric in shape and with repeated design similar to lace.",
-    img: img6,
+    img: img7,
   },
   {
     id: 7,
     name: "Polyster",
     data: "Polyester knit fabric is a synthetic, man-made fabric made of the most widely used fiber in the world.",
-    img: img6,
+    img: img8,
   },
   {
     id: 8,
     name: "Pique",
     data: "Pique is a durable cotton knit fabric covered with a tiny, textured pattern. The cross-tuck knit construction creates a cellular effect with a unique, subtle texture.",
-    img: img6,
+    img: img9,
   },
 ];
 

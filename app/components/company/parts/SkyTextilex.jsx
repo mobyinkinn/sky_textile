@@ -24,6 +24,10 @@ import img2 from "./assets/skyTextile/1.2.jpg";
 import img3 from "./assets/skyTextile/1.3.jpg";
 import img4 from "./assets/skyTextile/1.4.jpg";
 
+import trust from "./assets/Trust.png";
+import back from "./assets/back.png";
+import cert from "./assets/Certification.png";
+
 const processData = [
   {
     id: 0,
@@ -208,7 +212,7 @@ export default function SkyTextiles() {
         gap={"20px"}
       >
         <Stack alignItems={"center"} width={{ md: "30%" }}>
-          <Image src={handShake} alt="" width={100} height={100} />
+          <Image src={trust} alt="" width={100} height={100} />
           <Typography fontSize={"2.5rem"} fontWeight={"bold"}>
             150+
           </Typography>
@@ -217,7 +221,7 @@ export default function SkyTextiles() {
           </Typography>
         </Stack>
         <Stack alignItems={"center"} width={{ md: "30%" }}>
-          <Image src={handShake} alt="" width={100} height={100} />
+          <Image src={back} alt="" width={100} height={100} />
           <Typography fontSize={"2.5rem"} fontWeight={"bold"}>
             2020
           </Typography>
@@ -226,7 +230,7 @@ export default function SkyTextiles() {
           </Typography>
         </Stack>
         <Stack alignItems={"center"} width={{ md: "30%" }}>
-          <Image src={handShake} alt="" width={100} height={100} />
+          <Image src={cert} alt="" width={100} height={100} />
           <Typography fontSize={"2.5rem"} fontWeight={"bold"}>
             100+
           </Typography>
@@ -613,7 +617,7 @@ export default function SkyTextiles() {
           width={"60%"}
           margin={"0 auto"}
         >
-          {milestoneData[activeMileStone.data]}
+          {milestoneData[activeMileStone].data}
         </Typography>
         <Stack
           direction={{ md: "row" }}

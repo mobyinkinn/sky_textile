@@ -7,6 +7,11 @@ import yarns from "./assets/popularYarns.png";
 import gradient from "./assets/gradient.png";
 import Footer from "../../footer/Footer";
 
+import heena from "./assets/Yarns/Heena.jpeg";
+import lurex from "./assets/Yarns/Lurex.jpeg";
+import sorona from "./assets/Yarns/Sorona.jpeg";
+import valvateen from "./assets/Yarns/valvateen.jpeg";
+
 export default function Yarns() {
   return (
     <Stack>
@@ -78,7 +83,7 @@ export default function Yarns() {
             width={{ md: "22%", xs: "40%" }}
             height={"30vh"}
             sx={{
-              backgroundImage: `url(${yarns.src})`,
+              backgroundImage: `url(${heena.src})`,
               backgroundSize: "cover",
               backgroundPosition: "center center",
               borderRadius: "15px",
@@ -88,7 +93,7 @@ export default function Yarns() {
             width={{ md: "22%", xs: "40%" }}
             height={"30vh"}
             sx={{
-              backgroundImage: `url(${yarns.src})`,
+              backgroundImage: `url(${lurex.src})`,
               backgroundSize: "cover",
               backgroundPosition: "center center",
               borderRadius: "15px",
@@ -98,7 +103,7 @@ export default function Yarns() {
             width={{ md: "22%", xs: "40%" }}
             height={"30vh"}
             sx={{
-              backgroundImage: `url(${yarns.src})`,
+              backgroundImage: `url(${sorona.src})`,
               backgroundSize: "cover",
               backgroundPosition: "center center",
               borderRadius: "15px",
@@ -108,7 +113,7 @@ export default function Yarns() {
             width={{ md: "22%", xs: "40%" }}
             height={"30vh"}
             sx={{
-              backgroundImage: `url(${yarns.src})`,
+              backgroundImage: `url(${valvateen.src})`,
               backgroundSize: "cover",
               backgroundPosition: "center center",
               borderRadius: "15px",

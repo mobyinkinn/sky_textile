@@ -118,7 +118,7 @@ export default function Yarns() {
           textAlign={"center"}
           fontWeight={"bold"}
         >
-          Popular Yarns
+          Popular Garments
         </Typography>
         <Typography
           textAlign={"center"}
@@ -150,7 +150,7 @@ export default function Yarns() {
                     </Stack>
                     <Box
                       width={"100%"}
-                      height={"30vh"}
+                      height={"35vh"}
                       marginTop={"20px"}
                       sx={{
                         backgroundImage: `url(${el.img.src})`,

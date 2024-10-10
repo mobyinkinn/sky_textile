@@ -1,9 +1,9 @@
-import icon1 from "./assets/gif/gif1.gif";
-import icon2 from "./assets/gif/gif2.gif";
-import icon3 from "./assets/gif/gif3.gif";
-import icon4 from "./assets/gif/gif4.gif";
-import icon5 from "./assets/gif/gif5.gif";
-import icon6 from "./assets/gif/gif6.gif";
+import icon1 from "./assets/gifs/EnergyEfficient.gif";
+import icon2 from "./assets/gifs/Water.gif";
+import icon3 from "./assets/gifs/Sustainable.gif";
+import icon4 from "./assets/gifs/SocialResponsibility.gif";
+import icon5 from "./assets/gifs/InnovationsAndImprovisations.gif";
+import icon6 from "./assets/gifs/ChemicalComplaince.gif";
 
 export const data = [
   {
