@@ -28,7 +28,13 @@ const Accordion = styled((props) => (
 
 const AccordionSummary = styled((props) => (
   <MuiAccordionSummary
-    expandIcon={<FaPlus sx={{ fontSize: "0.9rem" }} color={"black"} />}
+    expandIcon={
+      <FaPlus
+        display={props.length === 0 && "none"}
+        sx={{ fontSize: "0.9rem" }}
+        color={"black"}
+      />
+    }
     {...props}
   />
 ))(({ theme }) => ({
@@ -123,7 +129,7 @@ const navData = [
         head: "Social Responsiblity",
         data: "used to demonstrate the visual.",
         color: "#FFDFE6",
-        route: "/overview",
+        route: "/overview/csr",
       },
       {
         id: 1,
@@ -144,7 +150,7 @@ const navData = [
         head: "Certifications",
         data: "used to demonstrate the visual.",
         color: "#DFD5E6",
-        route: "/overview",
+        route: "/overview/certifications",
       },
     ],
   },
@@ -243,6 +249,11 @@ export default function Navbar() {
                   <Typography
                     fontSize={"0.9rem"}
                     color={pathname.startsWith(el.route) ? "#FB5457" : "black"}
+                    sx={{
+                      "&:hover": {
+                        color: "#FB5457",
+                      },
+                    }}
                   >
                     {el.name}
                   </Typography>
@@ -309,6 +320,7 @@ export default function Navbar() {
             outline: "none",
             border: "none",
           }}
+          onClick={() => router.push("/get-in-touch")}
           onMouseEnter={() => {
             setIsHovered(true);
           }}
@@ -347,12 +359,11 @@ export default function Navbar() {
         padding={"15px 20px"}
         position={"fixed"}
         backgroundColor={"white"}
-        zIndex={"100"}
+        zIndex={100}
         top={"0"}
         sx={{ borderBottom: "1px solid black" }}
       >
         <Box
-          zIndex={"20"}
           onClick={() => {
             router.push("/");
           }}
@@ -368,7 +379,7 @@ export default function Navbar() {
             style={{ cursor: "pointer" }}
           />
         </Box>
-        <Box zIndex={showNav ? "0" : "50"}>
+        <Box zIndex={showNav ? "0" : "200"}>
           <Image
             src={menu}
             alt=""
@@ -454,16 +465,25 @@ export default function Navbar() {
                     {navData.map((el, i) => {
                       return (
                         <Accordion
-                          expanded={expanded === `panel${i + 1}`}
+                          expanded={
+                            el.subRoutes.length > 0 &&
+                            expanded === `panel${i + 1}`
+                          }
                           onChange={handleChange(`panel${i + 1}`)}
                         >
                           <AccordionSummary
+                            length={el.subRoutes.length}
                             aria-controls="panel1d-content"
                             id="panel1d-header"
                           >
-                            <Typography fontWeight={"bold"}>
-                              {el.name}
-                            </Typography>
+                            <Link
+                              style={{ textDecoration: "none", color: "black" }}
+                              href={el.route}
+                            >
+                              <Typography fontWeight={"bold"}>
+                                {el.name}
+                              </Typography>
+                            </Link>
                           </AccordionSummary>
                           <AccordionDetails>
                             {el.subRoutes.map((d, i) => {
@@ -476,6 +496,7 @@ export default function Navbar() {
                                     padding: "10px 15px",
                                     borderRadius: "10px",
                                   }}
+                                  onClick={() => router.push(d.route)}
                                 >
                                   <Typography
                                     fontSize={"1.2rem"}
@@ -517,6 +538,7 @@ export default function Navbar() {
                         borderRadius: "2px",
                         marginTop: "10px",
                       }}
+                      onClick={() => router.push("/get-in-touch")}
                     >
                       Contact
                     </button>

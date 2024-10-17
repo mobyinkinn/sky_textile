@@ -105,7 +105,7 @@ export default function Caraosal() {
               >
                 <Stack
                   width={{ lg: "40%", md: "60%", xs: "80%" }}
-                  height={{ lg: "50%", sm: "40%", xs: "70%" }}
+                  height={{ lg: "50%", sm: "50%", xs: "70%" }}
                   backgroundColor={"#FB5457"}
                   padding={"30px"}
                   color={"white"}

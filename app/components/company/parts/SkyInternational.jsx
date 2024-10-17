@@ -28,54 +28,84 @@ import trust from "./assets/Trust.png";
 import back from "./assets/back.png";
 import cert from "./assets/Certification.png";
 
+import customerIcon from "./assets/skyInternational/CustomerIcon.png";
+import productIcon from "./assets/skyInternational/ProductIcon.png";
+import uniqueIcon from "./assets/skyInternational/UniqueIcon.png";
+
+import authenticity from "./assets/skyInternational/gifs/Authenticity.gif";
+import brand from "./assets/skyInternational/gifs/Brand.gif";
+import customer from "./assets/skyInternational/gifs/Customer.gif";
+import innovation from "./assets/skyInternational/gifs/Innovation.gif";
+import market from "./assets/skyInternational/gifs/Market.gif";
+import product from "./assets/skyInternational/gifs/Product.gif";
+
+import authenticationIcon from "./assets/skyInternational/icons/Authenticity/1x/1.png";
+import brandIcon from "./assets/skyInternational/icons/Brand Identity/1x/1.png";
+import customerLoyalityIcon from "./assets/skyInternational/icons/Customer Loyality/1x/1.png";
+import innovationIcon from "./assets/skyInternational/icons/Innovation/1x/1.png";
+import marketIcon from "./assets/skyInternational/icons/Market Presence/1x/1.png";
+import productQualityIcon from "./assets/skyInternational/icons/Product Quality/1x/1.png";
+
 const processData = [
   {
     id: 0,
     head: "Brand Identity",
+    gif: brand,
     data1:
       "A clear, distinct, and memorable image that resonates with customers and sets the brand apart.",
     data2: null,
     data3: null,
+    icon1: brandIcon,
   },
   {
     id: 1,
     head: "Product Quality",
+    gif: product,
     data1:
       " Consistent delivery of high-quality products that meet or exceed customer expectations.",
     data2: null,
     data3: null,
+    icon1: productIcon,
   },
   {
     id: 2,
     head: "Customer Loyality",
+    gif: customer,
     data1:
       "Strong emotional connection and trust built with customers, leading to repeat business and advocacy.",
     data2: null,
     data3: null,
+    icon1: customerLoyalityIcon,
   },
   {
     id: 3,
     head: "Innovation",
+    gif: innovation,
     data1:
       "Continuous improvement and creativity in products, services, or experiences that keep the brand relevant.",
     data2: null,
     data3: null,
+    icon1: innovationIcon,
   },
   {
     id: 4,
     head: "Market Presence",
+    gif: market,
     data1:
       " A wide and strong distribution network, both online and offline, ensuring accessibility and visibility.",
     data2: null,
     data3: null,
+    icon1: marketIcon,
   },
   {
     id: 5,
     head: "Authenticity",
+    gif: authenticity,
     data1:
       "Genuine communication and ethical practices that align with brand values, fostering credibility and trust.",
     data2: null,
     data3: null,
+    icon1: authenticationIcon,
   },
 ];
 
@@ -106,11 +136,11 @@ const milestoneData = [
     data: "To deliver stylish, high-quality garments that blend innovation with sustainability, catering to the diverse fashion needs of our customers.",
   },
   {
-    name: "Vision",
+    name: "Mission",
     data: "To become a global leader in fashion, recognized for creating trendsetting, eco-conscious clothing that empowers individuals worldwide.",
   },
   {
-    name: "Vision",
+    name: "Values",
     data: "Innovation, sustainability, quality, customer satisfaction, and integrity in every garment we create.",
   },
 ];
@@ -351,12 +381,11 @@ export default function SkyTextiles() {
           </Slider>
         </Stack>
       </Stack>
-      <Stack backgroundColor={"#FB5457"} padding={10} height={"75vh"}>
+      <Stack backgroundColor={{ smm: "#FB5457" }} padding={{ smm: 5, md: 10 }}>
         <Slider ref={sliderRef} {...settings}>
           {processData.map((el, i) => {
             return (
               <Stack
-                height={"60vh"}
                 direction={{ md: "row", xs: "column-reverse" }}
                 justifyContent={"space-between"}
                 gap={{ md: "40px", xs: "10px" }}
@@ -367,11 +396,13 @@ export default function SkyTextiles() {
                 // padding={{ md: "40px", xs: "10px" }}
               >
                 <Stack
-                  direction={"row"}
+                  direction={{ md: "row" }}
                   padding={5}
                   justifyContent={"space-evenly"}
+                  gap={"30px"}
+                  alignItems={"center"}
                 >
-                  <Stack width={"62%"}>
+                  <Stack width={{ md: "62%" }}>
                     <Typography
                       fontWeight={"bold"}
                       fontSize={{ lg: "3rem", md: "2rem", xs: "1.5rem" }}
@@ -395,14 +426,14 @@ export default function SkyTextiles() {
                       backgroundColor={"white"}
                       marginBottom={"20px"}
                     >
-                      <Image src={sun} alt="" width={"10px"} height={"10px"} />
+                      <Image src={el.icon1} alt="" width={20} height={20} />
                       <Typography>{el.data1}</Typography>
                     </Stack>
                     {el.data2 && (
                       <Stack
                         direction={"row"}
                         gap={"20px"}
-                        alignItems={"center"}
+                        alignItems={"start"}
                         border={"1px solid #FB5457"}
                         padding={"15px"}
                         backgroundColor={"white"}
@@ -422,7 +453,7 @@ export default function SkyTextiles() {
                       <Stack
                         direction={"row"}
                         gap={"20px"}
-                        alignItems={"center"}
+                        alignItems={"start"}
                         border={"1px solid #FB5457"}
                         padding={"15px"}
                         backgroundColor={"white"}
@@ -439,10 +470,11 @@ export default function SkyTextiles() {
                     )}
                   </Stack>
                   <Stack
+                    height={{ xs: "30vh", md: "60vh" }}
                     width={{ lg: "33%", md: "50%", xs: "90%" }}
                     position={"relative"}
                   >
-                    <Image src={tree} fill objectFit="contain" />
+                    <Image src={el.gif} fill objectFit="contain" />
                   </Stack>
                 </Stack>
               </Stack>
@@ -496,7 +528,7 @@ export default function SkyTextiles() {
                 cursor: "pointer",
               }}
             >
-              <Image src={graph} alt="" width={50} height={50} />
+              <Image src={uniqueIcon} alt="" width={50} height={50} />
               <Stack gap={"10px"}>
                 <Typography fontSize={"1rem"} fontWeight={"bold"}>
                   Unique Brand Identity
@@ -521,7 +553,7 @@ export default function SkyTextiles() {
                 cursor: "pointer",
               }}
             >
-              <Image src={graph} alt="" width={50} height={50} />
+              <Image src={productIcon} alt="" width={50} height={50} />
               <Stack gap={"10px"}>
                 <Typography fontSize={"1rem"} fontWeight={"bold"}>
                   Product Quality and Design
@@ -547,7 +579,7 @@ export default function SkyTextiles() {
                 cursor: "pointer",
               }}
             >
-              <Image src={graph} alt="" width={50} height={50} />
+              <Image src={customerIcon} alt="" width={50} height={50} />
               <Stack gap={"10px"}>
                 <Typography fontSize={"1rem"} fontWeight={"bold"}>
                   Customer Experience and Engagement

@@ -1,15 +1,15 @@
-import { Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import gmail from "./assets/Gmail.gif";
 
 export default function Hero() {
   return (
     <Stack
-      margin={{ md: "200px 70px", sm: "85px 70px" }}
+      margin={{ md: "200px 70px", smm: "100px 20px", xs: "200px 20px" }}
       justifyContent={"space-between"}
-      direction={{ md: "row", sm: "column" }}
+      direction={{ smm: "row" }}
     >
-      <Stack>
+      <Stack width={{ md: "40%" }}>
         <Typography
           fontSize={{
             xl: "5rem",
@@ -26,15 +26,19 @@ export default function Hero() {
           Let's talk.
         </Typography>
       </Stack>
-      <Stack position={{ md: "relative", sm: "static" }} width={"60%"}>
-        <Image
-          src={gmail}
-          alt=""
-          fill
-          objectFit="contain"
-          style={{ top: "2%" }}
-        />
-      </Stack>
+      {/* <Stack
+        position={{ md: "relative" }}
+        width={{ md: "60%", xs: "100vw" }}
+        height={{ md: "90vh", xs: "40vh" }}
+      >
+        <Image src={gmail} alt="" fill objectFit="contain" />
+      </Stack> */}
+      <Box display={{ md: "none" }}>
+        <Image src={gmail} alt="" width={300} height={80} />
+      </Box>
+      <Box display={{ md: "block", xs: "none" }}>
+        <Image src={gmail} alt="" width={500} height={140} />
+      </Box>
     </Stack>
   );
 }

@@ -28,66 +28,125 @@ import trust from "./assets/Trust.png";
 import back from "./assets/back.png";
 import cert from "./assets/Certification.png";
 
+import knittingIcon from "./assets/skyTextile/KnittingIcon.png";
+import dyeingIcon from "./assets/skyTextile/DyeingIcon.png";
+import finishingIcon from "./assets/skyTextile/FinishingIcon.png";
+
+import innovationGif from "./assets/skyTextile/Innovations.gif";
+import technologiesGif from "./assets/skyTextile/Technology.gif";
+import economyGif from "./assets/skyTextile/EconomyScale.gif";
+import verticleGif from "./assets/skyTextile/VerticleIntegration.gif";
+import productGif from "./assets/skyTextile/ProductRange.gif";
+import globalGif from "./assets/skyTextile/GlobalPresence.gif";
+
+import innovationIcon1 from "./assets/skyTextile/icons/Innovations/1x/1.png";
+import innovationIcon2 from "./assets/skyTextile/icons/Innovations/1x/2.png";
+import innovationIcon3 from "./assets/skyTextile/icons/Innovations/1x/3.png";
+
+import technologiesIcon1 from "./assets/skyTextile/icons/Technology/1x/Commitment.png";
+import technologiesIcon2 from "./assets/skyTextile/icons/Technology/1x/techniques.png";
+import technologiesIcon3 from "./assets/skyTextile/icons/Technology/1x/Technology.png";
+
+import economyIcon1 from "./assets/skyTextile/icons/Economy Scale/1x/1.png";
+import economyIcon2 from "./assets/skyTextile/icons/Economy Scale/1x/2.png";
+import economyIcon3 from "./assets/skyTextile/icons/Economy Scale/1x/3.png";
+
+import verticleIcon1 from "./assets/skyTextile/icons/Verticle Integration/Verticle Integration/1.png";
+import verticleIcon2 from "./assets/skyTextile/icons/Verticle Integration/Verticle Integration/2.png";
+import verticleIcon3 from "./assets/skyTextile/icons/Verticle Integration/Verticle Integration/3.png";
+
+import globalIcon1 from "./assets/skyTextile/icons/Global Presence/1x/1.png";
+import globalIcon2 from "./assets/skyTextile/icons/Global Presence/1x/2.png";
+import globalIcon3 from "./assets/skyTextile/icons/Global Presence/1x/3.png";
+
+import productIcon1 from "./assets/skyTextile/icons/Product Range/1x/1.png";
+import productIcon2 from "./assets/skyTextile/icons/Product Range/1x/2.png";
+import productIcon3 from "./assets/skyTextile/icons/Product Range/1x/3.png";
+
 const processData = [
   {
     id: 0,
     head: "Innovations",
+    gif: innovationGif,
     data1:
       "SKY Textiles drives innovation by responding to customer needs for unique, high-quality products that reflect emerging trends and changing consumer preferences.",
     data2:
       "We stay ahead of the curve, consistently delivering tailored, differentiated solutions to meet market demands.",
     data3:
       "By monitoring trends and end-user expectations, we provide cutting-edge designs and superior products that exceed client expectations in a dynamic industry.",
+    icon1: innovationIcon1,
+    icon2: innovationIcon2,
+    icon3: innovationIcon3,
   },
   {
     id: 1,
     head: "Technologies",
+    gif: technologiesGif,
     data1:
       "SKY Textiles integrates technology into every facet of production, quality assurance, and R&D, ensuring precision, efficiency, and innovation.",
     data2:
       "Our use of cutting-edge tools and techniques allows us to maintain top-quality standards while fostering continuous improvement and creativity in our products.",
     data3:
       "This commitment to technology empowers us to meet the evolving needs of our clients and stay ahead in the market.",
+    icon1: technologiesIcon1,
+    icon2: technologiesIcon2,
+    icon3: technologiesIcon3,
   },
   {
     id: 2,
     head: "Economy Scale",
+    gif: economyGif,
     data1:
       "SKY Textiles' large production capacity optimizes every stage, from sourcing raw materials to delivering a wide range of products across the vertical.",
     data2:
       "Our capacity advantage allows us to efficiently meet diverse customer demands while maintaining flexibility and offering a superior variety of products.",
     data3:
       "Operating at scale enables us to provide clients with both quality and choice, ensuring competitiveness and responsiveness to market needs.",
+    icon1: economyIcon1,
+    icon2: economyIcon2,
+    icon3: economyIcon3,
   },
   {
     id: 3,
     head: "Verticle Integration",
+    gif: verticleGif,
     data1:
       "SKY Textiles has established a strong presence across the entire textile and garment value chain, from yarns and fabrics to finished garments.",
     data2:
       "Our comprehensive integration allows us to oversee every production stage, ensuring quality and consistency throughout the process.",
     data3:
       "With end-to-end capabilities, we efficiently meet diverse customer needs, making us a trusted partner in the textile and garment industry.",
+    icon1: verticleIcon1,
+    icon2: verticleIcon2,
+    icon3: verticleIcon3,
   },
   {
     id: 4,
     head: "Product Range",
+    gif: productGif,
     data1:
       "SKY Textiles offers an end-to-end solution across a wide range of product categories, from raw cotton to finished garments.",
     data2:
       "Our fully integrated services manage every aspect of the textile production process, ensuring quality and efficiency at each stage.",
     data3:
       "This comprehensive approach enables us to meet diverse client needs, making us a reliable partner for all textile and garment requirements.",
+    icon1: productIcon1,
+    icon2: productIcon2,
+    icon3: productIcon3,
   },
   {
     id: 5,
     head: "Global Presence",
+    gif: globalGif,
     data1:
       "SKY Textiles has established a global presence in 14 countries, delivering exceptional quality and innovation as one of India's fastest-growing textile units.",
     data2:
       "We cater to the biggest domestic brands, providing high-quality garments and fabrics, making us a trusted partner in the industry.",
     data3:
       "Our commitment to excellence and innovation drives growth and expansion both in India and internationally, keeping us ahead in the competitive global market.",
+    icon1: globalIcon1,
+    icon2: globalIcon2,
+    icon3: globalIcon3,
   },
 ];
 
@@ -95,18 +154,21 @@ const PassionateData = [
   {
     id: 0,
     name: "Knitting",
+    icon: knittingIcon,
     data: "The process of creating fabric by interlocking yarn loops to form flexible, stretchable textiles.",
     img: community,
   },
   {
     id: 1,
     name: "Dyeing",
+    icon: dyeingIcon,
     data: "Applying color to fabric through various methods to achieve vibrant and consistent shades.",
     img: curiosity,
   },
   {
     id: 2,
     name: "Finishing",
+    icon: finishingIcon,
     data: "Enhancing fabric properties like texture, strength, and appearance through treatments and processes after knitting and dyeing.",
     img: collab,
   },
@@ -371,7 +433,7 @@ export default function SkyTextiles() {
           </Slider>
         </Stack>
       </Stack>
-      <Stack backgroundColor={"#FB5457"} padding={10}>
+      <Stack backgroundColor={{ smm: "#FB5457" }} padding={{ smm: 5, md: 10 }}>
         <Slider ref={sliderRef} {...settings}>
           {processData.map((el, i) => {
             return (
@@ -386,11 +448,13 @@ export default function SkyTextiles() {
                 // padding={{ md: "40px", xs: "10px" }}
               >
                 <Stack
-                  direction={"row"}
+                  direction={{ md: "row" }}
                   padding={5}
                   justifyContent={"space-evenly"}
+                  gap={"30px"}
+                  alignItems={"center"}
                 >
-                  <Stack width={"62%"}>
+                  <Stack width={{ md: "62%" }}>
                     <Typography
                       fontWeight={"bold"}
                       fontSize={{ lg: "3rem", md: "2rem", xs: "1.5rem" }}
@@ -414,7 +478,7 @@ export default function SkyTextiles() {
                       backgroundColor={"white"}
                       marginBottom={"20px"}
                     >
-                      <Image src={sun} alt="" width={"10px"} height={"10px"} />
+                      <Image src={el.icon1} alt="" width={20} height={20} />
                       <Typography>{el.data1}</Typography>
                     </Stack>
                     <Stack
@@ -426,7 +490,7 @@ export default function SkyTextiles() {
                       backgroundColor={"white"}
                       marginBottom={"20px"}
                     >
-                      <Image src={sun} alt="" width={"10px"} height={"10px"} />
+                      <Image src={el.icon2} alt="" width={20} height={20} />
                       <Typography>{el.data2}</Typography>
                     </Stack>
                     <Stack
@@ -438,15 +502,16 @@ export default function SkyTextiles() {
                       backgroundColor={"white"}
                       marginBottom={"20px"}
                     >
-                      <Image src={sun} alt="" width={"10px"} height={"10px"} />
+                      <Image src={el.icon3} alt="" width={20} height={20} />
                       <Typography>{el.data3}</Typography>
                     </Stack>
                   </Stack>
                   <Stack
                     width={{ lg: "33%", md: "50%", xs: "90%" }}
+                    height={{ xs: "30vh", md: "60vh" }}
                     position={"relative"}
                   >
-                    <Image src={tree} fill objectFit="contain" />
+                    <Image src={el.gif} fill objectFit="contain" />
                   </Stack>
                 </Stack>
               </Stack>
@@ -504,7 +569,7 @@ export default function SkyTextiles() {
                 cursor: "pointer",
               }}
             >
-              <Image src={graph} alt="" width={50} height={50} />
+              <Image src={knittingIcon} alt="" width={50} height={50} />
               <Stack gap={"10px"}>
                 <Typography fontSize={"1rem"} fontWeight={"bold"}>
                   Knitting
@@ -529,7 +594,7 @@ export default function SkyTextiles() {
                 cursor: "pointer",
               }}
             >
-              <Image src={graph} alt="" width={50} height={50} />
+              <Image src={dyeingIcon} alt="" width={50} height={50} />
               <Stack gap={"10px"}>
                 <Typography fontSize={"1rem"} fontWeight={"bold"}>
                   Dyeing
@@ -554,7 +619,7 @@ export default function SkyTextiles() {
                 cursor: "pointer",
               }}
             >
-              <Image src={graph} alt="" width={50} height={50} />
+              <Image src={finishingIcon} alt="" width={50} height={50} />
               <Stack gap={"10px"}>
                 <Typography fontSize={"1rem"} fontWeight={"bold"}>
                   Finishing

@@ -1,4 +1,4 @@
-import { Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import girl from "./assets/wavingGirl.gif";
 import Image from "next/image";
 
@@ -7,7 +7,7 @@ export default function Hero() {
     <Stack
       alignItems={"center"}
       backgroundColor={"#FBFBFB"}
-      height={"90vh"}
+      height={"110vh"}
       width={"100%"}
       overflow={"hidden"}
     >
@@ -15,7 +15,7 @@ export default function Hero() {
         fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
         fontWeight={"bold"}
         textAlign={"center"}
-        margin={"30px 0 10px 0"}
+        margin={"130px 0 10px 0"}
       >
         Clients
       </Typography>
@@ -29,7 +29,17 @@ export default function Hero() {
         Industry. Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever
         Since The 1500s
       </Typography>
-      <Image src={girl} alt="" height={450} width={600} />
+      <Box
+        height={"50vh"}
+        width={{ md: "30%", xs: "90%" }}
+        sx={{
+          backgroundImage: `url(${girl.src})`,
+          backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center center",
+        }}
+      ></Box>
+      {/* <Image src={girl} alt="" height={450} width={450} /> */}
     </Stack>
   );
 }

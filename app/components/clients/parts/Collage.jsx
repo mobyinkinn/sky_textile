@@ -1,6 +1,13 @@
 import { Box, Stack, Typography } from "@mui/material";
 import client from "./assets/client1.png";
 
+import logo1 from "./assets/clients/1.png";
+import logo2 from "./assets/clients/2.png";
+import logo3 from "./assets/clients/3.png";
+import logo4 from "./assets/clients/4.png";
+import logo5 from "./assets/clients/5.png";
+import logo6 from "./assets/clients/6.jpg";
+
 export default function Collage() {
   return (
     <Stack
@@ -26,9 +33,10 @@ export default function Collage() {
             height={"30vh"}
             borderRadius={"10px"}
             sx={{
-              backgroundImage: `url(${client.src})`,
-              backgroundSize: "cover",
+              backgroundImage: `url(${logo1.src})`,
+              backgroundSize: "contain",
               backgroundPosition: "center center",
+              backgroundRepeat: "no-repeat",
             }}
           ></Box>
           <Box
@@ -36,9 +44,10 @@ export default function Collage() {
             height={"30vh"}
             borderRadius={"10px"}
             sx={{
-              backgroundImage: `url(${client.src})`,
-              backgroundSize: "cover",
+              backgroundImage: `url(${logo2.src})`,
+              backgroundSize: "contain",
               backgroundPosition: "center center",
+              backgroundRepeat: "no-repeat",
             }}
           ></Box>
           <Box
@@ -46,9 +55,10 @@ export default function Collage() {
             height={"30vh"}
             borderRadius={"10px"}
             sx={{
-              backgroundImage: `url(${client.src})`,
-              backgroundSize: "cover",
+              backgroundImage: `url(${logo3.src})`,
+              backgroundSize: "contain",
               backgroundPosition: "center center",
+              backgroundRepeat: "no-repeat",
             }}
           ></Box>
           <Box
@@ -56,9 +66,10 @@ export default function Collage() {
             height={"30vh"}
             borderRadius={"10px"}
             sx={{
-              backgroundImage: `url(${client.src})`,
-              backgroundSize: "cover",
+              backgroundImage: `url(${logo4.src})`,
+              backgroundSize: "contain",
               backgroundPosition: "center center",
+              backgroundRepeat: "no-repeat",
             }}
           ></Box>
           <Box
@@ -66,9 +77,10 @@ export default function Collage() {
             height={"30vh"}
             borderRadius={"10px"}
             sx={{
-              backgroundImage: `url(${client.src})`,
-              backgroundSize: "cover",
+              backgroundImage: `url(${logo5.src})`,
+              backgroundSize: "contain",
               backgroundPosition: "center center",
+              backgroundRepeat: "no-repeat",
             }}
           ></Box>
           <Box
@@ -76,8 +88,9 @@ export default function Collage() {
             height={"30vh"}
             borderRadius={"10px"}
             sx={{
-              backgroundImage: `url(${client.src})`,
-              backgroundSize: "cover",
+              backgroundImage: `url(${logo6.src})`,
+              backgroundSize: "contain",
+              backgroundRepeat: "no-repeat",
               backgroundPosition: "center center",
             }}
           ></Box>

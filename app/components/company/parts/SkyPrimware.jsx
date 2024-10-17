@@ -28,59 +28,104 @@ import trust from "./assets/Trust.png";
 import back from "./assets/back.png";
 import cert from "./assets/Certification.png";
 
+import productIcon from "./assets/skyPrimware/ProductIcon.png";
+import qualityIcon from "./assets/skyPrimware/QualityIcon.png";
+import unrivaledIcon from "./assets/skyPrimware/UnrivaledIcon.png";
+
+import cutting from "./assets/skyPrimware/gifs/Cutting.gif";
+import design from "./assets/skyPrimware/gifs/Design.gif";
+import location from "./assets/skyPrimware/gifs/Location.gif";
+import quality from "./assets/skyPrimware/gifs/Quality.gif";
+import sewing from "./assets/skyPrimware/gifs/Sewing.gif";
+import warehousing from "./assets/skyPrimware/gifs/Warehousing.gif";
+
+import designIcon1 from "./assets/skyPrimware/icons/Design/1x/1.png";
+import designIcon2 from "./assets/skyPrimware/icons/Design/1x/2.png";
+
+import cuttingIcon1 from "./assets/skyPrimware/icons/Cutting/1x/1.png";
+import cuttingIcon2 from "./assets/skyPrimware/icons/Cutting/1x/2.png";
+
+import locationIcon1 from "./assets/skyPrimware/icons/Location/Location And Overview/1.png";
+import locationIcon2 from "./assets/skyPrimware/icons/Location/Location And Overview/2.png";
+
+import qualityIcon1 from "./assets/skyPrimware/icons/Quality/1x/1.png";
+import qualityIcon2 from "./assets/skyPrimware/icons/Quality/1x/2.png";
+
+import sewingIcon1 from "./assets/skyPrimware/icons/Sewing/1x/1.png";
+import sewingIcon2 from "./assets/skyPrimware/icons/Sewing/1x/2.png";
+
+import warehousingIcon1 from "./assets/skyPrimware/icons/Warehousing/1x/1.png";
+
 const processData = [
   {
     id: 0,
     head: "Location and Overview",
+    gif: location,
     data1:
       "The strategically located factory serves aS the brand's creative hUb and prodUction center, foStering a Seamless workflow and timely deliveries.",
     data2:
       " ItS spacious layoUt allows for Unhindered collaboration among different departments.",
     data3: null,
+    icon1: locationIcon1,
+    icon2: locationIcon2,
   },
   {
     id: 1,
     head: "Design Studios",
+    gif: design,
     data1:
       "The brand's design studios buzz with innovation, where talented designers conceptualize and sketch breathtaking fashion ideas.",
     data2:
       "Equipped with the latest design software and an extensive library of resources, the studios inspire the creation of captivating collections.",
     data3: null,
+    icon1: designIcon1,
+    icon2: designIcon2,
   },
   {
     id: 2,
     head: "Cutting and Pattern Making Departments",
+    gif: cutting,
     data1:
       "Precision and meticulousness define the cutting and pattern making departments.",
     data2:
       "Equipped with state-of-the-art equipment, skilled artisans ensure that each garment's pattern is flawless, maximizing fabric utilization and minimizing waste.",
     data3: null,
+    icon1: cuttingIcon1,
+    icon2: cuttingIcon2,
   },
   {
     id: 3,
     head: "Sewing and Production Lines",
+    gif: sewing,
     data1:
       "The heart of the factory lies in its production lines, where skilled tailors and seamstresses translate designs into reality.",
     data2:
       "Combining traditional craftsmanship with modern techniques, they sew, stitch, and assemble garments with utmost care and attention to detail.",
     data3: null,
+    icon1: sewingIcon1,
+    icon2: sewingIcon2,
   },
   {
     id: 4,
     head: "Quality Control and Inspection Units",
+    gif: quality,
     data1:
       "Committed to maintaining exceptional quality, the brand's quality control and inspection units rigorously examine each garment.",
     data2:
       "The implementation of advanced technology and manual checks guarantees that only the finest products bear the SKY PRIMWEAR label.",
     data3: null,
+    icon1: qualityIcon1,
+    icon2: qualityIcon2,
   },
   {
     id: 5,
     head: "Warehousing and Distribution Facilities",
+    gif: warehousing,
     data1:
       "The factory's warehousing and distribution facilities are efficient and well-organized, ensuring smooth inventory management and timely global deliveries.",
     data2: null,
     data3: null,
+    icon1: warehousingIcon1,
   },
 ];
 
@@ -112,11 +157,11 @@ const milestoneData = [
     data: "To be a leading global garment manufacturer, recognized for innovation, sustainability, and unmatched quality.",
   },
   {
-    name: "Vision",
+    name: "Mission",
     data: "To produce high-quality, sustainable garments that exceed customer expectations while fostering innovation and ethical practices in every step of our process.",
   },
   {
-    name: "Vision",
+    name: "Values",
     data: "Quality, sustainability, integrity, innovation, and customer satisfaction drive everything we do in crafting exceptional garments.",
   },
 ];
@@ -362,12 +407,12 @@ export default function SkyTextiles() {
           </Slider>
         </Stack>
       </Stack>
-      <Stack backgroundColor={"#FB5457"} padding={10} height={"90vh"}>
+      <Stack backgroundColor={{ smm: "#FB5457" }} padding={{ smm: 5, md: 10 }}>
         <Slider ref={sliderRef} {...settings}>
           {processData.map((el, i) => {
             return (
               <Stack
-                height={"70vh"}
+                // height={"70vh"}
                 direction={{ md: "row", xs: "column-reverse" }}
                 justifyContent={"space-between"}
                 gap={{ md: "40px", xs: "10px" }}
@@ -378,11 +423,13 @@ export default function SkyTextiles() {
                 // padding={{ md: "40px", xs: "10px" }}
               >
                 <Stack
-                  direction={"row"}
+                  direction={{ md: "row" }}
                   padding={5}
                   justifyContent={"space-evenly"}
+                  gap={"30px"}
+                  alignItems={"center"}
                 >
-                  <Stack width={"62%"}>
+                  <Stack width={{ md: "62%" }}>
                     <Typography
                       fontWeight={"bold"}
                       fontSize={{ lg: "3rem", md: "2rem", xs: "1.5rem" }}
@@ -406,7 +453,7 @@ export default function SkyTextiles() {
                       backgroundColor={"white"}
                       marginBottom={"20px"}
                     >
-                      <Image src={sun} alt="" width={"10px"} height={"10px"} />
+                      <Image src={el.icon1} alt="" width={20} height={20} />
                       <Typography>{el.data1}</Typography>
                     </Stack>
                     {el.data2 && (
@@ -419,12 +466,7 @@ export default function SkyTextiles() {
                         backgroundColor={"white"}
                         marginBottom={"20px"}
                       >
-                        <Image
-                          src={sun}
-                          alt=""
-                          width={"10px"}
-                          height={"10px"}
-                        />
+                        <Image src={el.icon2} alt="" width={20} height={20} />
                         <Typography>{el.data2}</Typography>
                       </Stack>
                     )}
@@ -433,7 +475,7 @@ export default function SkyTextiles() {
                       <Stack
                         direction={"row"}
                         gap={"20px"}
-                        alignItems={"center"}
+                        alignItems={"start"}
                         border={"1px solid #FB5457"}
                         padding={"15px"}
                         backgroundColor={"white"}
@@ -451,9 +493,10 @@ export default function SkyTextiles() {
                   </Stack>
                   <Stack
                     width={{ lg: "33%", md: "50%", xs: "90%" }}
+                    height={{ xs: "30vh", md: "60vh" }}
                     position={"relative"}
                   >
-                    <Image src={tree} fill objectFit="contain" />
+                    <Image src={el.gif} fill objectFit="contain" />
                   </Stack>
                 </Stack>
               </Stack>
@@ -507,7 +550,7 @@ export default function SkyTextiles() {
                 cursor: "pointer",
               }}
             >
-              <Image src={graph} alt="" width={50} height={50} />
+              <Image src={unrivaledIcon} alt="" width={50} height={50} />
               <Stack gap={"10px"}>
                 <Typography fontSize={"1rem"} fontWeight={"bold"}>
                   Unrivaled Expertise
@@ -535,7 +578,7 @@ export default function SkyTextiles() {
                 cursor: "pointer",
               }}
             >
-              <Image src={graph} alt="" width={50} height={50} />
+              <Image src={qualityIcon} alt="" width={50} height={50} />
               <Stack gap={"10px"}>
                 <Typography fontSize={"1rem"} fontWeight={"bold"}>
                   Quality Assurance
@@ -562,7 +605,7 @@ export default function SkyTextiles() {
                 cursor: "pointer",
               }}
             >
-              <Image src={graph} alt="" width={50} height={50} />
+              <Image src={productIcon} alt="" width={50} height={50} />
               <Stack gap={"10px"}>
                 <Typography fontSize={"1rem"} fontWeight={"bold"}>
                   Product Range

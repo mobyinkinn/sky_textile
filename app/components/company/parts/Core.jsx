@@ -369,9 +369,9 @@ export default function Core() {
             direction={"row"}
             flexWrap={"wrap"}
             justifyContent={"space-between"}
-            gap={{ smm: "30px", xs: "10px" }}
+            gap={{ smm: "50px", xs: "20px" }}
           >
-            <Stack>
+            <Stack alignItems={"center"}>
               <Stack
                 width={"80px"}
                 height={"80px"}
@@ -381,10 +381,15 @@ export default function Core() {
                 borderRadius={"100%"}
                 sx={{}}
               >
-                <Image src={icon6} alt="" width={50} height={50} />
+                <Image src={icon1} alt="" width={50} height={50} />
               </Stack>
+              <Typography textAlign={"center"} fontSize={"0.8rem"}>
+                Customer
+                <br />
+                Focus
+              </Typography>
             </Stack>
-            <Stack>
+            <Stack alignItems={"center"}>
               <Stack
                 width={"80px"}
                 height={"80px"}
@@ -396,8 +401,11 @@ export default function Core() {
               >
                 <Image src={icon2} alt="" width={50} height={50} />
               </Stack>
+              <Typography textAlign={"center"} fontSize={"0.8rem"}>
+                Team Work
+              </Typography>
             </Stack>
-            <Stack>
+            <Stack alignItems={"center"}>
               <Stack
                 width={"80px"}
                 height={"80px"}
@@ -409,8 +417,11 @@ export default function Core() {
               >
                 <Image src={icon3} alt="" width={50} height={50} />
               </Stack>
+              <Typography textAlign={"center"} fontSize={"0.8rem"}>
+                Accountablity
+              </Typography>
             </Stack>
-            <Stack>
+            <Stack alignItems={"center"}>
               <Stack
                 width={"80px"}
                 height={"80px"}
@@ -422,8 +433,11 @@ export default function Core() {
               >
                 <Image src={icon4} alt="" width={50} height={50} />
               </Stack>
+              <Typography textAlign={"center"} fontSize={"0.8rem"}>
+                Integrity
+              </Typography>
             </Stack>
-            <Stack>
+            <Stack alignItems={"center"}>
               <Stack
                 width={"80px"}
                 height={"80px"}
@@ -435,8 +449,11 @@ export default function Core() {
               >
                 <Image src={icon5} alt="" width={50} height={50} />
               </Stack>
+              <Typography textAlign={"center"} fontSize={"0.8rem"}>
+                Respect
+              </Typography>
             </Stack>
-            <Stack>
+            <Stack alignItems={"center"}>
               <Stack
                 width={"80px"}
                 height={"80px"}
@@ -448,6 +465,11 @@ export default function Core() {
               >
                 <Image src={icon6} alt="" width={50} height={50} />
               </Stack>
+              <Typography textAlign={"center"} fontSize={"0.8rem"}>
+                Passion
+                <br />
+                for Excellence
+              </Typography>
             </Stack>
           </Stack>
         </Stack>

@@ -7,6 +7,10 @@ import team from "./assets/Team.png";
 import Image from "next/image";
 import { useState } from "react";
 
+import icon4 from "./assets/Artboard4.png";
+import icon5 from "./assets/Artboard5.png";
+import icon6 from "./assets/Artboard6.png";
+
 export default function Idea() {
   const [showIdea, setShowIdea] = useState(false);
   const [showTeam, setShowTeam] = useState(false);
@@ -17,19 +21,25 @@ export default function Idea() {
         sx={{
           marginBottom: "50px",
         }}
-        fontSize={"2.5rem"}
+        fontSize={{ md: "2.5rem", xs: "1.5rem" }}
         fontWeight={"bold"}
         textAlign={"center"}
+        display={{ md: "flex", xs: "none" }}
       >
         Verticle Setup. Cotten Rich District. Compliances.
       </Typography>
       <Stack direction={"row"} gap="50px" display={{ md: "flex", xs: "none" }}>
-        <Box position={"relative"}>
+        <Box
+          position={"relative"}
+          borderRadius={"100%"}
+          backgroundColor={"#F95758"}
+          padding={"10px"}
+        >
           <Image
-            src={idea}
+            src={icon4}
             alt=""
-            width={200}
-            height={200}
+            width={150}
+            height={150}
             style={{ cursor: "pointer" }}
             onMouseEnter={() => setTimeout(() => setShowIdea(true), 200)}
             onMouseLeave={() => setTimeout(() => setShowIdea(false), 200)}
@@ -52,24 +62,31 @@ export default function Idea() {
                 fontSize={"1.6rem"}
                 textAlign={"center"}
               >
-                IDEA
+                Verticle Setup
               </Typography>
               <Typography textAlign={"center"} fontSize={"0.7rem"}>
-                It is a long established fact that a reader will be distracted
-                by the readable content of a page when looking at its layout.
+                SKY Textiles operates a fully integrated vertical setup,
+                streamlining production from raw material sourcing to finished
+                products, enhancing efficiency, quality control, and
+                sustainability.
               </Typography>
             </Stack>
           )}
         </Box>
-        <Box position={"relative"}>
+        <Box
+          position={"relative"}
+          borderRadius={"100%"}
+          backgroundColor={"#9C3FEB"}
+          padding={"10px"}
+        >
           <Image
-            src={research}
+            src={icon5}
             onMouseEnter={() => setTimeout(() => setShowResearch(true), 200)}
             onMouseLeave={() => setTimeout(() => setShowResearch(false), 200)}
             alt=""
             style={{ cursor: "pointer" }}
-            width={200}
-            height={200}
+            width={150}
+            height={150}
           />
           {showResearch && (
             <Stack
@@ -89,26 +106,33 @@ export default function Idea() {
                 fontSize={"1.6rem"}
                 textAlign={"center"}
               >
-                RESEARCH
+                Cotten Rich
               </Typography>
               <Typography textAlign={"center"} fontSize={"0.7rem"}>
-                It is a long established fact that a reader will be distracted
-                by the readable content of a page when looking at its layout.
+                Located in a cotton-rich district, SKY Textiles ensures access
+                to high-quality raw materials, supporting local farmers and
+                promoting sustainable agricultural practices within the
+                community.
               </Typography>
             </Stack>
           )}
         </Box>
       </Stack>
       <Stack display={{ md: "flex", xs: "none" }}>
-        <Box position={"relative"}>
+        <Box
+          position={"relative"}
+          borderRadius={"100%"}
+          backgroundColor={"#5A59FF"}
+          padding={"25px"}
+        >
           <Image
-            src={team}
+            src={icon6}
             style={{ cursor: "pointer" }}
             alt=""
-            width={200}
+            width={135}
             onMouseEnter={() => setTimeout(() => setShowTeam(true), 200)}
             onMouseLeave={() => setTimeout(() => setShowTeam(false), 200)}
-            height={200}
+            height={135}
           />
           {showTeam && (
             <Stack
@@ -128,124 +152,46 @@ export default function Idea() {
                 fontSize={"1.6rem"}
                 textAlign={"center"}
               >
-                TEAMWORK
+                Compliances
               </Typography>
               <Typography textAlign={"center"} fontSize={"0.7rem"}>
-                It is a long established fact that a reader will be distracted
-                by the readable content of a page when looking at its layout.
+                SKY Textiles maintains rigorous compliance with international
+                standards, ensuring ethical labor practices, environmental
+                sustainability, and product safety to uphold our commitment to
+                social responsibility and transparency.
               </Typography>
             </Stack>
           )}
         </Box>
       </Stack>
-      <Stack direction={"row"} gap="20px" display={{ md: "none", xs: "flex" }}>
-        <Box position={"relative"}>
-          <Image
-            src={idea}
-            alt=""
-            width={90}
-            height={90}
-            style={{ cursor: "pointer" }}
-            onMouseEnter={() => setTimeout(() => setShowIdea(true), 200)}
-            onMouseLeave={() => setTimeout(() => setShowIdea(false), 200)}
-          />
-          <Stack
-            position={"absolute"}
-            width={"130px"}
-            justifyContent={"center"}
-            sx={{
-              right: "70%",
-              border: "1px solid #eee",
-              backgroundColor: "white",
-              top: "-40%",
-            }}
-            borderRadius={"5px"}
-            padding={"10px 10px"}
-          >
-            <Typography
-              fontWeight={"bold"}
-              fontSize={"1rem"}
-              textAlign={"center"}
-            >
-              IDEA
-            </Typography>
-            <Typography textAlign={"center"} fontSize={"0.6rem"}>
-              It is a long established fact that a reader t its layout.
-            </Typography>
-          </Stack>
-        </Box>
-        <Box position={"relative"}>
-          <Image
-            src={research}
-            onMouseEnter={() => setTimeout(() => setShowResearch(true), 200)}
-            onMouseLeave={() => setTimeout(() => setShowResearch(false), 200)}
-            alt=""
-            style={{ cursor: "pointer" }}
-            width={90}
-            height={90}
-          />
-          <Stack
-            position={"absolute"}
-            width={"130px"}
-            justifyContent={"center"}
-            borderRadius={"5px"}
-            padding={"10px 10px"}
-            sx={{
-              border: "1px solid #eee",
-              backgroundColor: "white",
-              left: "70%",
-              top: "-40%",
-            }}
-          >
-            <Typography
-              fontWeight={"bold"}
-              fontSize={"1rem"}
-              textAlign={"center"}
-            >
-              RESEARCH
-            </Typography>
-            <Typography textAlign={"center"} fontSize={"0.6rem"}>
-              It is a long established fact that a reader t its layout.
-            </Typography>
-          </Stack>
-        </Box>
-      </Stack>
-      <Stack display={{ md: "none", xs: "flex" }}>
-        <Box position={"relative"}>
-          <Image
-            src={team}
-            style={{ cursor: "pointer" }}
-            alt=""
-            width={90}
-            onMouseEnter={() => setTimeout(() => setShowTeam(true), 200)}
-            onMouseLeave={() => setTimeout(() => setShowTeam(false), 200)}
-            height={90}
-          />
-          <Stack
-            position={"absolute"}
-            width={"130px"}
-            justifyContent={"center"}
-            sx={{
-              backgroundColor: "white",
-              border: "1px solid #eee",
-              left: "-20px",
-              top: "110%",
-            }}
-            borderRadius={"5px"}
-            padding={"10px 10px"}
-          >
-            <Typography
-              fontWeight={"bold"}
-              fontSize={"1rem"}
-              textAlign={"center"}
-            >
-              TEAMWORK
-            </Typography>
-            <Typography textAlign={"center"} fontSize={"0.6rem"}>
-              It is a long established fact that a reader t its layout.
-            </Typography>
-          </Stack>
-        </Box>
+      <Stack gap="20px" margin={"20px"} display={{ md: "none", xs: "flex" }}>
+        <Typography fontWeight={"bold"} fontSize={"1rem"}>
+          Vertical Setup
+        </Typography>
+        <Typography fontSize={"0.8rem"}>
+          SKY Textiles maintains rigorous compliance with international
+          standards, ensuring ethical labor practices, environmental
+          sustainability, and product safety to uphold our commitment to social
+          responsibility and transparency.
+        </Typography>
+        <Typography fontWeight={"bold"} fontSize={"1rem"}>
+          Cotton Rich
+        </Typography>
+        <Typography fontSize={"0.8rem"}>
+          SKY Textiles maintains rigorous compliance with international
+          standards, ensuring ethical labor practices, environmental
+          sustainability, and product safety to uphold our commitment to social
+          responsibility and transparency.
+        </Typography>
+        <Typography fontWeight={"bold"} fontSize={"1rem"}>
+          Compliances
+        </Typography>
+        <Typography fontSize={"0.8rem"}>
+          SKY Textiles maintains rigorous compliance with international
+          standards, ensuring ethical labor practices, environmental
+          sustainability, and product safety to uphold our commitment to social
+          responsibility and transparency.
+        </Typography>
       </Stack>
     </Stack>
   );

@@ -145,7 +145,7 @@ export default function Vision() {
               Yarns
             </Typography>
             <Typography
-              fontSize={{ lg: "3rem", xs: "2rem" }}
+              fontSize={{ lg: "3rem", md: "2rem", xs: "1.5rem" }}
               fontWeight={"bold"}
               className="vision"
             >
@@ -164,7 +164,7 @@ export default function Vision() {
               Fabrics
             </Typography>
             <Typography
-              fontSize={{ lg: "3rem", xs: "2rem" }}
+              fontSize={{ lg: "3rem", md: "2rem", xs: "1.5rem" }}
               fontWeight={"bold"}
               className="mission"
             >
@@ -183,7 +183,7 @@ export default function Vision() {
               Garment
             </Typography>
             <Typography
-              fontSize={{ lg: "3rem", xs: "2rem" }}
+              fontSize={{ lg: "3rem", md: "2rem", xs: "1.5rem" }}
               fontWeight={"bold"}
               className="values"
             >

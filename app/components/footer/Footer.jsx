@@ -31,7 +31,13 @@ const Accordion = styled((props) => (
 
 const AccordionSummary = styled((props) => (
   <MuiAccordionSummary
-    expandIcon={<FaPlus sx={{ fontSize: "0.9rem" }} color={"black"} />}
+    expandIcon={
+      <FaPlus
+        display={props.length === 0 && "none"}
+        sx={{ fontSize: "0.9rem" }}
+        color={"black"}
+      />
+    }
     {...props}
   />
 ))(({ theme }) => ({
@@ -52,29 +58,33 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   padding: theme.spacing(2),
   borderTop: "1px solid rgba(0, 0, 0, .125)",
 }));
+
 const navData = [
   {
     id: 0,
     name: "Company Profile",
-    route: "/companyprofile",
+    route: "/company-profile",
     subRoutes: [
       {
         id: 0,
         head: "Sky Textiles.",
         data: "In publishing and graphic design.",
         color: "#FFDFE6",
+        route: "/company-profile/sky-textiles",
       },
       {
         id: 1,
         head: "SKY Primwear.",
         data: "Lorem ipsum is a placeholder text.",
         color: "#DFDFFD",
+        route: "/company-profile/sky-primware",
       },
       {
         id: 2,
         head: "SKY International.",
         data: "used to demonstrate the visual.",
         color: "#DFD5E6",
+        route: "/company-profile/sky-international",
       },
     ],
   },
@@ -82,32 +92,7 @@ const navData = [
     id: 1,
     name: "Infrastructure",
     route: "/infrastructure",
-    subRoutes: [
-      {
-        id: 0,
-        head: "Sky Textiles.",
-        data: "In publishing and graphic design.",
-        color: "#FFDFE6",
-      },
-      {
-        id: 1,
-        head: "SKY Primwear.",
-        data: "Lorem ipsum is a placeholder text.",
-        color: "#DFDFFD",
-      },
-      {
-        id: 2,
-        head: "SKY International.",
-        data: "used to demonstrate the visual.",
-        color: "#DFD5E6",
-      },
-      {
-        id: 3,
-        head: "SKY International.",
-        data: "used to demonstrate the visual.",
-        color: "#DFD5E6",
-      },
-    ],
+    subRoutes: [],
   },
   {
     id: 2,
@@ -119,55 +104,56 @@ const navData = [
         head: "Yarns",
         data: "In publishing and graphic design.",
         color: "#FFDFE6",
+        route: "/products/yarns",
       },
       {
         id: 1,
         head: "Fabrics",
         data: "Lorem ipsum is a placeholder text.",
         color: "#DFDFFD",
+        route: "/products/fabrics",
       },
       {
         id: 2,
         head: "Garments",
         data: "used to demonstrate the visual.",
         color: "#DFD5E6",
+        route: "/products/garments",
       },
     ],
   },
   {
     id: 3,
-    name: "Sustainability",
-    route: "/sustainability",
+    name: "Overview",
+    route: "/overview",
     subRoutes: [
       {
         id: 0,
-        head: "Overview",
-        data: "In publishing and graphic design.",
+        head: "Social Responsiblity",
+        data: "used to demonstrate the visual.",
         color: "#FFDFE6",
+        route: "/overview/csr",
       },
       {
         id: 1,
-        head: "Customer Relations",
-        data: "Lorem ipsum is a placeholder text.",
-        color: "#DFDFFD",
+        head: "Events",
+        data: "used to demonstrate the visual.",
+        color: "#DFD5E6",
+        route: "/overview/events",
       },
       {
         id: 2,
-        head: "Society",
+        head: "Why Us",
         data: "used to demonstrate the visual.",
-        color: "#DFD5E6",
+        color: "#DFDFFD",
+        route: "/overview/why-us",
       },
       {
         id: 3,
-        head: "Resource Management",
+        head: "Certifications",
         data: "used to demonstrate the visual.",
         color: "#DFD5E6",
-      },
-      {
-        id: 4,
-        head: "Social Responsiblity",
-        data: "used to demonstrate the visual.",
-        color: "#DFD5E6",
+        route: "/overview/certifications",
       },
     ],
   },
@@ -175,98 +161,26 @@ const navData = [
     id: 4,
     name: "Clients",
     route: "/clients",
-    subRoutes: [
-      {
-        id: 0,
-        head: "Sky Textiles.",
-        data: "In publishing and graphic design.",
-        color: "#FFDFE6",
-      },
-      {
-        id: 1,
-        head: "SKY Primwear.",
-        data: "Lorem ipsum is a placeholder text.",
-        color: "#DFDFFD",
-      },
-      {
-        id: 2,
-        head: "SKY International.",
-        data: "Lorem ipsum is a placeholder text.",
-        color: "#DFDFFD",
-      },
-    ],
-  },
-  {
-    id: 5,
-    name: "Why us",
-    route: "/whyus",
-    subRoutes: [
-      {
-        id: 0,
-        head: "Vertical Setup",
-        data: "In publishing and graphic design.",
-        color: "#FFDFE6",
-      },
-      {
-        id: 1,
-        head: "Cotton Rich  District",
-        data: "Lorem ipsum is a placeholder text.",
-        color: "#DFDFFD",
-      },
-      {
-        id: 2,
-        head: "Compliances",
-        data: "used to demonstrate the visual.",
-        color: "#DFD5E6",
-      },
-      {
-        id: 3,
-        head: "Transparency",
-        data: "used to demonstrate the visual.",
-        color: "#DFD5E6",
-      },
-      {
-        id: 4,
-        head: "Customer Service",
-        data: "used to demonstrate the visual.",
-        color: "#DFD5E6",
-      },
-      {
-        id: 5,
-        head: "EnvironMental Sustainablity",
-        data: "used to demonstrate the visual.",
-        color: "#DFD5E6",
-      },
-    ],
+    subRoutes: [],
   },
   {
     id: 6,
     name: "Get in Touch",
-    route: "/getintouch",
+    route: "/get-in-touch",
     subRoutes: [
       {
         id: 0,
         head: "Enquiry",
         data: "In publishing and graphic design.",
         color: "#FFDFE6",
+        route: "/get-in-touch/careers",
       },
       {
         id: 1,
         head: "Careers",
         data: "Lorem ipsum is a placeholder text.",
         color: "#DFDFFD",
-      },
-      {
-        id: 2,
-        head: "Events",
-        data: "used to demonstrate the visual.",
-        color: "#DFD5E6",
-      },
-      {
-        id: 2,
-        head: "Certifications",
-        data: "used to demonstrate the visual.",
-        color: "#DFD5E6",
+        route: "/get-in-touch/careers",
       },
     ],
   },
@@ -290,32 +204,30 @@ export default function Footer() {
           gap={"100px"}
         >
           <Stack gap={"10px"}>
-            <Typography fontWeight={"bold"}>Product</Typography>
+            <Typography fontWeight={"bold"}>Links</Typography>
             <Stack color={"#393737"} gap={"6px"}>
-              <Typography>Employee database</Typography>
-              <Typography>Paypal</Typography>
-              <Typography>Absences</Typography>
-              <Typography>Time tracking</Typography>
-              <Typography>Shift Planner</Typography>
-              <Typography>Recruiting</Typography>
+              <Typography>Company Profile</Typography>
+              <Typography>Infrastructure</Typography>
+              <Typography>Product Range</Typography>
+              <Typography>Overview</Typography>
+              <Typography>Clients</Typography>
+              <Typography>Get In Touch</Typography>
             </Stack>
           </Stack>
           <Stack gap={"10px"}>
-            <Typography fontWeight={"bold"}>Information</Typography>
+            <Typography fontWeight={"bold"}>Products</Typography>
             <Stack color={"#393737"} gap={"6px"}>
-              <Typography>FAQ</Typography>
-              <Typography>Blog</Typography>
-              <Typography>Support</Typography>
+              <Typography>Yarns</Typography>
+              <Typography>Fabrics</Typography>
+              <Typography>Garments</Typography>
             </Stack>
           </Stack>
           <Stack gap={"10px"}>
             <Typography fontWeight={"bold"}>Company</Typography>
             <Stack color={"#393737"} gap={"6px"}>
-              <Typography>FAQ</Typography>
-              <Typography>About us</Typography>
-              <Typography>Careers</Typography>
-              <Typography>Contact us</Typography>
-              <Typography>Lift Media</Typography>
+              <Typography>Sky Textile</Typography>
+              <Typography>Sky Primware</Typography>
+              <Typography>Sky International</Typography>
             </Stack>
           </Stack>
           <Stack
@@ -323,7 +235,7 @@ export default function Footer() {
             gap={"10px"}
             padding={"40px"}
             position={"relative"}
-            sx={{ top: "-40px" }}
+            sx={{ top: "-40px", zIndex: "0" }}
             width={"30%"}
           >
             <Typography fontWeight={"bold"}>Subscribe</Typography>
@@ -345,9 +257,8 @@ export default function Footer() {
               </button>
             </Stack>
             <Typography color={"#2E2D2D"} fontSize={"0.8rem"}>
-              Hello, we are Lift Media. Our goal is to translate the positive
-              effects from revolutionizing how companies engage with their
-              clients & their team.
+              At Sky Textiles, we focus on producing high-quality textile
+              products that meet international standards.
             </Typography>
           </Stack>
         </Stack>
@@ -463,18 +374,30 @@ export default function Footer() {
           {navData.map((el, i) => {
             return (
               <Accordion
-                expanded={expanded === `panel${i + 1}`}
+                expanded={
+                  el.subRoutes.length > 0 && expanded === `panel${i + 1}`
+                }
                 onChange={handleChange(`panel${i + 1}`)}
               >
                 <AccordionSummary
+                  length={el.subRoutes.length}
                   aria-controls="panel1d-content"
                   id="panel1d-header"
                 >
-                  <Typography fontWeight={"bold"}>{el.name}</Typography>
+                  <Link
+                    href={el.route}
+                    style={{ textDecoration: "none", color: "black" }}
+                  >
+                    <Typography fontWeight={"bold"}>{el.name}</Typography>
+                  </Link>
                 </AccordionSummary>
                 <AccordionDetails>
                   {el.subRoutes.map((d, i) => {
-                    return <Typography>{d?.head}</Typography>;
+                    return (
+                      <Typography onClick={() => router.push(d.route)}>
+                        {d?.head}
+                      </Typography>
+                    );
                   })}
                 </AccordionDetails>
               </Accordion>

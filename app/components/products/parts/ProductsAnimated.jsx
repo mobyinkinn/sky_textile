@@ -30,10 +30,10 @@ export default function ProductAnimated() {
       .fromTo(
         ".yarnsImage",
         {
-          clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+          opacity: 1,
         },
         {
-          clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)",
+          opacity: 0,
           scrollTrigger: {
             trigger: ".fabrics",
             start: "top center",
@@ -46,45 +46,49 @@ export default function ProductAnimated() {
       .fromTo(
         ".fabricsImage",
         {
-          clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)",
+          opacity: 0,
         },
         {
-          clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+          opacity: 1,
+          duration: 0.5,
           scrollTrigger: {
             trigger: ".fabrics",
+            endTrigger: ".garments",
+            end: "top center",
             start: "top center",
-            end: `+=100`,
-            scrub: true,
+            toggleActions: "play reverse play reset",
+            // end: `+=100`,
+            // scrub: true,
             // markers: true,
           },
         }
       )
-      .to(
-        ".fabricsImage",
-
-        {
-          clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)",
-          scrollTrigger: {
-            trigger: ".garments",
-            start: "top center",
-            end: `+=100`,
-            scrub: true,
-            // markers: true,
-          },
-        }
-      )
+      .to(".fabricsImage", {
+        opacity: 0,
+        duration: 0.5,
+        scrollTrigger: {
+          trigger: ".garments",
+          start: "top center",
+          toggleActions: "play reverse play reset",
+          // end: `+=100`,
+          // scrub: true,
+          // markers: true,
+        },
+      })
       .fromTo(
         ".garmentsImage",
         {
-          clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)",
+          opacity: 0,
         },
         {
-          clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+          opacity: 1,
+          duration: 0.5,
           scrollTrigger: {
             trigger: ".garments",
             start: "top center",
-            end: `+=100`,
-            scrub: true,
+            toggleActions: "play reverse play reset",
+            // end: `+=100`,
+            // scrub: true,
             // markers: true,
           },
         }
@@ -271,7 +275,7 @@ export default function ProductAnimated() {
           height={"150px"}
           width={"60%"}
           sx={{
-            backgroundImage: `url(${yarns.src})`,
+            backgroundImage: `url(${fabric.src})`,
             backgroundSize: "contain",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
@@ -301,7 +305,7 @@ export default function ProductAnimated() {
           height={"150px"}
           width={"60%"}
           sx={{
-            backgroundImage: `url(${yarns.src})`,
+            backgroundImage: `url(${garments.src})`,
             backgroundSize: "contain",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",

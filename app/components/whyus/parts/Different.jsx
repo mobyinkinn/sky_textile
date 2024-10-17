@@ -1,6 +1,10 @@
 import { Stack, Typography } from "@mui/material";
 import icon from "./assets/icon.png";
 
+import icon1 from "./assets/Artboard1.png";
+import icon2 from "./assets/Artboard2.png";
+import icon3 from "./assets/Artboard3.png";
+
 import Image from "next/image";
 
 export default function Different() {
@@ -10,8 +14,13 @@ export default function Different() {
         What Make us Different
       </Typography>
       <Stack direction={{ md: "row", xs: "column" }} gap={"50px"}>
-        <Stack justifyContent={"center"} alignItems={"center"} gap={"5px"}>
-          <Image src={icon} alt="" width={50} height={50} />
+        <Stack
+          justifyContent={"center"}
+          alignItems={"center"}
+          gap={"5px"}
+          width={{ md: "30%" }}
+        >
+          <Image src={icon1} alt="" width={50} height={50} />
           <Typography
             fontSize={{ lg: "2rem", md: "1.5rem", xs: "1.3rem" }}
             textAlign={"center"}
@@ -24,8 +33,13 @@ export default function Different() {
             environmental impact.
           </Typography>
         </Stack>
-        <Stack justifyContent={"center"} alignItems={"center"} gap={"5px"}>
-          <Image src={icon} alt="" width={50} height={50} />
+        <Stack
+          width={{ md: "30%" }}
+          justifyContent={"center"}
+          alignItems={"center"}
+          gap={"5px"}
+        >
+          <Image src={icon2} alt="" width={50} height={50} />
           <Typography
             fontSize={{ lg: "2rem", md: "1.5rem", xs: "1.3rem" }}
             textAlign={"center"}
@@ -37,8 +51,13 @@ export default function Different() {
             sourcing from farms to production.
           </Typography>
         </Stack>
-        <Stack justifyContent={"center"} alignItems={"center"} gap={"5px"}>
-          <Image src={icon} alt="" width={50} height={50} />
+        <Stack
+          width={{ md: "30%" }}
+          justifyContent={"center"}
+          alignItems={"center"}
+          gap={"5px"}
+        >
+          <Image src={icon3} alt="" width={50} height={50} />
           <Typography
             fontSize={{ lg: "2rem", md: "1.5rem", xs: "1.3rem" }}
             textAlign={"center"}

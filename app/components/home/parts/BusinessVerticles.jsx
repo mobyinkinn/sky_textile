@@ -67,7 +67,7 @@ export default function BusinessVerticles({ mapRef }) {
       .to(".fabricsContainer", {
         scrollTrigger: {
           trigger: ".fabricsContainer",
-          start: "center 35%",
+          start: "center 45%",
           endTrigger: ".garmentsContainer",
           end: "top center",
           anticipatePin: 0.1,
@@ -82,7 +82,7 @@ export default function BusinessVerticles({ mapRef }) {
         opacity: 1,
         scrollTrigger: {
           trigger: ".fabricsContainer",
-          start: "center 35%",
+          start: "center 45%",
           end: "+=10",
           scrub: true,
         },
@@ -94,7 +94,7 @@ export default function BusinessVerticles({ mapRef }) {
         opacity: 1,
         scrollTrigger: {
           trigger: ".fabricsContainer",
-          start: "center 35%",
+          start: "center 45%",
           end: "+=150",
           scrub: true,
           // markers: true,
@@ -103,7 +103,7 @@ export default function BusinessVerticles({ mapRef }) {
       .to(".garmentsContainer", {
         scrollTrigger: {
           trigger: ".garmentsContainer",
-          start: "center 35%",
+          start: "center 45%",
           endTrigger: mapRef.current,
           end: "top bottom",
           anticipatePin: 0.1,
@@ -118,7 +118,7 @@ export default function BusinessVerticles({ mapRef }) {
         opacity: 1,
         scrollTrigger: {
           trigger: ".garmentsContainer",
-          start: "center 35%",
+          start: "center 45%",
           end: "+=10",
           scrub: true,
         },
@@ -130,7 +130,7 @@ export default function BusinessVerticles({ mapRef }) {
         opacity: 1,
         scrollTrigger: {
           trigger: ".garmentsContainer",
-          start: "center 35%",
+          start: "center 45%",
           end: "+=150",
           scrub: true,
           // markers: true,

@@ -8,42 +8,61 @@ import career from "./assets/career.gif";
 import location from "./assets/location.png";
 import time from "./assets/time.png";
 
+import Form from "./FormCareer";
+
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Careers() {
+  const [showForm, setShowForm] = useState(false);
   const data = [
     {
-      designation: "HR Head",
+      designation: "B2B Area Sales Manager",
       Description:
-        "We're Looking For A Mid-level Product Designer To Join Our Team.",
+        "Seeking a dynamic professional to drive sales and expand market reach for our clothing brand ONE SKY.",
       type: "Full-time",
-      Remote: "100% Remote",
+      Remote: "Madhya Pradesh",
     },
     {
-      designation: "Textiles Merchandiser",
+      designation: "Exhaust Dyeing Supervisor Fabrics",
       Description:
-        "We're Looking For A Mid-level Product Designer To Join Our Team.",
+        "Supervisor needed for managing exhaust dyeing process, ensuring fabric quality.",
       type: "Full-time",
-      Remote: "100% Remote",
+      Remote: "Botad, Gujarat",
     },
     {
-      designation: "Shift Supervisor",
+      designation: "Continuos Dyeing Supervisor",
       Description:
-        "We're Looking For A Mid-level Product Designer To Join Our Team.",
+        "Supervisor required for overseeing continuous dyeing process, ensuring fabric quality.",
       type: "Full-time",
-      Remote: "100% Remote",
+      Remote: "Botad, Gujarat",
     },
     {
-      designation: "Sales and Marketing Garments",
+      designation: "Textile PPC Executive",
       Description:
-        "We're Looking For A Mid-level Product Designer To Join Our Team.",
+        "Textile PPC Executive needed to manage production planning, scheduling, and coordination to optimize efficiency.",
       type: "Full-time",
-      Remote: "100% Remote",
+      Remote: "Botad, Gujarat",
     },
   ];
   return (
     <Stack>
       <Navbar />
+      {showForm && (
+        <Stack
+          sx={{
+            position: "fixed",
+            width: "100vw",
+            height: "100vh",
+            justifyContent: "center",
+            alignItems: "center",
+            backgroundColor: "rgba(0, 0, 0, 0.5)",
+            zIndex: "20",
+          }}
+        >
+          <Form setShowForm={setShowForm} />
+        </Stack>
+      )}
       <Stack
         direction={{ md: "row" }}
         margin={{ md: "100px 70px", xs: "30px" }}
@@ -91,19 +110,20 @@ export default function Careers() {
           width={"80%"}
           margin={"10px auto"}
           textAlign={"center"}
-          fontSize={{ ms: "1rem", xs: "0.7rem" }}
+          fontSize={{ md: "1rem", xs: "0.7rem" }}
         >
-          Joining SKY Textiles means becoming part of an innovative and
-          sustainable textile company dedicated to quality and social
-          responsibility. We prioritize employee growth, offering training and
-          development programs to enhance skills and career advancement. Our
-          commitment to eco-friendly practices ensures you contribute to a
-          greener future while working with high-quality materials in a fully
-          integrated setup. As part of our team, you’ll collaborate with
-          passionate professionals who value creativity and excellence.
-          Additionally, our focus on ethical labor practices fosters a
-          supportive and inclusive work environment. Join SKY Textiles to make a
-          meaningful impact in the textile industry while advancing your career.
+          At Sky Textiles, we focus on producing high-quality textile products
+          that meet international standards. By joining our team, you become a
+          part of a company that strives for excellence, embraces sustainable
+          practices, and values innovation. Our commitment to sustainability
+          ensures that you work in a company that takes responsibility for the
+          environment, using eco-friendly processes and materials. We also
+          invest in our employees through continuous training, skill
+          development, and career progression opportunities. You will have the
+          chance to work with industry experts and gain hands-on experience in
+          various aspects of textile production, design, and marketing. This
+          exposure can greatly enhance your skills and open up new career paths
+          within the industry.
         </Typography>
       </Stack>
       <Stack margin={{ md: "100px 70px", xs: "30px" }}>
@@ -133,6 +153,10 @@ export default function Careers() {
                 gap={"15px"}
                 alignItems={"center"}
                 display={{ md: "flex", xs: "none" }}
+                sx={{
+                  cursor: "pointer",
+                }}
+                onClick={() => setShowForm(true)}
               >
                 <Typography fontSize={"1.6rem"}>Apply Now</Typography>
                 <Image src={arrow} alt="" width={"20"} height={"20"} />
@@ -178,6 +202,9 @@ export default function Careers() {
               gap={"15px"}
               alignItems={"center"}
               display={{ md: "none", smm: "flex" }}
+              sx={{
+                cursor: "pointer",
+              }}
             >
               <Typography fontSize="18px">Apply Now</Typography>
               <Image src={arrow} alt="" width={"15"} height={"15"} />

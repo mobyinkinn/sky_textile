@@ -148,11 +148,83 @@ export default function Overview() {
           }}
         ></Box>
       </Stack>
+
       <Stack
         gap={"20px"}
         margin={"50px 0"}
         padding={{ md: "60px 70px", xs: "30px" }}
         backgroundColor={"#f9f9f9"}
+        display={{ md: "none", xs: "flex" }}
+      >
+        <Typography
+          fontSize={{ lg: "3rem", md: "2rem", xs: "1.5rem" }}
+          fontWeight={"bold"}
+          textAlign={"center"}
+        >
+          Responsiblity for planet
+        </Typography>
+        <Typography
+          width={{ md: "80%" }}
+          fontSize={{ md: "1rem", xs: "0.8rem" }}
+          margin={"0 auto"}
+          textAlign={"center"}
+        >
+          {responsibility[0].aim}
+        </Typography>
+        <Stack
+          textAlign={"left"}
+          gap={"20px"}
+          fontSize={{ md: "1rem", xs: "0.8rem" }}
+        >
+          {responsibility[0].points.map((el, i) => {
+            return (
+              <Stack key={i}>
+                <Typography fontWeight={"bold"}>{`${i + 1}. ${
+                  el.name
+                }`}</Typography>
+                <Typography>{el.data}</Typography>
+              </Stack>
+            );
+          })}
+        </Stack>
+        <Typography
+          fontSize={{ lg: "3rem", md: "2rem", xs: "1.5rem" }}
+          fontWeight={"bold"}
+          textAlign={"center"}
+        >
+          Responsiblity for people
+        </Typography>
+        <Typography
+          width={{ md: "80%" }}
+          fontSize={{ md: "1rem", xs: "0.8rem" }}
+          margin={"0 auto"}
+          textAlign={"center"}
+        >
+          {responsibility[1].aim}
+        </Typography>
+        <Stack
+          textAlign={"left"}
+          gap={"20px"}
+          fontSize={{ md: "1rem", xs: "0.8rem" }}
+        >
+          {responsibility[1].points.map((el, i) => {
+            return (
+              <Stack key={i}>
+                <Typography fontWeight={"bold"}>{`${i + 1}. ${
+                  el.name
+                }`}</Typography>
+                <Typography>{el.data}</Typography>
+              </Stack>
+            );
+          })}
+        </Stack>
+      </Stack>
+      <Stack
+        gap={"20px"}
+        margin={"50px 0"}
+        padding={{ md: "60px 70px", xs: "30px" }}
+        backgroundColor={"#f9f9f9"}
+        display={{ md: "flex", xs: "none" }}
       >
         <Typography
           fontSize={{ lg: "3rem", md: "2rem", xs: "1.5rem" }}
@@ -216,7 +288,32 @@ export default function Overview() {
           ></Box>
         </Stack>
       </Stack>
-      <Stack margin={"50px 70px"}>
+
+      <Stack margin={"10px 20px"}>
+        <Typography
+          fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
+          fontWeight={"bold"}
+          textAlign={"center"}
+        >
+          Our Goals
+        </Typography>
+        <Typography
+          fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
+          fontWeight={"bold"}
+        >
+          Vision
+        </Typography>
+        <Typography>{goals[0]}</Typography>
+        <Typography
+          fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
+          fontWeight={"bold"}
+        >
+          Mission
+        </Typography>
+        <Typography>{goals[1]}</Typography>
+      </Stack>
+
+      <Stack margin={"50px 70px"} display={{ md: "flex", xs: "none" }}>
         <Typography
           fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
           fontWeight={"bold"}
@@ -312,7 +409,7 @@ export default function Overview() {
             return (
               <Stack
                 key={i}
-                width={"30%"}
+                width={{ md: "30%" }}
                 sx={{
                   cursor: "pointer",
                   boxShadow: "4px 2px 20px 2px rgba(0, 0, 0, 0.2)",

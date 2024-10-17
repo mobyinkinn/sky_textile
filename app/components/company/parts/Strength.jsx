@@ -27,10 +27,15 @@ export default function Strength() {
               gap={"15px"}
             >
               <Image src={el.img} alt="" width={100} height={90} />
-              <Typography color={"#FB5457"} fontSize={"1.8rem"}>
+              <Typography
+                color={"#FB5457"}
+                fontSize={{ md: "1.8rem", xs: "1.3rem" }}
+              >
                 {el.head}
               </Typography>
-              <Typography fontSize={"1.2rem"}>{el.data}</Typography>
+              <Typography fontSize={{ md: "1.2rem", xs: "0.9rem" }}>
+                {el.data}
+              </Typography>
             </Stack>
           );
         })}
