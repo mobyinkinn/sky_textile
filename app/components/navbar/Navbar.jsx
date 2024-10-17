@@ -170,7 +170,7 @@ const navData = [
         head: "Enquiry",
         data: "In publishing and graphic design.",
         color: "#FFDFE6",
-        route: "/get-in-touch/careers",
+        route: "/get-in-touch/enquiry",
       },
       {
         id: 1,
