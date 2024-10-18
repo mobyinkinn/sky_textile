@@ -247,7 +247,7 @@ export default function Navbar() {
                   onMouseEnter={() => handleShowSubRoutes(el)}
                 >
                   <Typography
-                    fontSize={"0.9rem"}
+                    fontSize={"1rem"}
                     color={pathname.startsWith(el.route) ? "#FB5457" : "black"}
                     sx={{
                       "&:hover": {

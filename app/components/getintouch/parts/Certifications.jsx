@@ -1,5 +1,5 @@
 import { Box, Stack, Typography } from "@mui/material";
-import cert from "./assets/Certification.png";
+import cert from "./assets/Certification.jpg";
 import Navbar from "../../navbar/Navbar";
 import Footer from "../../footer/Footer";
 
