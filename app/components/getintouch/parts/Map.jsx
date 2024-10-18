@@ -26,16 +26,16 @@ export default function Map() {
         We Have Offices And Teams All Around The World.
       </Typography>
       <Box
-        width={"100%"}
         margin={{
-          xll: "45px 0",
-          xl: "30px 0",
-          lg: "40px 0",
-          md: "30px 0",
-          smm: "25px 0",
-          sm: "0px 0",
+          xll: "45px auto",
+          xl: "30px auto",
+          lg: "40px auto",
+          md: "30px auto",
+          smm: "25px auto",
+          sm: "0px auto",
         }}
-        height={{ xll: "70vh", md: "50vh", sm: "34vh" }}
+        height={{ xl: "300px", md: "200px", xs: "34vh" }}
+        width={{ xl: "900px", md: "600", xs: "100%" }}
         sx={{
           backgroundImage: `url(${map.src})`,
           backgroundSize: "contain",
@@ -44,7 +44,7 @@ export default function Map() {
           position: "relative",
         }}
       >
-        <Tooltip title="Surat, Gujarat">
+        <Tooltip title="India">
           <Skeleton
             sx={{
               cursor: "pointer",
@@ -54,7 +54,63 @@ export default function Map() {
               position: "absolute",
               borderRadius: "100%",
               top: "37%",
-              right: "34%",
+              right: "32%",
+            }}
+          ></Skeleton>
+        </Tooltip>
+        <Tooltip title="Russia">
+          <Skeleton
+            sx={{
+              cursor: "pointer",
+              backgroundColor: "#F8575A",
+              height: "25px",
+              width: "15px",
+              position: "absolute",
+              borderRadius: "100%",
+              top: "13%",
+              right: "37%",
+            }}
+          ></Skeleton>
+        </Tooltip>
+        <Tooltip title="USA">
+          <Skeleton
+            sx={{
+              cursor: "pointer",
+              backgroundColor: "#F8575A",
+              height: "25px",
+              width: "15px",
+              position: "absolute",
+              borderRadius: "100%",
+              top: "33%",
+              left: "27%",
+            }}
+          ></Skeleton>
+        </Tooltip>
+        <Tooltip title="Sri Lanka">
+          <Skeleton
+            sx={{
+              cursor: "pointer",
+              backgroundColor: "#F8575A",
+              height: "25px",
+              width: "15px",
+              position: "absolute",
+              borderRadius: "100%",
+              top: "50%",
+              right: { xl: "29%", md: "38%" },
+            }}
+          ></Skeleton>
+        </Tooltip>
+        <Tooltip title="Singapore">
+          <Skeleton
+            sx={{
+              cursor: "pointer",
+              backgroundColor: "#F8575A",
+              height: "25px",
+              width: "15px",
+              position: "absolute",
+              borderRadius: "100%",
+              top: { xl: "58%", md: "58%" },
+              right: { xl: "24%", md: "35%" },
             }}
           ></Skeleton>
         </Tooltip>

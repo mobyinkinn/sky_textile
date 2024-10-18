@@ -13,21 +13,31 @@ export default function Enquiry() {
   return (
     <Stack>
       <Navbar></Navbar>
-      <Stack margin={"250px 100px"} direction={"row"} gap={"30px"}>
-        <Stack width={"50%"} gap={"20px"}>
-          <Typography fontWeight={"bold"}>
+      <Stack
+        margin={{ md: "250px 100px", xs: "150px 30px" }}
+        direction={{ md: "row" }}
+        gap={"30px"}
+      >
+        <Stack width={{ md: "50%" }} gap={"20px"}>
+          <Typography
+            fontWeight={"bold"}
+            fontSize={{ md: "1rem", xs: "0.8rem" }}
+          >
             Sky Textiles Customer Platform
           </Typography>
-          <Typography fontWeight={"bold"} fontSize={"3.5rem"}>
+          <Typography
+            fontWeight={"bold"}
+            fontSize={{ md: "3.5rem", xs: "1.2rem" }}
+          >
             Grow Better With Sky Textiles
           </Typography>
-          <Typography>
+          <Typography fontSize={{ md: "1rem", xs: "0.8rem" }}>
             Software That's Powerful, Not Overpowering. Seamlessly Connect Your
             Data, Teams, And Customers On One Ai-powered Customer Platform That
             Grows With Your Business.
           </Typography>
         </Stack>
-        <Stack width={"50%"}>
+        <Stack width={{ md: "50%" }}>
           <Box
             sx={{
               backgroundImage: `url(${enquiryGif.src})`,
@@ -47,7 +57,7 @@ export default function Enquiry() {
         </Typography>
 
         <Stack
-          direction={"row"}
+          direction={{ md: "row" }}
           marginTop={"50px"}
           justifyContent={"space-between"}
         >

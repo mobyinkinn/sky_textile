@@ -20,14 +20,17 @@ export default function Hero() {
         Clients
       </Typography>
       <Typography
-        fontSize={{ lg: "2rem", smm: "1.5rem", xs: "1.1rem" }}
+        fontSize={{ lg: "1.5rem", smm: "1.2rem", xs: "0.9rem" }}
         width={{ md: "60vw", xs: "80%" }}
         textAlign={"center"}
         margin={"0 auto"}
       >
-        Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting
-        Industry. Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever
-        Since The 1500s
+        At SKY Textiles, we prioritize our clients by providing complete
+        transparency, exceptional service, and unmatched quality. From
+        production to delivery, we keep clients informed at every step, ensuring
+        a seamless experience. Our commitment to excellence guarantees that
+        every product meets the highest standards, building trust and
+        long-lasting partnerships.
       </Typography>
       <Box
         height={"50vh"}

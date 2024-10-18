@@ -40,8 +40,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <ThemeProvider theme={theme}>
-        <body className={poppins.className}>
-          <Stack overflow={"hidden"} position={"relative"}>
+        <body>
+          <Stack
+            className={poppins.className}
+            overflow={"hidden"}
+            position={"relative"}
+          >
             {children}
           </Stack>
         </body>

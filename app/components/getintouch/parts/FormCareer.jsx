@@ -7,6 +7,9 @@ const getTrasformStyles = (isHovered) => ({
 
 export default function Form({ setShowForm }) {
   const [isHovered, setIsHovered] = useState(false);
+  const [email, setEmail] = useState("");
+  const [position, setPosition] = useState("");
+
   return (
     <Stack
       margin={{
@@ -67,6 +70,8 @@ export default function Form({ setShowForm }) {
           <TextField
             variant="outlined"
             label="Email address"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             sx={{
               width: { xll: "50%", smm: "50%", sm: "100%" },
             }}
@@ -120,30 +125,32 @@ export default function Form({ setShowForm }) {
         >
           Cancel
         </button>
-        <button
-          style={{
-            color: "white",
-            backgroundColor: "black",
-            padding: "10px 25px",
-            borderRadius: "5px",
-            fontWeight: "bold",
-            width: "fit-content",
-            cursor: "pointer",
-            outline: "none",
-            border: "none",
-          }}
-          onMouseEnter={() => {
-            setIsHovered(true);
-          }}
-          onMouseLeave={() => {
-            setIsHovered(false);
-          }}
-        >
-          <span className="fancy-button-text-container">
-            <span style={getTrasformStyles(isHovered)}>Apply</span>
-            <span style={getTrasformStyles(isHovered)}>Apply</span>
-          </span>
-        </button>
+        <a href={`mailto:${email}`}>
+          <button
+            style={{
+              color: "white",
+              backgroundColor: "black",
+              padding: "10px 25px",
+              borderRadius: "5px",
+              fontWeight: "bold",
+              width: "fit-content",
+              cursor: "pointer",
+              outline: "none",
+              border: "none",
+            }}
+            onMouseEnter={() => {
+              setIsHovered(true);
+            }}
+            onMouseLeave={() => {
+              setIsHovered(false);
+            }}
+          >
+            <span className="fancy-button-text-container">
+              <span style={getTrasformStyles(isHovered)}>Apply</span>
+              <span style={getTrasformStyles(isHovered)}>Apply</span>
+            </span>
+          </button>
+        </a>
       </Stack>
     </Stack>
   );
