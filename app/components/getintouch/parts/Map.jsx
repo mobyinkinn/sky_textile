@@ -31,17 +31,18 @@ export default function Map() {
           xl: "30px auto",
           lg: "40px auto",
           md: "30px auto",
-          smm: "25px auto",
-          sm: "0px auto",
+          sm: "25px auto",
+          xs: "0px auto",
         }}
-        height={{ xl: "300px", md: "200px", xs: "34vh" }}
-        width={{ xl: "900px", md: "600", xs: "100%" }}
         sx={{
+          width: "90%",
+          maxWidth: "900px",
+          position: "relative",
+          aspectRatio: "3 / 2", // Ensures the map maintains aspect ratio
           backgroundImage: `url(${map.src})`,
           backgroundSize: "contain",
           backgroundRepeat: "no-repeat",
-          backgroundPosition: "center center",
-          position: "relative",
+          backgroundPosition: "center",
         }}
       >
         <Tooltip title="India">
@@ -53,10 +54,10 @@ export default function Map() {
               width: "15px",
               position: "absolute",
               borderRadius: "100%",
-              top: "37%",
-              right: "32%",
+              top: "43%", // Use percentage values
+              right: "27%",
             }}
-          ></Skeleton>
+          />
         </Tooltip>
         <Tooltip title="Russia">
           <Skeleton
@@ -67,10 +68,10 @@ export default function Map() {
               width: "15px",
               position: "absolute",
               borderRadius: "100%",
-              top: "13%",
-              right: "37%",
+              top: "33%",
+              right: "25%",
             }}
-          ></Skeleton>
+          />
         </Tooltip>
         <Tooltip title="USA">
           <Skeleton
@@ -81,10 +82,10 @@ export default function Map() {
               width: "15px",
               position: "absolute",
               borderRadius: "100%",
-              top: "33%",
-              left: "27%",
+              top: "40%",
+              left: "25%",
             }}
-          ></Skeleton>
+          />
         </Tooltip>
         <Tooltip title="Sri Lanka">
           <Skeleton
@@ -96,9 +97,9 @@ export default function Map() {
               position: "absolute",
               borderRadius: "100%",
               top: "50%",
-              right: { xl: "29%", md: "38%" },
+              right: "26%",
             }}
-          ></Skeleton>
+          />
         </Tooltip>
         <Tooltip title="Singapore">
           <Skeleton
@@ -109,10 +110,10 @@ export default function Map() {
               width: "15px",
               position: "absolute",
               borderRadius: "100%",
-              top: { xl: "58%", md: "58%" },
-              right: { xl: "24%", md: "35%" },
+              top: "60%",
+              right: "17%",
             }}
-          ></Skeleton>
+          />
         </Tooltip>
       </Box>
     </Stack>
