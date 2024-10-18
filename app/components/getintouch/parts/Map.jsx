@@ -1,14 +1,25 @@
+"use client";
+
 import { Box, Stack, Typography } from "@mui/material";
 import map from "./assets/Map.png";
 import Tooltip from "@mui/material/Tooltip";
-
+import building from "./assets/1.jpg";
 import Skeleton from "@mui/material/Skeleton";
+import { useState } from "react";
+
+const locations = [
+  { name: "USA" },
+  { name: "Russia" },
+  { name: "India" },
+  { name: "Sri Lanka" },
+  { name: "Singapore" },
+];
 
 export default function Map() {
+  const [viewLocation, setViewLocation] = useState(null);
+
   return (
-    <Stack
-      margin={{ xll: "100px 0 0 0", md: "100px 0 0 0", sm: "150px 0 0 0" }}
-    >
+    <Stack margin={{ xll: "10px 0 0 0", md: "10px 0 0 0", sm: "15px 0 0 0" }}>
       <Typography
         fontSize={{
           xll: "2.5rem",
@@ -45,7 +56,41 @@ export default function Map() {
           backgroundPosition: "center",
         }}
       >
-        <Tooltip title="India">
+        {viewLocation && (
+          <Stack
+            alignItems={"center"}
+            width={"fit-content"}
+            sx={{
+              border: "1px solid rgba(0,0,0, 0.1)",
+              backgroundColor: "white",
+              padding: "15px",
+              borderRadius: "5px",
+              position: "absolute",
+              top: "50px",
+            }}
+          >
+            <Box
+              sx={{
+                backgroundImage: `url(${building.src})`,
+                backgroundSize: "250%",
+                backgroundPosition: "center center",
+                width: "50px",
+                height: "50px",
+                borderRadius: "100%",
+                marginBottom: "5px",
+              }}
+            ></Box>
+            <Typography fontSize={"1rem"}>
+              Sky textiles India Pvt Ltd.
+            </Typography>
+            <Typography fontSize={"0.9rem"}>{viewLocation || ""}</Typography>
+          </Stack>
+        )}
+        <Tooltip
+          title="India"
+          onMouseEnter={() => setViewLocation("India")}
+          onMouseLeave={() => setViewLocation(null)}
+        >
           <Skeleton
             sx={{
               cursor: "pointer",
@@ -59,7 +104,11 @@ export default function Map() {
             }}
           />
         </Tooltip>
-        <Tooltip title="Russia">
+        <Tooltip
+          title="Russia"
+          onMouseEnter={() => setViewLocation("Russia")}
+          onMouseLeave={() => setViewLocation(null)}
+        >
           <Skeleton
             sx={{
               cursor: "pointer",
@@ -73,7 +122,11 @@ export default function Map() {
             }}
           />
         </Tooltip>
-        <Tooltip title="USA">
+        <Tooltip
+          title="USA"
+          onMouseEnter={() => setViewLocation("USA")}
+          onMouseLeave={() => setViewLocation(null)}
+        >
           <Skeleton
             sx={{
               cursor: "pointer",
@@ -87,7 +140,11 @@ export default function Map() {
             }}
           />
         </Tooltip>
-        <Tooltip title="Sri Lanka">
+        <Tooltip
+          title="Sri Lanka"
+          onMouseEnter={() => setViewLocation("Sri Lanka")}
+          onMouseLeave={() => setViewLocation(null)}
+        >
           <Skeleton
             sx={{
               cursor: "pointer",
@@ -101,7 +158,11 @@ export default function Map() {
             }}
           />
         </Tooltip>
-        <Tooltip title="Singapore">
+        <Tooltip
+          title="Singapore"
+          onMouseEnter={() => setViewLocation("Singapore")}
+          onMouseLeave={() => setViewLocation(null)}
+        >
           <Skeleton
             sx={{
               cursor: "pointer",

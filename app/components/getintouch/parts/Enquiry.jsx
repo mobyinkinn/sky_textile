@@ -3,7 +3,7 @@ import Navbar from "../../navbar/Navbar";
 import Footer from "../../footer/Footer";
 import Form from "./EnquiryForm";
 
-import enquiryGif from "./assets/enquiryGif.png";
+import enquiryGif from "./assets/enquiryGif.gif";
 import gate from "./assets/gate.png";
 import call from "./assets/call.png";
 import location from "./assets/LocationOutline.png";
@@ -14,7 +14,7 @@ export default function Enquiry() {
     <Stack>
       <Navbar></Navbar>
       <Stack
-        margin={{ md: "250px 100px", xs: "150px 30px" }}
+        margin={{ md: "200px 100px", xs: "150px 30px" }}
         direction={{ md: "row" }}
         gap={"30px"}
       >
@@ -32,9 +32,12 @@ export default function Enquiry() {
             Grow Better With Sky Textiles
           </Typography>
           <Typography fontSize={{ md: "1rem", xs: "0.8rem" }}>
-            Software That's Powerful, Not Overpowering. Seamlessly Connect Your
-            Data, Teams, And Customers On One Ai-powered Customer Platform That
-            Grows With Your Business.
+            Collaborating with Sky Textiles offers an opportunity to partner
+            with a leader in the textile industry known for quality,
+            sustainability, and innovation. We welcome businesses seeking
+            reliable fabric and garment solutions that meet international
+            standards. Together, we can create value-driven products and achieve
+            mutual growth through a strong and trusted partnership.
           </Typography>
         </Stack>
         <Stack width={{ md: "50%" }}>
@@ -59,27 +62,27 @@ export default function Enquiry() {
         <Stack
           direction={{ md: "row" }}
           marginTop={"50px"}
-          justifyContent={"space-between"}
+          justifyContent={"center"}
+          gap={"50px"}
         >
           <Stack width={"30%"} gap={"10px"} alignItems={"center"}>
             <Box
               sx={{
                 backgroundImage: `url(${gate.src})`,
                 backgroundSize: "contain",
-                backgroundRepeat: "no-repeat",
                 backgroundPosition: "center center",
                 height: "100px",
                 width: "100px",
               }}
             ></Box>
             <Typography fontSize={"2.5rem"} textAlign={"center"}>
-              India
+              Head Office
             </Typography>
-            <Stack direction={"row"} gap={"10px"} alignItems={"start"}>
+            <Stack direction={"row"} gap={"10px"}>
               <Image src={location} alt="" width={15} height={25} />
               <Typography textAlign={"center"}>
-                Office No.202, 2nd Floor, Techno Park, Eksar, Link Road,
-                Borivali (W), Mumbai: 400 092.
+                Sky Textiles India Pvt Ltd. B-105, Westgate Tower Unit 2, Nr.
+                YMCA Club, S.G. HIGHWAY , Makarba , AHMEDABAD- 380015
               </Typography>
             </Stack>
             <Stack direction={"row"} gap={"10px"}>
@@ -98,38 +101,14 @@ export default function Enquiry() {
               }}
             ></Box>
             <Typography fontSize={"2.5rem"} textAlign={"center"}>
-              India
+              Plant
             </Typography>
             <Stack direction={"row"} gap={"10px"}>
               <Image src={location} alt="" width={15} height={25} />
               <Typography textAlign={"center"}>
-                Office No.202, 2nd Floor, Techno Park, Eksar, Link Road,
-                Borivali (W), Mumbai: 400 092.
-              </Typography>
-            </Stack>
-            <Stack direction={"row"} gap={"10px"}>
-              <Image src={call} alt="" width={25} height={25} />
-              <Typography>+91 72082 23487</Typography>
-            </Stack>
-          </Stack>
-          <Stack width={"30%"} gap={"10px"} alignItems={"center"}>
-            <Box
-              sx={{
-                backgroundImage: `url(${gate.src})`,
-                backgroundSize: "contain",
-                backgroundPosition: "center center",
-                height: "100px",
-                width: "100px",
-              }}
-            ></Box>
-            <Typography fontSize={"2.5rem"} textAlign={"center"}>
-              India
-            </Typography>
-            <Stack direction={"row"} gap={"10px"}>
-              <Image src={location} alt="" width={15} height={25} />
-              <Typography textAlign={"center"}>
-                Office No.202, 2nd Floor, Techno Park, Eksar, Link Road,
-                Borivali (W), Mumbai: 400 092.
+                Sky Textiles India, pvt ltd, survey no paiki, 32 and 33, near
+                sky spintex pvt. limited, Bhavnagar road, Lathidad, Botad,
+                Gujarat, 364710 Gujarat, 364710
               </Typography>
             </Stack>
             <Stack direction={"row"} gap={"10px"}>

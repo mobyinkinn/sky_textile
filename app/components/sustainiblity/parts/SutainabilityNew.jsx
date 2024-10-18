@@ -11,6 +11,9 @@ import cape from "./assets/cape.png";
 import Strength from "./SustainabilityStrength";
 import { useState } from "react";
 
+import people from "./assets/peopleImage.jpg";
+import planet from "./assets/planetImage.jpg";
+
 const futurePlans = [
   {
     name: "20%",
@@ -267,7 +270,7 @@ export default function Overview() {
             onMouseEnter={() => setPlanetData(0)}
             sx={{
               cursor: "pointer",
-              backgroundImage: `url(${legacy.src})`,
+              backgroundImage: `url(${planet.src})`,
               backgroundSize: "cover",
               backgroundPosition: "center center",
               borderRadius: "10px",
@@ -280,7 +283,7 @@ export default function Overview() {
             onMouseEnter={() => setPlanetData(1)}
             sx={{
               cursor: "pointer",
-              backgroundImage: `url(${legacy.src})`,
+              backgroundImage: `url(${people.src})`,
               backgroundSize: "cover",
               backgroundPosition: "center center",
               borderRadius: "10px",

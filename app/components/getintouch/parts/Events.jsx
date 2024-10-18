@@ -14,27 +14,59 @@ export default function Events() {
   const data = [
     {
       Date: "Wednesday, March 29",
-      Title: " Microsoft Teams: The Productivity Swiss Army Knife.",
+      Title: "Sky Primwear Founders day",
       time: "11 AM - 1 PM",
-      location: "The Kitchen American Bistro",
+      location: "Sky Textiles",
       description:
-        "Join Tecnologia And Ingram Micro To Explore How Teams Can Enable Better Hybrid Work For Businesses.",
+        "1st Founders Day marked with commitments, uniform policy, and annual event.",
     },
     {
       Date: "Wednesday, March 29",
-      Title: " Microsoft Teams: The Productivity Swiss Army Knife.",
+      Title: "Independence Day celebration",
       time: "11 AM - 1 PM",
-      location: "The Kitchen American Bistro",
+      location: "Sky Textiles",
       description:
-        "Join Tecnologia And Ingram Micro To Explore How Teams Can Enable Better Hybrid Work For Businesses.",
+        "Independence Day celebration fostering patriotism and unity among our team.",
     },
     {
       Date: "Wednesday, March 29",
-      Title: " Microsoft Teams: The Productivity Swiss Army Knife.",
+      Title: "Ganesh Chaturthi",
       time: "11 AM - 1 PM",
-      location: "The Kitchen American Bistro",
+      location: "Sky Textiles",
       description:
-        "Join Tecnologia And Ingram Micro To Explore How Teams Can Enable Better Hybrid Work For Businesses.",
+        "Joyful Ganesh Chaturthi celebration uniting our factory team in devotion.",
+    },
+    {
+      Date: "Wednesday, March 29",
+      Title: "Navratri Celebration",
+      time: "11 AM - 1 PM",
+      location: "Sky Textiles",
+      description:
+        "Navratri celebration at our factory embraces Gujarat's culture, dance, and unity.",
+    },
+    {
+      Date: "Wednesday, March 29",
+      Title: "Sardar Patel Jayanti",
+      time: "11 AM - 1 PM",
+      location: "Sky Textiles",
+      description:
+        "Sardar Patel Jayanti, National Unity Day, honors India’s first Deputy PM.",
+    },
+    {
+      Date: "Wednesday, March 29",
+      Title: "Vishwakarma Pooja",
+      time: "11 AM - 1 PM",
+      location: "Sky Textiles",
+      description:
+        "Vishwakarma Puja celebrates Lord Vishwakarma, the divine architect, creator.",
+    },
+    {
+      Date: "Wednesday, March 29",
+      Title: "Fire and safety programmes",
+      time: "11 AM - 1 PM",
+      location: "Sky Textiles",
+      description:
+        "Comprehensive Fire & Safety Programs ensuring a secure, compliant workplace environment.",
     },
   ];
   return (
@@ -56,7 +88,7 @@ export default function Events() {
         <Typography fontSize={"1rem"} textAlign={"center"}>
           View Upcoming And Past Events Hosted By Sky Textiles.
         </Typography>
-        <Stack
+        {/* <Stack
           direction={"row"}
           justifyContent={"center"}
           gap={"20px"}
@@ -86,7 +118,7 @@ export default function Events() {
           >
             Post Events
           </button>
-        </Stack>
+        </Stack>*/}
       </Stack>
       <Stack
         margin={{
@@ -98,6 +130,7 @@ export default function Events() {
         justifyContent={"space-between"}
         direction={{ md: "row", sm: "column" }}
         flexWrap={"wrap"}
+        gap={"20px"}
       >
         {data.map((d) => (
           <Stack
@@ -116,7 +149,7 @@ export default function Events() {
                 borderRadius: "5px",
               }}
             ></Box>
-            <Typography
+            {/* <Typography
               fontSize={"0.9rem"}
               backgroundColor={"#D9D9D9"}
               padding={"5px 8px"}
@@ -125,7 +158,7 @@ export default function Events() {
               margin={"10px 0"}
             >
               {d.Date}
-            </Typography>
+            </Typography> */}
             <Typography fontSize={"1.3rem"} fontWeight={"bold"}>
               {d.Title}
             </Typography>
@@ -150,7 +183,7 @@ export default function Events() {
                 color: "white",
               }}
             >
-              Register Now
+              View More
             </button>
           </Stack>
         ))}

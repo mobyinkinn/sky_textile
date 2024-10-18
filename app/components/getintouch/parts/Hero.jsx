@@ -5,7 +5,8 @@ import gmail from "./assets/Gmail.gif";
 export default function Hero() {
   return (
     <Stack
-      margin={{ md: "200px 70px", smm: "100px 20px", xs: "200px 20px" }}
+      margin={{ md: "150px 70px", smm: "100px 20px", xs: "100px 20px" }}
+      marginBottom={"50px"}
       justifyContent={"space-between"}
       direction={{ smm: "row" }}
     >

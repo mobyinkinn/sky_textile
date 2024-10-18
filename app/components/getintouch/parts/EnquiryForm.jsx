@@ -1,4 +1,6 @@
-import { Button, Stack, TextField, Typography } from "@mui/material";
+import { Box, Button, Stack, TextField, Typography } from "@mui/material";
+import left from "./assets/left.svg";
+import right from "./assets/right.svg";
 
 export default function Form() {
   return (
@@ -12,7 +14,32 @@ export default function Form() {
         sm: "30px",
       }}
       gap={"10px"}
+      sx={{
+        position: "relative",
+      }}
     >
+      <Box
+        sx={{
+          position: "absolute",
+          backgroundImage: `url(${left.src})`,
+          backgroundSize: "contain",
+          width: "200px",
+          height: "200px",
+          right: "0",
+          bottom: "0",
+        }}
+      ></Box>
+      <Box
+        sx={{
+          position: "absolute",
+          backgroundImage: `url(${right.src})`,
+          backgroundSize: "contain",
+          width: "200px",
+          height: "200px",
+          left: "0",
+          bottom: "0",
+        }}
+      ></Box>
       <Typography
         sx={{ fontSize: "2rem", textAlign: "center", fontWeight: "bold" }}
       >
@@ -115,7 +142,7 @@ export default function Form() {
       </Stack>
       <Button
         variant="contained"
-        sx={{ width: "200px", margin: "auto", backgroundColor: "black" }}
+        sx={{ width: "200px", margin: "auto", backgroundColor: "#FB5457" }}
       >
         Send Request
       </Button>
