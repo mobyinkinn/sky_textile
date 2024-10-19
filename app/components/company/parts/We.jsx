@@ -2,7 +2,6 @@
 
 import { Box, Stack, Typography } from "@mui/material";
 
-
 import who1 from "./assets/who/1.JPG";
 import who2 from "./assets/who/2.JPG";
 import who3 from "./assets/who/3.JPG";

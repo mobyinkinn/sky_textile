@@ -34,7 +34,7 @@ export default function Map() {
         We'd Love To Hear From You
       </Typography>
       <Typography color={"#F8575A"} textAlign={"center"}>
-        We Have Offices And asd Teams All Around The World.
+        We Have Offices And Teams All Around The World.
       </Typography>
       <Box
         margin={{

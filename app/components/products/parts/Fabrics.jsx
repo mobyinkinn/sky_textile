@@ -10,6 +10,8 @@ import gradient from "./assets/gradient.png";
 import Footer from "../../footer/Footer";
 import Grid from "@mui/material/Grid";
 
+import flowChart from "./assets/fabricsFlowCharts.jpg";
+
 import img1 from "./assets/Fabrics/SingleJersey.jpeg";
 import img2 from "./assets/Fabrics/DoubleJersey.jpeg";
 import img3 from "./assets/Fabrics/RIBKNIT.jpeg";
@@ -223,16 +225,13 @@ export default function Yarns() {
           xl: "800px",
           lg: "600px",
           md: "500px",
-          smm: "700px",
-          sm: "500px",
-          xs: "300px",
+          smm: "600px",
+          sm: "300px",
+          xs: "200px",
         }}
         margin={{ xl: "0 0 50px 0" }}
         sx={{
-          backgroundImage: {
-            md: `url(${gradient.src})`,
-            xs: `url(${bannerMobile.src})`,
-          },
+          backgroundImage: `url(${flowChart.src})`,
           backgroundSize: "contain",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",

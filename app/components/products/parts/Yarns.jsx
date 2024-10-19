@@ -7,6 +7,8 @@ import yarns from "./assets/popularYarns.png";
 import gradient from "./assets/gradient.png";
 import Footer from "../../footer/Footer";
 
+import flowChart from "./assets/yarnsFlowCharts.jpg";
+
 import heena from "./assets/Yarns/Heena.jpeg";
 import lurex from "./assets/Yarns/Lurex.jpeg";
 import sorona from "./assets/Yarns/Sorona.jpeg";
@@ -127,16 +129,13 @@ export default function Yarns() {
           xl: "800px",
           lg: "600px",
           md: "500px",
-          smm: "700px",
-          sm: "500px",
-          xs: "300px",
+          smm: "600px",
+          sm: "300px",
+          xs: "200px",
         }}
         margin={{ xl: "0 0 50px 0" }}
         sx={{
-          backgroundImage: {
-            md: `url(${gradient.src})`,
-            xs: `url(${bannerMobile.src})`,
-          },
+          backgroundImage: `url(${flowChart.src})`,
           backgroundSize: "contain",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",

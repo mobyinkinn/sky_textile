@@ -5,9 +5,12 @@ import banner from "./assets/yarnsBanner.png";
 import bannerMobile from "./assets/yarnsBannerMobile.png";
 import Navbar from "../../navbar/Navbar";
 import Strength from "./StrengthGarments";
+import yarns from "./assets/popularYarns.png";
 import gradient from "./assets/gradient.png";
 import Footer from "../../footer/Footer";
 import Grid from "@mui/material/Grid";
+
+import flowChart from "./assets/garmentsFlowChart.jpg";
 
 import img1 from "./assets/Garments/INNERWEAR.JPG";
 import img2 from "./assets/Garments/CASUALWEAR.JPG";
@@ -219,16 +222,13 @@ export default function Yarns() {
           xl: "800px",
           lg: "600px",
           md: "500px",
-          smm: "700px",
-          sm: "500px",
-          xs: "300px",
+          smm: "600px",
+          sm: "300px",
+          xs: "200px",
         }}
         margin={{ xl: "0 0 50px 0" }}
         sx={{
-          backgroundImage: {
-            md: `url(${gradient.src})`,
-            xs: `url(${bannerMobile.src})`,
-          },
+          backgroundImage: `url(${flowChart.src})`,
           backgroundSize: "contain",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
