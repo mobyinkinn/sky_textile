@@ -10,19 +10,19 @@ import tree from "./assets/sustainable.gif";
 import sun from "./assets/sun.png";
 import graph from "./assets/graph.png";
 
-import community from "./assets/skyTextile/Knitting.jpg";
-import curiosity from "./assets/skyTextile/DEYING.jpg";
-import collab from "./assets/skyTextile/FABRIC.jpg";
+import community from "./assets/skyTextile/Knitting.JPG";
+import curiosity from "./assets/skyTextile/DEYING.JPG";
+import collab from "./assets/skyTextile/FABRIC.JPG";
 
 import { useRef, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import img1 from "./assets/skyTextile/1.1.jpg";
-import img2 from "./assets/skyTextile/1.2.jpg";
-import img3 from "./assets/skyTextile/1.3.jpg";
-import img4 from "./assets/skyTextile/1.4.jpg";
+import img1 from "./assets/skyTextile/1.1.JPG";
+import img2 from "./assets/skyTextile/1.2.JPG";
+import img3 from "./assets/skyTextile/1.3.JPG";
+import img4 from "./assets/skyTextile/1.4.JPG";
 
 import trust from "./assets/Trust.png";
 import back from "./assets/back.png";
