@@ -5,7 +5,7 @@ import Form from "./EnquiryForm";
 
 import enquiryGif from "./assets/enquiryGif.gif";
 import gate from "./assets/gate.png";
-import call from "./assets/call.png";
+import call from "./assets/Call.png";
 import location from "./assets/LocationOutline.png";
 import Image from "next/image";
 

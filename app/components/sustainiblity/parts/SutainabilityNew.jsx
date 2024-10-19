@@ -7,7 +7,7 @@ import Footer from "../../footer/Footer";
 import legacy from "./assets/legacy.png";
 import yarn1 from "./assets/yarnUp.png";
 import yarn2 from "./assets/yarnDown.png";
-import cape from "./assets/cape.png";
+import cape from "./assets/Cape.png";
 import Strength from "./SustainabilityStrength";
 import { useState } from "react";
 
