@@ -11,18 +11,18 @@ import sun from "./assets/sun.png";
 import graph from "./assets/graph.png";
 
 import community from "./assets/skyInternational/unique.jpg";
-import curiosity from "./assets/skyInternational/quality.jpg";
-import collab from "./assets/skyInternational/customer.jpg";
+import curiosity from "./assets/skyInternational/quality.JPG";
+import collab from "./assets/skyInternational/customer.JPG";
 
 import { useRef, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import img1 from "./assets/skyInternational/1.jpg";
+import img1 from "./assets/skyInternational/1.JPG";
 import img2 from "./assets/skyInternational/2.jpg";
-import img3 from "./assets/skyInternational/3.jpg";
-import img4 from "./assets/skyInternational/4.jpg";
+import img3 from "./assets/skyInternational/3.JPG";
+import img4 from "./assets/skyInternational/4.JPG";
 
 import trust from "./assets/Trust.png";
 import back from "./assets/back.png";
