@@ -11,10 +11,10 @@ import flowers from "../assets/flowers.png";
 import laptop from "../assets/laptop.png";
 import girlOnLaptop from "../assets/girlOnLaptop.png";
 
-import img1 from "../assets/Events/ganeshChaturthi/1.JPG";
-import img2 from "../assets/Events/ganeshChaturthi/2.JPG";
-import img3 from "../assets/Events/ganeshChaturthi/5.JPG";
-import img4 from "../assets/Events/ganeshChaturthi/4.JPG";
+import img1 from "../assets/Events/ganeshChaturthi/1.jpg";
+import img2 from "../assets/Events/ganeshChaturthi/2.jpg";
+import img3 from "../assets/Events/ganeshChaturthi/5.jpg";
+import img4 from "../assets/Events/ganeshChaturthi/4.jpg";
 
 const data = [
   {
