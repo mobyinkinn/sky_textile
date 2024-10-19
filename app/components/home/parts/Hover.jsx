@@ -20,7 +20,7 @@ import img13 from "@/app/components/home/parts/assets/coverImages/image13.jpg";
 import img14 from "@/app/components/home/parts/assets/coverImages/image14.jpg";
 import img15 from "@/app/components/home/parts/assets/coverImages/image15.jpg";
 
-import image1 from "@/app/components/home/parts/assets/hoverImages/image1.jpg";
+import image1 from "@/app/components/home/parts/assets/hoverImages/Image1.jpg";
 import image2 from "@/app/components/home/parts/assets/hoverImages/image2.jpg";
 import image3 from "@/app/components/home/parts/assets/hoverImages/image3.jpg";
 import image4 from "@/app/components/home/parts/assets/hoverImages/image4.jpg";
