@@ -5,9 +5,9 @@ import Image from "next/image";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import yarnImage from "./assets/Yarn.gif"
-import fabricImage from "./assets/Fabric.gif"
-import garmentImage from "./assets/Garment.gif"
+import yarnImage from "./assets/Yarn.gif";
+import fabricImage from "./assets/Fabric.gif";
+import garmentImage from "./assets/Garment.gif";
 import { useRef } from "react";
 import ReactLenis from "@studio-freight/react-lenis";
 import { FaCircle } from "react-icons/fa";
@@ -154,646 +154,625 @@ export default function BusinessVerticles({ mapRef }) {
   });
 
   return (
-    // <ReactLenis root options={{ lerp: 2, duration: 1.5, smoothWheel: true }}>
-    <Stack
-      margin={{ lg: "50px 150px", md: "50px", smm: "30px", xs: "10px" }}
-      ref={container}
-    >
-      <Typography
-        color="#D88684"
-        fontSize={{ md: "3rem", smm: "2rem", xs: "1.5rem" }}
-        fontWeight={"bold"}
-        textAlign={"center"}
-        paddingBottom={"50px"}
-      >
-        Business Verticles
-      </Typography>
-      <Stack direction={"row"} height={"100vh"} gap={"50px"}>
-        <Stack>
-          <Stack className="yarns" gap={{ md: "20px" }}>
-            <Stack
-              marginBottom={"10px"}
-              direction={"row"}
-              gap={"10px"}
-              alignItems={"center"}
-            >
-              <Stack
-                sx={{
-                  border: "1.5px solid black",
-                  width: "60px",
-                  height: "60px",
-                  borderRadius: "100%",
-                  padding: "10px",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <Box
-                  sx={{
-                    width: "100%",
-                    height: "100%",
-                    borderRadius: "100%",
-                    backgroundColor: "#FB5457",
-                  }}
-                ></Box>
-              </Stack>
-              <Typography
-                fontSize={{
-                  lg: "4.5rem",
-                  md: "3rem",
-                  smm: "2.5rem",
-                  xs: "2rem",
-                }}
-                fontWeight={"bold"}
-              >
-                Yarns
-              </Typography>
-            </Stack>
-            <Stack
-              width={{ md: "25vw", sm: "75vw", xs: "65vw" }}
-              sx={{ opacity: 0, display: "none" }}
-              className="yarnsText"
-            >
-              <Stack direction={"row"} gap={"10px"} alignItems={"baseline"}>
-                <Stack justifyContent={"start"}>
-                  <FaCircle
-                    color="#FB5457"
-                    style={{
-                      width: "10px",
-                      height: "10px",
-                    }}
-                  />
-                </Stack>
-                <Typography
-                  fontSize={{
-                    lg: "1.2rem",
-                    md: "1rem",
-                    smm: "0.9rem",
-                    xs: "0.7rem",
-                  }}
-                >
-                  High-quality natural and synthetic yarns
-                </Typography>
-              </Stack>
-              <Stack direction={"row"} alignItems={"baseline"} gap={"10px"}>
-                <Stack>
-                  <FaCircle
-                    color="#FB5457"
-                    style={{
-                      width: "10px",
-                      height: "10px",
-                    }}
-                  />
-                </Stack>
-                <Typography
-                  fontSize={{
-                    lg: "1.2rem",
-                    md: "1rem",
-                    smm: "0.9rem",
-                    xs: "0.7rem",
-                  }}
-                >
-                  Ensures strength and longevity
-                </Typography>
-              </Stack>
-              <Stack direction={"row"} alignItems={"baseline"} gap={"10px"}>
-                <Stack>
-                  <FaCircle
-                    color="#FB5457"
-                    style={{
-                      width: "10px",
-                      height: "10px",
-                    }}
-                  />
-                </Stack>
-                <Typography
-                  fontSize={{
-                    lg: "1.2rem",
-                    md: "1rem",
-                    smm: "0.9rem",
-                    xs: "0.7rem",
-                  }}
-                >
-                  Rigorous testing for quality
-                </Typography>
-              </Stack>
-              <Stack direction={"row"} alignItems={"baseline"} gap={"10px"}>
-                <Stack>
-                  <FaCircle
-                    style={{
-                      width: "10px",
-                      height: "10px",
-                    }}
-                    color="#FB5457"
-                  />
-                </Stack>
-                <Typography
-                  fontSize={{
-                    lg: "1.2rem",
-                    md: "1rem",
-                    smm: "0.9rem",
-                    xs: "0.7rem",
-                  }}
-                >
-                  Reliable foundation for fabrics
-                </Typography>
-              </Stack>
-              <Stack direction={"row"} alignItems={"baseline"} gap={"10px"}>
-                <Stack>
-                  <FaCircle
-                    style={{ width: "10px", height: "10px" }}
-                    color="#FB5457"
-                  />
-                </Stack>
-                <Typography
-                  fontSize={{
-                    lg: "1.2rem",
-                    md: "1rem",
-                    smm: "0.9rem",
-                    xs: "0.7rem",
-                  }}
-                >
-                  Available in various counts
-                </Typography>
-              </Stack>
-              <Stack direction={"row"} alignItems={"baseline"} gap={"10px"}>
-                <Stack>
-                  <FaCircle
-                    color="#FB5457"
-                    style={{
-                      width: "10px",
-                      height: "10px",
-                    }}
-                  />
-                </Stack>
-                <Typography
-                  fontSize={{
-                    lg: "1.2rem",
-                    md: "1rem",
-                    smm: "0.9rem",
-                    xs: "0.7rem",
-                  }}
-                >
-                  Versatile for diverse applications
-                </Typography>
-              </Stack>
-              <Box display={{ md: "none" }}>
-                <Image
-                  width={200}
-                  height={200}
-                  src={yarnImage}
-                  alt=""
-                  unoptimized
-                />
-              </Box>
-            </Stack>
-          </Stack>
-
-          <Stack className="fabrics">
-            <Stack
-              marginBottom={"10px"}
-              direction={"row"}
-              gap={"10px"}
-              alignItems={"center"}
-            >
-              <Stack
-                sx={{
-                  border: "1.5px solid black",
-                  width: "60px",
-                  height: "60px",
-                  borderRadius: "100%",
-                  padding: "10px",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <Box
-                  sx={{
-                    width: "100%",
-                    height: "100%",
-                    borderRadius: "100%",
-                    backgroundColor: "#5857F9",
-                  }}
-                ></Box>
-              </Stack>
-              <Typography
-                fontSize={{
-                  lg: "4.5rem",
-                  md: "3rem",
-                  smm: "2.5rem",
-                  xs: "2rem",
-                }}
-                fontWeight={"bold"}
-              >
-                Fabrics
-              </Typography>
-            </Stack>
-          </Stack>
-          <Stack className="garments">
-            <Stack direction={"row"} gap={"10px"} alignItems={"center"}>
-              <Stack
-                sx={{
-                  border: "1.5px solid black",
-                  width: "60px",
-                  height: "60px",
-                  borderRadius: "100%",
-                  padding: "10px",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <Box
-                  sx={{
-                    width: "100%",
-                    height: "100%",
-                    borderRadius: "100%",
-                    backgroundColor: "#9C34F0",
-                  }}
-                ></Box>
-              </Stack>
-              <Typography
-                fontSize={{
-                  lg: "4.5rem",
-                  md: "3rem",
-                  smm: "2.5rem",
-                  xs: "2rem",
-                }}
-                fontWeight={"bold"}
-              >
-                Garments
-              </Typography>
-            </Stack>
-          </Stack>
-        </Stack>
-        <Stack
-          width={{ lg: "40vw", md: "40vw" }}
-          display={{ xs: "none", md: "flex" }}
-          height={"60vh"}
-          position={"relative"}
-          className="imageContainer"
-        >
-          <Image
-            src={yarnImage}
-            alt=""
-            fill
-            objectPosition="top"
-            objectFit="contain"
-            className="yarnImage"
-            unoptimized
-          />
-          <Image
-            src={fabricImage}
-            alt=""
-            fill
-            objectPosition="top"
-            objectFit="contain"
-            style={{ opacity: 0 }}
-            className="fabricImage"
-            unoptimized
-          />
-          <Image
-            src={garmentImage}
-            alt=""
-            fill
-            objectPosition="top"
-            objectFit="contain"
-            style={{ opacity: 0 }}
-            className="garmentImage"
-            unoptimized
-          />
-        </Stack>
-      </Stack>
-
+    <ReactLenis root options={{ lerp: 2, duration: 1.5, smoothWheel: true }}>
       <Stack
-        className="fabricsContainer"
-        height={{ md: "100vh", xs: "120vh" }}
-        justifyContent={"center"}
+        margin={{ lg: "50px 150px", md: "50px", smm: "30px", xs: "10px" }}
+        ref={container}
       >
-        <Stack direction={"row"} gap={"10px"} alignItems={"center"}>
-          <Stack
-            sx={{
-              border: "1.5px solid black",
-              width: "60px",
-              height: "60px",
-              borderRadius: "100%",
-              padding: "10px",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <Box
-              sx={{
-                width: "100%",
-                height: "100%",
-                borderRadius: "100%",
-                backgroundColor: "#5857F9",
-              }}
-            ></Box>
-          </Stack>
-          <Typography
-            fontSize={{
-              lg: "4.5rem",
-              md: "3rem",
-              smm: "2.5rem",
-              xs: "2rem",
-            }}
-            fontWeight={"bold"}
-          >
-            Fabrics
-          </Typography>
-        </Stack>
-        <Stack
-          width={{ md: "25vw", xs: "70vw", xs: "60vw" }}
-          fontSize={{ lg: "1.2rem", md: "1rem", smm: "0.9rem", xs: "0.7rem" }}
-          sx={{ opacity: 0 }}
-          className="fabricsText"
+        <Typography
+          color="#D88684"
+          fontSize={{ md: "3rem", smm: "2rem", xs: "1.5rem" }}
+          fontWeight={"bold"}
+          textAlign={"center"}
+          paddingBottom={"50px"}
         >
-          <Stack direction={"row"} alignItems={"baseline"} gap={"10px"}>
-            <Stack>
-              <FaCircle
-                color="#5857F9"
-                style={{
-                  width: "10px",
-                  height: "10px",
-                }}
-              />
-            </Stack>
-            <Typography
-              fontSize={{
-                lg: "1.2rem",
-                md: "1rem",
-                smm: "0.9rem",
-                xs: "0.7rem",
-              }}
-            >
-              Advanced technology for softness
-            </Typography>
-          </Stack>
-          <Stack direction={"row"} alignItems={"baseline"} gap={"10px"}>
-            <Stack>
-              <FaCircle
-                color="#5857F9"
-                style={{
-                  width: "10px",
-                  height: "10px",
-                }}
-              />
+          Business Verticles
+        </Typography>
+        <Stack direction={"row"} height={"100vh"} gap={"50px"}>
+          <Stack>
+            <Stack className="yarns" gap={{ md: "20px" }}>
+              <Stack
+                marginBottom={"10px"}
+                direction={"row"}
+                gap={"10px"}
+                alignItems={"center"}
+              >
+                <Stack
+                  sx={{
+                    border: "1.5px solid black",
+                    width: "60px",
+                    height: "60px",
+                    borderRadius: "100%",
+                    padding: "10px",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  <Box
+                    sx={{
+                      width: "100%",
+                      height: "100%",
+                      borderRadius: "100%",
+                      backgroundColor: "#FB5457",
+                    }}
+                  ></Box>
+                </Stack>
+                <Typography
+                  fontSize={{
+                    lg: "4.5rem",
+                    md: "3rem",
+                    smm: "2.5rem",
+                    xs: "2rem",
+                  }}
+                  fontWeight={"bold"}
+                >
+                  Yarns
+                </Typography>
+              </Stack>
+              <Stack
+                width={{ md: "25vw", sm: "75vw", xs: "65vw" }}
+                sx={{ opacity: 0, display: "none" }}
+                className="yarnsText"
+              >
+                <Stack direction={"row"} gap={"10px"} alignItems={"baseline"}>
+                  <Stack justifyContent={"start"}>
+                    <FaCircle
+                      color="#FB5457"
+                      style={{
+                        width: "10px",
+                        height: "10px",
+                      }}
+                    />
+                  </Stack>
+                  <Typography
+                    fontSize={{
+                      lg: "1.2rem",
+                      md: "1rem",
+                      smm: "0.9rem",
+                      xs: "0.7rem",
+                    }}
+                  >
+                    High-quality natural and synthetic yarns
+                  </Typography>
+                </Stack>
+                <Stack direction={"row"} alignItems={"baseline"} gap={"10px"}>
+                  <Stack>
+                    <FaCircle
+                      color="#FB5457"
+                      style={{
+                        width: "10px",
+                        height: "10px",
+                      }}
+                    />
+                  </Stack>
+                  <Typography
+                    fontSize={{
+                      lg: "1.2rem",
+                      md: "1rem",
+                      smm: "0.9rem",
+                      xs: "0.7rem",
+                    }}
+                  >
+                    Ensures strength and longevity
+                  </Typography>
+                </Stack>
+                <Stack direction={"row"} alignItems={"baseline"} gap={"10px"}>
+                  <Stack>
+                    <FaCircle
+                      color="#FB5457"
+                      style={{
+                        width: "10px",
+                        height: "10px",
+                      }}
+                    />
+                  </Stack>
+                  <Typography
+                    fontSize={{
+                      lg: "1.2rem",
+                      md: "1rem",
+                      smm: "0.9rem",
+                      xs: "0.7rem",
+                    }}
+                  >
+                    Rigorous testing for quality
+                  </Typography>
+                </Stack>
+                <Stack direction={"row"} alignItems={"baseline"} gap={"10px"}>
+                  <Stack>
+                    <FaCircle
+                      style={{
+                        width: "10px",
+                        height: "10px",
+                      }}
+                      color="#FB5457"
+                    />
+                  </Stack>
+                  <Typography
+                    fontSize={{
+                      lg: "1.2rem",
+                      md: "1rem",
+                      smm: "0.9rem",
+                      xs: "0.7rem",
+                    }}
+                  >
+                    Reliable foundation for fabrics
+                  </Typography>
+                </Stack>
+                <Stack direction={"row"} alignItems={"baseline"} gap={"10px"}>
+                  <Stack>
+                    <FaCircle
+                      style={{ width: "10px", height: "10px" }}
+                      color="#FB5457"
+                    />
+                  </Stack>
+                  <Typography
+                    fontSize={{
+                      lg: "1.2rem",
+                      md: "1rem",
+                      smm: "0.9rem",
+                      xs: "0.7rem",
+                    }}
+                  >
+                    Available in various counts
+                  </Typography>
+                </Stack>
+                <Stack direction={"row"} alignItems={"baseline"} gap={"10px"}>
+                  <Stack>
+                    <FaCircle
+                      color="#FB5457"
+                      style={{
+                        width: "10px",
+                        height: "10px",
+                      }}
+                    />
+                  </Stack>
+                  <Typography
+                    fontSize={{
+                      lg: "1.2rem",
+                      md: "1rem",
+                      smm: "0.9rem",
+                      xs: "0.7rem",
+                    }}
+                  >
+                    Versatile for diverse applications
+                  </Typography>
+                </Stack>
+                <Box display={{ md: "none" }}>
+                  <Image width={200} height={200} src={yarnImage} alt="" />
+                </Box>
+              </Stack>
             </Stack>
 
-            <Typography
-              fontSize={{
-                lg: "1.2rem",
-                md: "1rem",
-                smm: "0.9rem",
-                xs: "0.7rem",
-              }}
-            >
-              Excellent breathability and comfort
-            </Typography>
-          </Stack>
-          <Stack direction={"row"} alignItems={"baseline"} gap={"10px"}>
-            <Stack>
-              <FaCircle
-                color="#5857F9"
-                style={{
-                  width: "10px",
-                  height: "10px",
-                }}
-              />
+            <Stack className="fabrics">
+              <Stack
+                marginBottom={"10px"}
+                direction={"row"}
+                gap={"10px"}
+                alignItems={"center"}
+              >
+                <Stack
+                  sx={{
+                    border: "1.5px solid black",
+                    width: "60px",
+                    height: "60px",
+                    borderRadius: "100%",
+                    padding: "10px",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  <Box
+                    sx={{
+                      width: "100%",
+                      height: "100%",
+                      borderRadius: "100%",
+                      backgroundColor: "#5857F9",
+                    }}
+                  ></Box>
+                </Stack>
+                <Typography
+                  fontSize={{
+                    lg: "4.5rem",
+                    md: "3rem",
+                    smm: "2.5rem",
+                    xs: "2rem",
+                  }}
+                  fontWeight={"bold"}
+                >
+                  Fabrics
+                </Typography>
+              </Stack>
             </Stack>
-
-            <Typography
-              fontSize={{
-                lg: "1.2rem",
-                md: "1rem",
-                smm: "0.9rem",
-                xs: "0.7rem",
-              }}
-            >
-              Ideal for casual, athletic wear{" "}
-            </Typography>
-          </Stack>
-          <Stack direction={"row"} alignItems={"baseline"} gap={"10px"}>
-            <Stack>
-              <FaCircle
-                color="#5857F9"
-                style={{
-                  width: "10px",
-                  height: "10px",
-                }}
-              />
+            <Stack className="garments">
+              <Stack direction={"row"} gap={"10px"} alignItems={"center"}>
+                <Stack
+                  sx={{
+                    border: "1.5px solid black",
+                    width: "60px",
+                    height: "60px",
+                    borderRadius: "100%",
+                    padding: "10px",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  <Box
+                    sx={{
+                      width: "100%",
+                      height: "100%",
+                      borderRadius: "100%",
+                      backgroundColor: "#9C34F0",
+                    }}
+                  ></Box>
+                </Stack>
+                <Typography
+                  fontSize={{
+                    lg: "4.5rem",
+                    md: "3rem",
+                    smm: "2.5rem",
+                    xs: "2rem",
+                  }}
+                  fontWeight={"bold"}
+                >
+                  Garments
+                </Typography>
+              </Stack>
             </Stack>
-
-            <Typography
-              fontSize={{
-                lg: "1.2rem",
-                md: "1rem",
-                smm: "0.9rem",
-                xs: "0.7rem",
-              }}
-            >
-              Variety of textures and patterns{" "}
-            </Typography>
           </Stack>
-          <Stack direction={"row"} alignItems={"baseline"} gap={"10px"}>
-            <Stack>
-              <FaCircle
-                color="#5857F9"
-                style={{
-                  width: "10px",
-                  height: "10px",
-                }}
-              />
-            </Stack>
-
-            <Typography
-              fontSize={{
-                lg: "1.2rem",
-                md: "1rem",
-                smm: "0.9rem",
-                xs: "0.7rem",
-              }}
-            >
-              Durable and stylish fabrics
-            </Typography>
-          </Stack>
-          <Box display={{ md: "none" }}>
+          <Stack
+            width={{ lg: "40vw", md: "40vw" }}
+            display={{ xs: "none", md: "flex" }}
+            height={"60vh"}
+            position={"relative"}
+            className="imageContainer"
+          >
             <Image
-              width={200}
-              height={200}
+              src={yarnImage}
+              alt=""
+              fill
+              objectPosition="top"
+              objectFit="contain"
+              className="yarnImage"
+            />
+            <Image
               src={fabricImage}
               alt=""
-              unoptimized
+              fill
+              objectPosition="top"
+              objectFit="contain"
+              style={{ opacity: 0 }}
+              className="fabricImage"
             />
-          </Box>
-        </Stack>
-      </Stack>
-      <Stack
-        className="garmentsContainer"
-        height={{ md: "100vh", xs: "120vh" }}
-        justifyContent={"center"}
-      >
-        <Stack direction={"row"} gap={"10px"} alignItems={"center"}>
-          <Stack
-            sx={{
-              border: "1.5px solid black",
-              width: "60px",
-              height: "60px",
-              borderRadius: "100%",
-              padding: "10px",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <Box
-              sx={{
-                width: "100%",
-                height: "100%",
-                borderRadius: "100%",
-                backgroundColor: "#9C34F0",
-              }}
-            ></Box>
-          </Stack>
-          <Typography
-            fontSize={{
-              lg: "4.5rem",
-              md: "3rem",
-              smm: "2.5rem",
-              xs: "2rem",
-            }}
-            fontWeight={"bold"}
-          >
-            Garments
-          </Typography>
-        </Stack>
-        <Stack
-          width={{ md: "25vw", xs: "70vw", xs: "60vw" }}
-          fontSize={{ lg: "1.2rem", md: "1rem", smm: "0.9rem", xs: "0.7rem" }}
-          sx={{ opacity: 0 }}
-          className="garmentsText"
-        >
-          <Stack direction={"row"} alignItems={"baseline"} gap={"10px"}>
-            <Stack>
-              <FaCircle
-                color="#9C34F0"
-                style={{
-                  width: "10px",
-                  height: "10px",
-                }}
-              />
-            </Stack>
-
-            <Typography
-              fontSize={{
-                lg: "1.2rem",
-                md: "1rem",
-                smm: "0.9rem",
-                xs: "0.7rem",
-              }}
-            >
-              Precision and quality focused
-            </Typography>
-          </Stack>
-          <Stack direction={"row"} alignItems={"baseline"} gap={"10px"}>
-            <Stack>
-              <FaCircle
-                color="#9C34F0"
-                style={{
-                  width: "10px",
-                  height: "10px",
-                }}
-              />
-            </Stack>
-
-            <Typography
-              fontSize={{
-                lg: "1.2rem",
-                md: "1rem",
-                smm: "0.9rem",
-                xs: "0.7rem",
-              }}
-            >
-              Global standards in apparel
-            </Typography>
-          </Stack>
-          <Stack direction={"row"} alignItems={"baseline"} gap={"10px"}>
-            <Stack>
-              <FaCircle
-                color="#9C34F0"
-                style={{
-                  width: "10px",
-                  height: "10px",
-                }}
-              />
-            </Stack>
-
-            <Typography
-              fontSize={{
-                lg: "1.2rem",
-                md: "1rem",
-                smm: "0.9rem",
-                xs: "0.7rem",
-              }}
-            >
-              Durable, comfortable, and stylish
-            </Typography>
-          </Stack>
-          <Stack direction={"row"} alignItems={"baseline"} gap={"10px"}>
-            <Stack>
-              <FaCircle
-                color="#9C34F0"
-                style={{
-                  width: "10px",
-                  height: "10px",
-                }}
-              />
-            </Stack>
-
-            <Typography
-              fontSize={{
-                lg: "1.2rem",
-                md: "1rem",
-                smm: "0.9rem",
-                xs: "0.7rem",
-              }}
-            >
-              Casual, formal, and industrial wear
-            </Typography>
-          </Stack>
-          <Stack direction={"row"} alignItems={"baseline"} gap={"10px"}>
-            <Stack>
-              <FaCircle
-                color="#9C34F0"
-                style={{
-                  width: "10px",
-                  height: "10px",
-                }}
-              />
-            </Stack>
-
-            <Typography
-              fontSize={{
-                lg: "1.2rem",
-                md: "1rem",
-                smm: "0.9rem",
-                xs: "0.7rem",
-              }}
-            >
-              Wide variety of fashion needs
-            </Typography>
-          </Stack>
-          <Box display={{ md: "none" }}>
             <Image
-              width={200}
-              height={200}
               src={garmentImage}
               alt=""
-              unoptimized
+              fill
+              objectPosition="top"
+              objectFit="contain"
+              style={{ opacity: 0 }}
+              className="garmentImage"
             />
-          </Box>
+          </Stack>
+        </Stack>
+
+        <Stack
+          className="fabricsContainer"
+          height={{ md: "100vh", xs: "120vh" }}
+          justifyContent={"center"}
+        >
+          <Stack direction={"row"} gap={"10px"} alignItems={"center"}>
+            <Stack
+              sx={{
+                border: "1.5px solid black",
+                width: "60px",
+                height: "60px",
+                borderRadius: "100%",
+                padding: "10px",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <Box
+                sx={{
+                  width: "100%",
+                  height: "100%",
+                  borderRadius: "100%",
+                  backgroundColor: "#5857F9",
+                }}
+              ></Box>
+            </Stack>
+            <Typography
+              fontSize={{
+                lg: "4.5rem",
+                md: "3rem",
+                smm: "2.5rem",
+                xs: "2rem",
+              }}
+              fontWeight={"bold"}
+            >
+              Fabrics
+            </Typography>
+          </Stack>
+          <Stack
+            width={{ md: "25vw", xs: "70vw", xs: "60vw" }}
+            fontSize={{ lg: "1.2rem", md: "1rem", smm: "0.9rem", xs: "0.7rem" }}
+            sx={{ opacity: 0 }}
+            className="fabricsText"
+          >
+            <Stack direction={"row"} alignItems={"baseline"} gap={"10px"}>
+              <Stack>
+                <FaCircle
+                  color="#5857F9"
+                  style={{
+                    width: "10px",
+                    height: "10px",
+                  }}
+                />
+              </Stack>
+              <Typography
+                fontSize={{
+                  lg: "1.2rem",
+                  md: "1rem",
+                  smm: "0.9rem",
+                  xs: "0.7rem",
+                }}
+              >
+                Advanced technology for softness
+              </Typography>
+            </Stack>
+            <Stack direction={"row"} alignItems={"baseline"} gap={"10px"}>
+              <Stack>
+                <FaCircle
+                  color="#5857F9"
+                  style={{
+                    width: "10px",
+                    height: "10px",
+                  }}
+                />
+              </Stack>
+
+              <Typography
+                fontSize={{
+                  lg: "1.2rem",
+                  md: "1rem",
+                  smm: "0.9rem",
+                  xs: "0.7rem",
+                }}
+              >
+                Excellent breathability and comfort
+              </Typography>
+            </Stack>
+            <Stack direction={"row"} alignItems={"baseline"} gap={"10px"}>
+              <Stack>
+                <FaCircle
+                  color="#5857F9"
+                  style={{
+                    width: "10px",
+                    height: "10px",
+                  }}
+                />
+              </Stack>
+
+              <Typography
+                fontSize={{
+                  lg: "1.2rem",
+                  md: "1rem",
+                  smm: "0.9rem",
+                  xs: "0.7rem",
+                }}
+              >
+                Ideal for casual, athletic wear{" "}
+              </Typography>
+            </Stack>
+            <Stack direction={"row"} alignItems={"baseline"} gap={"10px"}>
+              <Stack>
+                <FaCircle
+                  color="#5857F9"
+                  style={{
+                    width: "10px",
+                    height: "10px",
+                  }}
+                />
+              </Stack>
+
+              <Typography
+                fontSize={{
+                  lg: "1.2rem",
+                  md: "1rem",
+                  smm: "0.9rem",
+                  xs: "0.7rem",
+                }}
+              >
+                Variety of textures and patterns{" "}
+              </Typography>
+            </Stack>
+            <Stack direction={"row"} alignItems={"baseline"} gap={"10px"}>
+              <Stack>
+                <FaCircle
+                  color="#5857F9"
+                  style={{
+                    width: "10px",
+                    height: "10px",
+                  }}
+                />
+              </Stack>
+
+              <Typography
+                fontSize={{
+                  lg: "1.2rem",
+                  md: "1rem",
+                  smm: "0.9rem",
+                  xs: "0.7rem",
+                }}
+              >
+                Durable and stylish fabrics
+              </Typography>
+            </Stack>
+            <Box display={{ md: "none" }}>
+              <Image width={200} height={200} src={fabricImage} alt="" />
+            </Box>
+          </Stack>
+        </Stack>
+        <Stack
+          className="garmentsContainer"
+          height={{ md: "100vh", xs: "120vh" }}
+          justifyContent={"center"}
+        >
+          <Stack direction={"row"} gap={"10px"} alignItems={"center"}>
+            <Stack
+              sx={{
+                border: "1.5px solid black",
+                width: "60px",
+                height: "60px",
+                borderRadius: "100%",
+                padding: "10px",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <Box
+                sx={{
+                  width: "100%",
+                  height: "100%",
+                  borderRadius: "100%",
+                  backgroundColor: "#9C34F0",
+                }}
+              ></Box>
+            </Stack>
+            <Typography
+              fontSize={{
+                lg: "4.5rem",
+                md: "3rem",
+                smm: "2.5rem",
+                xs: "2rem",
+              }}
+              fontWeight={"bold"}
+            >
+              Garments
+            </Typography>
+          </Stack>
+          <Stack
+            width={{ md: "25vw", xs: "70vw", xs: "60vw" }}
+            fontSize={{ lg: "1.2rem", md: "1rem", smm: "0.9rem", xs: "0.7rem" }}
+            sx={{ opacity: 0 }}
+            className="garmentsText"
+          >
+            <Stack direction={"row"} alignItems={"baseline"} gap={"10px"}>
+              <Stack>
+                <FaCircle
+                  color="#9C34F0"
+                  style={{
+                    width: "10px",
+                    height: "10px",
+                  }}
+                />
+              </Stack>
+
+              <Typography
+                fontSize={{
+                  lg: "1.2rem",
+                  md: "1rem",
+                  smm: "0.9rem",
+                  xs: "0.7rem",
+                }}
+              >
+                Precision and quality focused
+              </Typography>
+            </Stack>
+            <Stack direction={"row"} alignItems={"baseline"} gap={"10px"}>
+              <Stack>
+                <FaCircle
+                  color="#9C34F0"
+                  style={{
+                    width: "10px",
+                    height: "10px",
+                  }}
+                />
+              </Stack>
+
+              <Typography
+                fontSize={{
+                  lg: "1.2rem",
+                  md: "1rem",
+                  smm: "0.9rem",
+                  xs: "0.7rem",
+                }}
+              >
+                Global standards in apparel
+              </Typography>
+            </Stack>
+            <Stack direction={"row"} alignItems={"baseline"} gap={"10px"}>
+              <Stack>
+                <FaCircle
+                  color="#9C34F0"
+                  style={{
+                    width: "10px",
+                    height: "10px",
+                  }}
+                />
+              </Stack>
+
+              <Typography
+                fontSize={{
+                  lg: "1.2rem",
+                  md: "1rem",
+                  smm: "0.9rem",
+                  xs: "0.7rem",
+                }}
+              >
+                Durable, comfortable, and stylish
+              </Typography>
+            </Stack>
+            <Stack direction={"row"} alignItems={"baseline"} gap={"10px"}>
+              <Stack>
+                <FaCircle
+                  color="#9C34F0"
+                  style={{
+                    width: "10px",
+                    height: "10px",
+                  }}
+                />
+              </Stack>
+
+              <Typography
+                fontSize={{
+                  lg: "1.2rem",
+                  md: "1rem",
+                  smm: "0.9rem",
+                  xs: "0.7rem",
+                }}
+              >
+                Casual, formal, and industrial wear
+              </Typography>
+            </Stack>
+            <Stack direction={"row"} alignItems={"baseline"} gap={"10px"}>
+              <Stack>
+                <FaCircle
+                  color="#9C34F0"
+                  style={{
+                    width: "10px",
+                    height: "10px",
+                  }}
+                />
+              </Stack>
+
+              <Typography
+                fontSize={{
+                  lg: "1.2rem",
+                  md: "1rem",
+                  smm: "0.9rem",
+                  xs: "0.7rem",
+                }}
+              >
+                Wide variety of fashion needs
+              </Typography>
+            </Stack>
+            <Box display={{ md: "none" }}>
+              <Image width={200} height={200} src={garmentImage} alt="" />
+            </Box>
+          </Stack>
         </Stack>
       </Stack>
-    </Stack>
-    // </ReactLenis>
+    </ReactLenis>
   );
 }
