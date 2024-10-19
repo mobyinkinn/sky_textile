@@ -10,19 +10,19 @@ import tree from "./assets/sustainable.gif";
 import sun from "./assets/sun.png";
 import graph from "./assets/graph.png";
 
-import community from "./assets/skyPrimware/expertise.jpg";
-import curiosity from "./assets/skyPrimware/quality.jpg";
-import collab from "./assets/skyPrimware/product.jpg";
+import community from "./assets/skyPrimware/expertise.JPG";
+import curiosity from "./assets/skyPrimware/quality.JPG";
+import collab from "./assets/skyPrimware/product.JPG";
 
 import { useRef, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import img1 from "./assets/skyPrimware/Main/1.jpg";
-import img2 from "./assets/skyPrimware/Main/2.jpg";
-import img3 from "./assets/skyPrimware/Main/3.jpg";
-import img4 from "./assets/skyPrimware/Main/4.jpg";
+import img1 from "./assets/skyPrimware/Main/1.JPG";
+import img2 from "./assets/skyPrimware/Main/2.JPG";
+import img3 from "./assets/skyPrimware/Main/3.JPG";
+import img4 from "./assets/skyPrimware/Main/4.JPG";
 
 import trust from "./assets/Trust.png";
 import back from "./assets/back.png";

@@ -1,10 +1,10 @@
 "use client";
 
 import { Box, Stack, Typography } from "@mui/material";
-import enduro1 from "./assets/events/b1.jpg";
-import enduro2 from "./assets/events/b2.jpg";
-import enduro3 from "./assets/events/s1.jpg";
-import enduro4 from "./assets/events/s2.jpg";
+import enduro1 from "./assets/events/b1.JPG";
+import enduro2 from "./assets/events/b2.JPG";
+import enduro3 from "./assets/events/s1.JPG";
+import enduro4 from "./assets/events/s2.JPG";
 import Image from "next/image";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";

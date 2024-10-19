@@ -2,26 +2,20 @@
 
 import { Box, Stack, Typography } from "@mui/material";
 
-import img from "./assets/We1.png";
-import img1 from "./assets/1.jpg";
-import img2 from "./assets/2.jpg";
-import img3 from "./assets/3.jpg";
-import img4 from "./assets/4.jpg";
+import who1 from "./assets/who/1.JPG";
+import who2 from "./assets/who/2.JPG";
+import who3 from "./assets/who/3.JPG";
+import who4 from "./assets/who/4.JPG";
 
-import who1 from "./assets/who/1.jpg";
-import who2 from "./assets/who/2.jpg";
-import who3 from "./assets/who/3.jpg";
-import who4 from "./assets/who/4.jpg";
+import what1 from "./assets/what/1.JPG";
+import what2 from "./assets/what/2.JPG";
+import what3 from "./assets/what/3.JPG";
+import what4 from "./assets/what/4.JPG";
 
-import what1 from "./assets/what/1.jpg";
-import what2 from "./assets/what/2.jpg";
-import what3 from "./assets/what/3.jpg";
-import what4 from "./assets/what/4.jpg";
-
-import where1 from "./assets/where/1.jpg";
-import where2 from "./assets/where/2.jpg";
-import where3 from "./assets/where/3.jpg";
-import where4 from "./assets/where/4.jpg";
+import where1 from "./assets/where/1.JPG";
+import where2 from "./assets/where/2.JPG";
+import where3 from "./assets/where/3.JPG";
+import where4 from "./assets/where/4.JPG";
 
 import Typewriter from "typewriter-effect";
 import Slider from "react-slick";

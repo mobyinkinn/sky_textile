@@ -6,12 +6,12 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useRef, useState } from "react";
 
-import dyeing from "./assets/main/dyeing.jpg";
-import design from "./assets/main/design.jpg";
-import cutting from "./assets/main/cutting.jpg";
-import printing from "./assets/main/printing.jpg";
-import sewing from "./assets/main/sewing.jpg";
-import warehousing from "./assets/main/warehousing.jpg";
+import dyeing from "./assets/main/dyeing.JPG";
+import design from "./assets/main/design.JPG";
+import cutting from "./assets/main/cutting.JPG";
+import printing from "./assets/main/printing.JPG";
+import sewing from "./assets/main/sewing.JPG";
+import warehousing from "./assets/main/warehousing.JPG";
 
 const processData = [
   {
