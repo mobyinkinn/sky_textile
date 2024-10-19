@@ -5,16 +5,15 @@ import banner from "./assets/yarnsBanner.png";
 import bannerMobile from "./assets/yarnsBannerMobile.png";
 import Navbar from "../../navbar/Navbar";
 import Strength from "./StrengthGarments";
-import yarns from "./assets/popularYarns.png";
 import gradient from "./assets/gradient.png";
 import Footer from "../../footer/Footer";
 import Grid from "@mui/material/Grid";
 
-import img1 from "./assets/Garments/INNERWEAR.jpg";
-import img2 from "./assets/Garments/CASUALWEAR.jpg";
-import img3 from "./assets/Garments/LOUNGEWEAR.jpg";
-import img4 from "./assets/Garments/WINTERWEAR.jpg";
-import img5 from "./assets/Garments/Athleisure.jpg";
+import img1 from "./assets/Garments/INNERWEAR.JPG";
+import img2 from "./assets/Garments/CASUALWEAR.JPG";
+import img3 from "./assets/Garments/LOUNGEWEAR.JPG";
+import img4 from "./assets/Garments/WINTERWEAR.JPG";
+import img5 from "./assets/Garments/Athleisure.JPG";
 import img6 from "./assets/Garments/Outerwear.jpg";
 
 const gridData = [
